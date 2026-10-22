@@ -7,106 +7,163 @@
   <meta name="description" content="2310 APEX 국어 학습 분석 시스템의 학부모용 체험 리포트입니다. 모든 학생 정보와 수치는 가상 예시입니다.">
   <title>2310 APEX | 학부모 체험 리포트</title>
   <style>
-    :root{--navy:#0b1d36;--navy2:#132c4e;--blue:#266cde;--blueLight:#eaf2ff;--ink:#192a41;--muted:#63748b;--line:#e3eaf2;--bg:#f4f7fb;--card:#ffffff;--green:#188b71;--amber:#a76316;--red:#bc4b49;--shadow:0 7px 22px rgba(20,45,80,.05)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
-    button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #73a5f9;outline-offset:3px}a{color:inherit;text-decoration:none}
-    .top{background:var(--navy);color:#fff}.top-in{max-width:1140px;margin:auto;padding:24px 28px 58px}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:900;letter-spacing:-.9px;font-size:24px}.brand small{display:block;letter-spacing:2.7px;font-size:9px;color:#8bb6f0;font-weight:750;margin-top:-5px}.navtag{font-size:12px;color:#dbe8fa;border:1px solid #38516c;border-radius:30px;padding:7px 12px;white-space:nowrap}
-    .intro{padding-top:50px;max-width:790px}.eyebrow{text-transform:uppercase;letter-spacing:2.4px;font-size:11px;font-weight:800;color:#90b6f8}.intro h1{font-size:clamp(29px,4vw,44px);letter-spacing:-1.7px;margin:11px 0 17px;line-height:1.28;font-weight:850}.intro h1 em{color:#91b9fd;font-style:normal}.intro p{color:#c0cde0;font-size:15px;line-height:1.9;margin:0;max-width:675px}
-    .layout{max-width:1140px;margin:-30px auto 0;padding:0 28px 70px;position:relative}.sample{padding:14px 20px;border-radius:13px;background:#fff9e9;border:1px solid #f5e4b1;color:#82611b;font-size:12px;line-height:1.55;display:flex;align-items:start;gap:10px;box-shadow:var(--shadow)}.sample strong{font-weight:850}
-    .panel{border:1px solid var(--line);background:var(--card);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}.profile{margin-top:18px;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:18px}.profile-name{display:flex;align-items:center;gap:14px}.avatar{height:53px;width:53px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(140deg,#dceaff,#f1f5ff);color:#1b5ba6;font-weight:900;font-size:18px}.overline{font-size:11px;font-weight:850;letter-spacing:1px;color:#6683a6}.profile h2{font-size:21px;margin:2px 0 3px;letter-spacing:-.5px}.profile p{font-size:12px;color:var(--muted);margin:0}.reportpill{border:1px solid #cbdcf6;color:#316cbd;background:#f1f6ff;padding:8px 12px;border-radius:7px;font-size:12px;font-weight:750;white-space:nowrap}
-    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:17px 0}.metric{padding:20px}.metric-label{font-size:12px;color:#61748b;font-weight:750}.metric-num{font-size:29px;font-weight:900;letter-spacing:-1px;margin:6px 0 0;line-height:1.25}.metric small{display:block;font-size:11px;margin-top:6px;color:#7688a0}.metric .growth{color:var(--green)}.metric .bad{color:var(--red)}
-    .section-title{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:34px 0 14px}.section-title h3{font-size:20px;letter-spacing:-.5px;margin:0}.section-title p{color:var(--muted);font-size:12px;margin:3px 0 0}.title-mark{height:20px;width:4px;border-radius:2px;background:var(--blue);display:inline-block;vertical-align:-3px;margin-right:9px}
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.section-inner{padding:24px}.panel-label{font-size:15px;font-weight:850;letter-spacing:-.3px;margin-bottom:4px}.sub{color:var(--muted);font-size:12px;margin:0 0 22px}
-    .barrow{display:grid;grid-template-columns:65px 1fr 55px;align-items:center;gap:11px;margin:19px 0;font-size:13px}.barrow strong{font-size:12px}.track{background:#eaf0f7;border-radius:99px;height:11px;overflow:hidden}.fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#2e77df,#79aafa)}.fill.low{background:linear-gradient(90deg,#d07051,#e9aa7e)}.num{text-align:right;font-weight:800;font-size:12px}.footnote{font-size:11px;color:#8693a5;border-top:1px solid var(--line);padding-top:15px;margin-top:24px}
-    .progressitem{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:17px 0 4px}.progressitem span{font-weight:750;font-size:13px}.progressitem strong{font-weight:900;color:#1f5fae;font-size:18px}.smalltrack{height:7px;background:#ecf1f7;border-radius:20px;margin:9px 0 18px;overflow:hidden}.smalltrack b{display:block;height:100%;background:#4d8ae3;border-radius:20px}.delta{background:#eef9f5;border:1px solid #d6ece3;border-radius:11px;padding:13px;color:#197763;font-weight:650;font-size:12px;margin-top:14px}
-    .tabs{display:flex;gap:5px;background:#e9eef5;padding:5px;border-radius:10px;width:max-content;max-width:100%}.tabs button{border:0;border-radius:8px;padding:9px 15px;background:transparent;color:#61728b;font-size:12px;font-weight:800;white-space:nowrap}.tabs button.active{background:#fff;color:#195fae;box-shadow:0 1px 5px #173e661f}
-    .question-panel{padding:24px}.question-top{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;flex-wrap:wrap}.question-top p{margin:3px 0 0;color:var(--muted);font-size:12px}.legend{display:flex;gap:12px;flex-wrap:wrap;color:#6d7d94;font-size:12px;align-items:center}.dot{display:inline-block;width:9px;height:9px;margin-right:5px;border-radius:3px;background:#dde8f5}.dot.wrong{background:#f2d4d0}
-    .qgroup{margin-top:22px}.qgroup h4{font-size:13px;margin:0 0 11px;color:#526982;display:flex;justify-content:space-between;gap:10px}.qgroup h4 span{font-weight:500;font-size:11px;color:#8998aa}.qlist{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:8px}.q{height:40px;background:#edf3fa;border:1px solid #dce7f4;border-radius:9px;color:#285b94;font-weight:850;font-size:13px}.q.wrong{background:#fff0ed;color:#bd564c;border-color:#f6d4cf}.q.current{box-shadow:0 0 0 2px #4684e6 inset;background:#e0ecff;color:#1a54ad}.q.current.wrong{box-shadow:0 0 0 2px #d96e65 inset;background:#ffe5e0;color:#ad3d35}.q:hover{filter:brightness(.96)}
-    .detail{margin-top:18px;border:1px solid #d9e6f7;background:#f9fbff;border-radius:13px;padding:20px;min-height:165px}.detail-header{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.chip{font-size:11px;font-weight:800;border-radius:20px;background:#e9f1ff;color:#2a64b3;padding:4px 9px}.chip.alert{background:#fae6e3;color:#b74c41}.detail h4{font-size:16px;letter-spacing:-.3px;margin:12px 0 6px}.detail p{font-size:13px;color:#53667c;margin:7px 0}.detail .coachtip{border-top:1px dashed #d5e1ee;padding-top:12px;margin-top:14px;color:#2a405c}.detail .coachtip b{color:#1b5ca6}
-    .insights{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}.insight{padding:21px 18px;border-top:3px solid #79abf4}.insight:nth-child(2){border-top-color:#e2a575}.insight:nth-child(3){border-top-color:#6aaf9b}.insight small{font-size:11px;color:#6b829e;font-weight:800;letter-spacing:.6px}.insight strong{display:block;font-size:15px;margin:8px 0}.insight p{margin:0;color:#5c7087;font-size:12px;line-height:1.8}
-    .quote{margin-top:16px;background:#142d4e;color:white;padding:27px;border-radius:17px}.quote .qtitle{font-size:11px;color:#a5c4fa;font-weight:850;letter-spacing:1.4px}.quote p{font-size:17px;font-weight:750;line-height:1.85;letter-spacing:-.3px;margin:12px 0 20px}.quote .teacher{font-size:12px;color:#bdd0e7;display:flex;justify-content:space-between;gap:8px;align-items:center}
-    .bottom{margin-top:30px;text-align:center;font-size:12px;color:#8190a4}.bottom strong{color:#243e61;font-size:18px;letter-spacing:-.3px;display:block;margin-bottom:5px}.bottom span{display:block;margin-top:5px}
-    @media(max-width:800px){.top-in{padding:20px 19px 51px}.layout{padding:0 15px 45px}.intro{padding-top:37px}.intro h1{font-size:31px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}.insights{grid-template-columns:1fr}.qlist{grid-template-columns:repeat(6,minmax(0,1fr))}.profile{padding:18px}.question-panel,.section-inner{padding:19px}.section-title{margin-top:28px}}
-    @media(max-width:600px){.question-title{flex-wrap:wrap;gap:10px}.question-title .tabs{width:100%}}
-    @media(max-width:480px){.brand{font-size:22px}.navtag{font-size:10px;padding:6px 9px}.intro h1{font-size:28px}.intro p{font-size:13px}.profile{align-items:flex-start}.profile h2{font-size:18px}.avatar{height:46px;width:46px;flex:none}.reportpill{font-size:10px}.metric{padding:17px}.metric-num{font-size:25px}.qlist{gap:7px}.q{height:39px}.tabs{width:100%}.tabs button{flex:1;padding:10px 8px}.quote{padding:22px}.quote p{font-size:15px}}
-    @media print{.top{color:#222;background:#fff}.top-in{padding-bottom:20px}.intro p{color:#333}.layout{margin:0}.tabs{display:none}.q{break-inside:avoid}body{background:#fff}.panel{box-shadow:none}.sample{box-shadow:none}}
 
-/* V2 — mobile-first parent preview improvements */
-html{scroll-padding-top:14px}
-.sample{font-size:13px}
-.profile{margin-top:12px}
-.demo-selector{padding:22px 23px 19px;margin-top:18px}
-.demo-selector-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:13px}
-.demo-selector-head h2{font-size:17px;line-height:1.4;letter-spacing:-.45px;margin:0}
-.demo-selector-head span{font-size:11px;color:var(--muted)}
-.sample-tabs{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;padding:2px 2px 8px}
-.sample-tab{flex:1;min-width:190px;text-align:left;border:1px solid #dce6f2;background:#fafcff;border-radius:12px;padding:13px 14px;scroll-snap-align:start;line-height:1.6;color:var(--ink);transition:background .12s,border-color .12s}
-.sample-tab .tab-name{display:block;font-size:14px;font-weight:850}
-.sample-tab .tab-type{display:block;font-size:12px;color:#61738c;margin-top:1px}
-.sample-tab.active{background:#ebf3ff;border-color:#407ddd;box-shadow:inset 0 0 0 1px #407ddd}
-.sample-tab.active .tab-name{color:#1b5eb2}
-.diagnosis{margin-top:14px;padding:20px 23px;background:#edf5ff;border:1px solid #d2e3fa;border-left:4px solid #286dd0;border-radius:15px}
-.diagnosis .overline{color:#34699f}
-.diagnosis h3{font-size:18px;letter-spacing:-.5px;margin:6px 0 6px;line-height:1.5}
-.diagnosis p{font-size:13px;color:#4b617a;margin:0;line-height:1.8}
-.pattern{margin-top:16px;padding:16px 17px;border:1px solid #f4debf;background:#fff9ee;border-radius:12px;font-size:13px;color:#775622;line-height:1.75}
-.pattern strong{display:block;color:#835c20;margin-bottom:3px}
-.actionstep{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px}
-.step-card{padding:18px 17px;border:1px solid var(--line);border-radius:13px;background:#fff}
-.step-card b{display:block;font-size:11px;color:#2b6fc4;margin-bottom:7px;letter-spacing:.5px}
-.step-card strong{display:block;font-size:14px;margin-bottom:6px}
-.step-card p{font-size:12px;color:var(--muted);margin:0;line-height:1.7}
-button:focus-visible,a:focus-visible{outline:3px solid #407dd3}
-.intro-cta{display:inline-flex;margin-top:22px;padding:10px 15px;border:1px solid #8daede;color:#fff;background:#1d4574;border-radius:10px;font-weight:800;font-size:13px}
-.report-disclaimer{display:block;font-size:11px;color:#74849a;margin-top:12px}
-@media(max-width:800px){.actionstep{grid-template-columns:1fr}.demo-selector{padding:18px}.sample-tab{flex:0 0 182px}}
-@media(max-width:480px){
-  .top-in{padding-bottom:43px}
-  .intro{padding-top:28px}
-  .intro h1{font-size:26px;letter-spacing:-1px;line-height:1.34}
-  .intro p{font-size:14px;line-height:1.8}
-  .sample{padding:12px 13px;font-size:12px}
-  .demo-selector-head{align-items:flex-start;flex-direction:column;gap:2px}
-  .sample-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;gap:7px}
-  .sample-tab{min-width:0;flex:auto;padding:11px 8px}
-  .sample-tab .tab-name{font-size:13px}.sample-tab .tab-type{font-size:11px}
-  .demo-selector-head h2{font-size:16px}
-  .profile{display:none}
-  .profile-name{gap:9px}.profile h2{font-size:16px}.profile p{font-size:12px}
-  .reportpill{font-size:9px;padding:6px 7px}
-  .diagnosis{padding:16px 17px}.diagnosis h3{font-size:17px}
-  .stats{gap:9px;margin:11px 0}.metric{padding:15px 12px}.metric-num{font-size:24px}.metric-label{font-size:12px}.metric small{font-size:11px;line-height:1.5}
-  .section-title h3{font-size:19px}.section-inner,.question-panel{padding:18px}
-  .barrow{grid-template-columns:46px minmax(0,1fr) 48px;gap:7px}
-  .question-top p,.detail p,.insight p{font-size:13px;line-height:1.76}
-  .q{min-height:44px;height:44px}.qlist{grid-template-columns:repeat(6,minmax(0,1fr));gap:7px}
-  .quote p{font-size:15px;line-height:1.85}.quote .teacher{font-size:11px;align-items:start;flex-direction:column;gap:3px}
-  .step-card p{font-size:13px}
-  .bottom{font-size:12px;line-height:1.8}
+:root{--ink:#192737;--muted:#647286;--line:#e1e7ee;--bg:#f7f9fc;--card:#fff;--blue:#315f9d;--navy:#15263c;--red:#b15a4c;--green:#287b65}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;line-height:1.6;word-break:keep-all}
+button{font:inherit;cursor:pointer}a{color:inherit;text-decoration:none}
+button:focus-visible,a:focus-visible{outline:3px solid #709be1;outline-offset:3px}
+[hidden]{display:none!important}
+.top{background:#fff;border-bottom:1px solid var(--line)}
+.top-in{max-width:1020px;margin:0 auto;padding:20px 25px 28px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-size:22px;font-weight:850;letter-spacing:-.9px;color:#15263c}
+.brand span{color:#315f9d!important}.brand small{display:block;font-size:9px;letter-spacing:1.5px;color:#7b899b;font-weight:650;margin-top:-5px}
+.navtag{font-size:11px;color:#637187;border:1px solid #dde4ec;border-radius:5px;padding:5px 9px;white-space:nowrap}
+.intro{padding-top:31px;max-width:720px}
+.eyebrow{font-size:12px;font-weight:700;color:#315f9d;letter-spacing:0}
+.intro h1{font-size:clamp(25px,3.8vw,34px);font-weight:800;line-height:1.32;letter-spacing:-.9px;margin:9px 0 11px}
+.intro h1 em{color:#315f9d;font-style:normal}
+.intro p{font-size:14px;color:#5d6b80;line-height:1.8;margin:0;max-width:680px}
+.intro-cta{display:inline-flex;align-items:center;font-size:12px;font-weight:700;color:#315f9d;border-bottom:1px solid #9db9df;padding:0 0 2px;margin-top:16px}
+.layout{max-width:1020px;margin:0 auto;padding:18px 25px 56px}
+.sample{display:flex;gap:8px;align-items:flex-start;font-size:12px;color:#6a7584;background:#f0f3f7;border:1px solid #e2e7ed;border-radius:7px;padding:11px 13px}
+.sample strong{font-weight:800;color:#47566c}
+.panel{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:none}
+.demo-selector{padding:20px 22px 17px;margin-top:15px}
+.demo-selector-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:12px}
+.demo-selector-head h2{font-size:16px;letter-spacing:-.25px;margin:0;font-weight:800}
+.demo-selector-head span{font-size:11px;color:#8996a5}
+.sample-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.sample-tab{border:1px solid #e0e6ed;background:#fff;border-radius:7px;padding:12px 13px;text-align:left;min-width:0;color:var(--ink);transition:background .12s,border-color .12s}
+.sample-tab.active{border-color:#3b6eab;background:#f0f5fb}
+.sample-tab .tab-name{display:block;font-weight:800;font-size:14px;color:#273952}
+.sample-tab.active .tab-name{color:#245a9b}
+.sample-tab .tab-type{display:block;color:#738296;font-size:12px;margin-top:2px}
+.profile{display:none}
+.diagnosis{margin-top:13px;padding:18px 21px;border-radius:8px;background:#eef3f9;border-left:3px solid #366cab}
+.overline{font-size:11px;font-weight:750;color:#557aa7;letter-spacing:0}
+.diagnosis h3{font-size:17px;line-height:1.5;margin:7px 0 5px;letter-spacing:-.4px}
+.diagnosis p{margin:0;font-size:13px;color:#59697c;line-height:1.75}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:12px 0 0}
+.metric{padding:18px 17px}
+.metric-label{font-size:12px;color:#6c7a8d;font-weight:650}
+.metric-num{font-size:27px;font-weight:850;letter-spacing:-.75px;margin:7px 0 4px;line-height:1.2;color:#1d3049}
+.metric .growth{color:#267660}.metric .bad{color:#a5554b}
+.metric small{display:block;color:#8390a0;font-size:11px;line-height:1.6}
+.section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin:30px 0 11px}
+.section-title h3{font-size:18px;line-height:1.35;letter-spacing:-.5px;margin:0;font-weight:800}
+.section-title p{margin:4px 0 0;font-size:12px;color:#8390a0}
+.title-mark{display:none}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.section-inner,.question-panel{padding:22px}
+.panel-label{font-size:14px;font-weight:800;margin:0 0 3px}
+.sub{font-size:12px;color:#8591a0;margin:0 0 18px}
+.barrow{display:grid;grid-template-columns:50px 1fr 54px;gap:10px;align-items:center;margin:16px 0;font-size:12px}
+.barrow strong{font-weight:700}
+.track{height:8px;border-radius:5px;background:#edf1f6;overflow:hidden}
+.fill{height:100%;background:#638bbd;border-radius:5px}.fill.low{background:#c78a80}
+.num{text-align:right;font-size:12px;font-weight:700}
+.footnote{margin-top:18px;padding-top:13px;border-top:1px solid #edf0f4;font-size:11px;line-height:1.65;color:#8a96a4}
+.progressitem{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:16px 0 5px;font-size:13px}
+.progressitem span{font-weight:650}.progressitem strong{font-size:17px;color:#315f9d}
+.smalltrack{height:7px;background:#edf1f6;overflow:hidden;border-radius:5px;margin:8px 0 17px}
+.smalltrack b{display:block;height:100%;border-radius:5px;background:#638bbd}
+.delta{margin-top:9px;border-left:2px solid #a7b9ce;background:#f6f8fb;padding:9px 12px;font-size:12px;color:#546477;line-height:1.7}
+.tabs{display:flex;gap:2px;background:#f0f3f7;padding:3px;border-radius:6px;flex-shrink:0}
+.tabs button{border:0;background:transparent;color:#69798d;border-radius:4px;font-size:12px;padding:7px 14px;font-weight:700}
+.tabs button.active{background:#fff;color:#264e7c;box-shadow:0 1px 2px #22334b10}
+.question-top{display:flex;justify-content:space-between;gap:15px;align-items:flex-start;flex-wrap:wrap}
+.question-top p{margin:3px 0 0;font-size:12px;color:#8591a0}
+.legend{display:flex;align-items:center;gap:12px;font-size:11px;color:#78879a}
+.dot{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:4px;background:#dbe5f0}
+.dot.wrong{background:#e4bab3}
+.qgroup{margin-top:19px}.qgroup h4{display:flex;justify-content:space-between;gap:10px;margin:0 0 10px;font-size:13px;color:#4e6077}
+.qgroup h4 span{font-weight:450;color:#8b98a8;font-size:11px}
+.qlist{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:7px}
+.q{border:1px solid #e2e9f1;background:#f4f7fa;height:40px;border-radius:6px;color:#526d8b;font-weight:700;font-size:12px;min-width:0}
+.q.wrong{background:#fbefec;color:#a14c42;border-color:#ebc9c2}
+.q.current{outline:2px solid #4778b0;outline-offset:0}
+.q.current.wrong{outline-color:#b7645b}
+.detail{border:1px solid #dce5ef;border-radius:7px;padding:18px;margin-top:15px;background:#fbfcfe;min-height:0}
+.detail-header{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-block;font-size:11px;border-radius:4px;background:#eaf0f7;color:#536d8c;padding:3px 7px;font-weight:650}
+.chip.alert{background:#f8e9e6;color:#a4574c}
+.detail h4{font-size:15px;margin:13px 0 7px;letter-spacing:-.3px}
+.detail p{font-size:13px;color:#54667a;line-height:1.8;margin:7px 0}
+.detail .coachtip{border-top:1px solid #e1e8f0;padding-top:11px;margin-top:12px}
+.detail .coachtip b{color:#315f9d}
+.report-disclaimer{display:block;color:#909cab;font-size:11px;margin-top:13px}
+.pattern{border:1px solid var(--line);border-left:3px solid #8da6c4;background:#fff;border-radius:7px;padding:17px 19px;margin-top:12px;font-size:13px;color:#5b6d81;line-height:1.75}
+.pattern strong{display:block;font-size:13px;color:#283f58;margin-bottom:4px}
+.insights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.insight{padding:19px}.insight small{font-size:11px;color:#7287a1;font-weight:700}.insight strong{display:block;font-size:14px;margin:7px 0}.insight p{font-size:12px;color:#5e7085;line-height:1.75;margin:0}
+.actionstep{display:flex;gap:0;border:1px solid var(--line);border-radius:8px;background:#fff;overflow:hidden}
+.step-card{flex:1;padding:17px 19px;border-right:1px solid var(--line)}.step-card:last-child{border-right:0}
+.step-card b{display:block;color:#7288a1;font-size:11px;margin-bottom:4px}
+.step-card strong{display:block;font-size:13px;margin-bottom:3px}
+.step-card p{font-size:12px;color:#748399;margin:0;line-height:1.65}
+.quote{margin-top:23px;border-radius:8px;border:1px solid #dce4ed;background:#fff;padding:22px 24px;color:var(--ink)}
+.quote .qtitle{font-size:12px;color:#406b9b;font-weight:750;letter-spacing:0}
+.quote p{font-size:14px;line-height:1.85;font-weight:550;color:#344b63;margin:10px 0 14px;letter-spacing:-.15px}
+.quote .teacher{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:11px;color:#8a97a7}
+.bottom{margin-top:27px;text-align:center;font-size:12px;color:#8d98a8;line-height:1.8}
+.bottom strong{display:block;font-size:16px;color:#385370;letter-spacing:-.4px;margin-bottom:4px}
+.bottom span{display:block;margin-top:4px}
+@media(max-width:800px){
+.top-in{padding:18px 19px 25px}.layout{padding:15px 16px 42px}
+.two{grid-template-columns:1fr}.insights{grid-template-columns:1fr}
+.qlist{grid-template-columns:repeat(6,minmax(0,1fr))}
+.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.actionstep{display:grid;grid-template-columns:1fr}
+.step-card{border-right:0;border-bottom:1px solid var(--line)}
+.step-card:last-child{border-bottom:0}
 }
-@media(max-width:355px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.brand{font-size:19px}.navtag{font-size:9px}.profile .avatar{display:none}.reportpill{display:none}}
+@media(max-width:480px){
+.top-in{padding:16px 16px 22px}.layout{padding:12px 12px 35px}
+.brand{font-size:20px}.navtag{font-size:10px;padding:4px 7px}
+.intro{padding-top:25px}.intro h1{font-size:25px;letter-spacing:-.8px}
+.intro p{font-size:13px}
+.sample{font-size:11px;padding:10px 11px}
+.demo-selector{padding:15px 13px}.demo-selector-head{display:block}
+.demo-selector-head h2{font-size:15px}.demo-selector-head span{display:block;margin-top:2px}
+.sample-tabs{gap:6px;margin-top:13px}
+.sample-tab{padding:11px 7px}.sample-tab .tab-name{font-size:13px}.sample-tab .tab-type{font-size:10px}
+.diagnosis{padding:15px 15px}.diagnosis h3{font-size:16px}.diagnosis p{font-size:12px}
+.metric{padding:15px 13px}.metric-num{font-size:24px}.metric-label{font-size:11px}
+.section-title{margin:26px 0 10px;display:block}.section-title h3{font-size:17px}
+.question-title .tabs{width:100%;margin-top:10px}.tabs button{flex:1}
+.section-inner,.question-panel{padding:17px 15px}
+.barrow{grid-template-columns:40px minmax(0,1fr) 51px;gap:7px}
+.q{height:44px;min-height:44px}
+.insight{padding:17px}
+.quote{padding:18px}.quote p{font-size:13px}.quote .teacher{display:block}
+.quote .teacher span{display:block}
+}
+@media(max-width:350px){.sample-tab .tab-type{font-size:9px}.metric-num{font-size:22px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{body{background:#fff}.top{border:none}.tabs{display:none}.q{break-inside:avoid}}
 
-  </style>
+</style>
 </head>
 <body>
 <header class="top"><div class="top-in">
-  <div class="nav"><div class="brand">2310 <span style="color:#99c4ff">APEX</span><small>LEARNING INSIGHT SYSTEM</small></div><span class="navtag">학부모 체험 리포트</span></div>
-  <div class="intro"><div class="eyebrow">2310 APEX · 김성재 강사</div><h1>점수만 보는 국어가 아닌,<br><em>틀린 이유까지 추적하는 국어.</em></h1><p>주간지 테스트의 오답 패턴을 분석해 학생별 취약점을 찾아내고, 김성재 강사가 필요한 학습 처방과 재평가 방향을 제시합니다.</p><a class="intro-cta" href="#report">학부모 체험 리포트 바로 보기 ↓</a></div>
+<div class="nav"><div class="brand">2310 <span>APEX</span><small>STUDENT ANALYSIS</small></div><span class="navtag">학부모 열람용 · 샘플</span></div>
+<div class="intro"><div class="eyebrow">김성재 강사 · 예비 고1 국어</div><h1>주간지 학습 분석 <em>리포트</em></h1><p>맞힌 문제 수보다 중요한 것은 틀린 이유입니다. 오답 패턴을 확인하고, 학생에게 필요한 보완 학습을 구체적으로 안내합니다.</p><a class="intro-cta" href="#report">분석 사례 확인하기 ↓</a></div>
 </div></header>
 <main class="layout">
-  <div class="sample" role="note"><span aria-hidden="true">ⓘ</span><div><strong>홍보용 가상 데이터입니다.</strong> 아래 학생, 점수, 집단 평균, 피드백은 시스템 작동 방식을 설명하기 위한 예시이며 실제 학생 기록이나 성적이 아닙니다.</div></div>
-  <section class="panel demo-selector" id="report" aria-labelledby="demo-header"><div class="demo-selector-head"><h2 id="demo-header">학생별 분석 샘플을 선택해 보세요</h2><span>예비 고1 대상 · 모든 사례는 가상 데이터입니다.</span></div><div class="sample-tabs" role="group" aria-label="샘플 학생 선택"><button type="button" class="sample-tab active" data-student="A" aria-pressed="true"><span class="tab-name">학생 A</span><span class="tab-type">문법 취약</span></button><button type="button" class="sample-tab" data-student="B" aria-pressed="false"><span class="tab-name">학생 B</span><span class="tab-type">독서 취약</span></button><button type="button" class="sample-tab" data-student="C" aria-pressed="false"><span class="tab-name">학생 C</span><span class="tab-type">문학 취약</span></button></div></section>
+  <div class="sample" role="note"><span aria-hidden="true">※</span><div><strong>체험용 가상 리포트</strong> — 학생, 점수, 오답 사유와 피드백은 기능 설명을 위해 구성한 예시이며 실제 학생 기록이 아닙니다.</div></div>
+  <section class="panel demo-selector" id="report" aria-labelledby="demo-header"><div class="demo-selector-head"><h2 id="demo-header">분석 사례 선택</h2><span>문법 · 독서 · 문학 사례를 비교할 수 있습니다.</span></div><div class="sample-tabs" role="group" aria-label="샘플 학생 선택"><button type="button" class="sample-tab active" data-student="A" aria-pressed="true"><span class="tab-name">학생 A</span><span class="tab-type">문법 취약</span></button><button type="button" class="sample-tab" data-student="B" aria-pressed="false"><span class="tab-name">학생 B</span><span class="tab-type">독서 취약</span></button><button type="button" class="sample-tab" data-student="C" aria-pressed="false"><span class="tab-name">학생 C</span><span class="tab-type">문학 취약</span></button></div></section>
   <section class="panel profile" aria-label="예시 학생 정보"><div class="profile-name"><div class="avatar" id="avatar">A</div><div><span class="overline">STUDENT ANALYSIS · SAMPLE</span><h2 id="profileTitle">예비 고1 · 샘플 학생 A</h2><p>국어 주간지 테스트 · 1·2회차 통합 분석</p></div></div><span class="reportpill">DEMO REPORT</span></section>
-  <section class="diagnosis" aria-live="polite"><span class="overline">APEX 핵심 진단 · ONE-LINE INSIGHT</span><h3 id="diagnosisTitle">개념을 이해해도 새로운 사례에서 판단이 흔들립니다.</h3><p id="diagnosisText">같은 개념을 적용하는 과정에서 반복 오답이 확인되었습니다.</p></section>
+  <section class="diagnosis" aria-live="polite"><span class="overline">핵심 진단</span><h3 id="diagnosisTitle">개념을 이해해도 새로운 사례에서 판단이 흔들립니다.</h3><p id="diagnosisText">같은 개념을 적용하는 과정에서 반복 오답이 확인되었습니다.</p></section>
   <section class="stats" aria-label="핵심 분석 지표">
    <article class="panel metric"><div class="metric-label">종합 정답률</div><div class="metric-num" id="totalPct">70.8%</div><small id="totalCount">총 24문항 중 17문항 정답</small></article>
    <article class="panel metric"><div class="metric-label">샘플 집단 평균</div><div class="metric-num" id="groupPct">68.1%</div><small>가상 학생 3명 · 참고용</small></article>
    <article class="panel metric"><div class="metric-label">1→2회차 변화</div><div class="metric-num growth" id="deltaPct">+8.3%p</div><small id="deltaFoot">66.7% → 75.0%</small></article>
    <article class="panel metric"><div class="metric-label">최우선 보완 영역</div><div class="metric-num bad" id="weakArea" style="font-size:26px">문법</div><small id="weakFoot">8문항 중 4문항 오답</small></article>
   </section>
-  <div class="section-title"><div><h3><i class="title-mark"></i>학습 현황</h3><p>영역별 정답률과 회차별 변화</p></div></div>
+  <div class="section-title"><div><h3><i class="title-mark"></i>학습 결과</h3><p>영역별 정답률과 회차별 변화</p></div></div>
   <section class="two">
    <article class="panel section-inner"><div class="panel-label">영역별 학습 정확도</div><p class="sub">샘플 구성: 문학·독서·문법 각 8문항 기준</p>
     <div class="barrow"><strong>문학</strong><div class="track"><div id="fill-문학" class="fill" style="width:87.5%"></div></div><div class="num">87.5%</div></div>
@@ -121,19 +178,19 @@ button:focus-visible,a:focus-visible{outline:3px solid #407dd3}
      <div class="footnote">회차별 난이도가 다를 수 있어 점수 변화만으로 실력 향상을 단정하지 않습니다.</div>
    </article>
   </section>
-  <div class="section-title question-title"><div><h3><i class="title-mark"></i>문항별 오답 정밀 분석</h3><p>회차와 문항을 눌러 상세 분석을 체험해 보세요.</p></div><div class="tabs" role="tablist" aria-label="회차 선택"><button class="active" type="button" data-filter="all" role="tab" aria-selected="true">전체</button><button type="button" data-filter="1" role="tab" aria-selected="false">1회차</button><button type="button" data-filter="2" role="tab" aria-selected="false">2회차</button></div></div>
+  <div class="section-title question-title"><div><h3><i class="title-mark"></i>문항별 오답 확인</h3><p>오답 문항을 누르면 판단 오류와 보완 지도를 확인할 수 있습니다.</p></div><div class="tabs" role="tablist" aria-label="회차 선택"><button class="active" type="button" data-filter="all" role="tab" aria-selected="true">전체</button><button type="button" data-filter="1" role="tab" aria-selected="false">1회차</button><button type="button" data-filter="2" role="tab" aria-selected="false">2회차</button></div></div>
   <section class="panel question-panel">
-    <div class="question-top"><div><div class="panel-label">문항별 정오답 현황</div><p>오답 문항을 선택하면 원인과 보완 방향이 표시됩니다.</p></div><div class="legend"><span><i class="dot"></i>정답</span><span><i class="dot wrong"></i>오답</span></div></div>
+    <div class="question-top"><div><div class="panel-label">문항별 정오답 현황</div><p>문항을 터치하면 원인 분석과 지도 방향이 펼쳐집니다.</p></div><div class="legend"><span><i class="dot"></i>정답</span><span><i class="dot wrong"></i>오답</span></div></div>
     <div id="questions" aria-label="회차별 문제 선택"></div>
-    <div class="detail" id="detail" aria-live="polite"></div><span class="report-disclaimer">분석 설명은 실제 시험지를 검토해 도출한 결과가 아닌 기능 안내용 가상 사례입니다.</span>
+    <div class="detail" id="detail" aria-live="polite" hidden></div><span class="report-disclaimer">분석 설명은 실제 시험지를 검토해 도출한 결과가 아닌 기능 안내용 가상 사례입니다.</span>
   </section>
   <div class="pattern" id="repeatPattern" role="status"><strong>반복 오답 추적</strong><span id="repeatText">1·2회차를 함께 살펴 동일 유형이 반복되는지 확인합니다.</span></div>
-  <div class="section-title"><div><h3><i class="title-mark"></i>학생별 맞춤 학습 처방</h3><p>점수 나열이 아니라 원인 → 보완 → 재확인으로 이어지는 지도</p></div></div>
+  <div class="section-title"><div><h3><i class="title-mark"></i>맞춤 보완 계획</h3><p>점수 나열이 아니라 원인 → 보완 → 재확인으로 이어지는 지도</p></div></div>
   <section class="insights" id="insights" aria-live="polite"></section>
-  <div class="section-title"><div><h3><i class="title-mark"></i>다음 주 관리 계획</h3><p>예시 학생에게 적용할 수 있는 3단계 학습 관리 프로세스</p></div></div>
+  <div class="section-title"><div><h3><i class="title-mark"></i>관리 방식</h3><p>진단과 학습 보완을 연결하는 3단계 절차</p></div></div>
   <section class="actionstep" aria-label="오답 개선 프로세스"><div class="step-card"><b>STEP 01 · 진단</b><strong>틀린 이유 분류</strong><p>문항별 오류의 원인을 개념·근거·적용 과정으로 나누어 확인합니다.</p></div><div class="step-card"><b>STEP 02 · 보완</b><strong>유형별 맞춤 과제</strong><p>반복되는 오류 유형을 우선 배정하고, 강사가 설명 과정까지 점검합니다.</p></div><div class="step-card"><b>STEP 03 · 재확인</b><strong>유사·변형 문항 재평가</strong><p>학습 후 같은 유형에서 오류가 줄었는지 확인하고 다음 과제를 조정합니다.</p></div></section>
-  <div class="quote"><div class="qtitle">KIM SUNGJAE · TEACHER FEEDBACK</div><p id="feedbackText">“문학에서는 안정적인 이해도를 보였지만, 문법에서 비슷한 개념을 구분하는 과정의 오류가 반복되고 있습니다. 다음 학습에서는 문법 적용 문제를 우선 배정하고, 근거를 설명하는 훈련과 재평가를 통해 개선 여부를 확인하겠습니다.”</p><div class="teacher"><span>국어 김성재 강사 · 2310 APEX</span><span>가상 학생에 대한 피드백 예시</span></div></section>
-  <footer class="bottom"><strong>2310 APEX</strong>개별 진단 · 오답 분석 · 맞춤 피드백 · 보완 확인<span>본 페이지는 학부모 설명용 독립 데모이며, 실사용 APEX 전체 기능과 연결되어 있지 않습니다.</span><span>김성재 강사 수강 상담은 안내받으신 홍보 문자로 회신해 주세요.</span></footer>
+  <div class="quote"><div class="qtitle">김성재 강사 피드백</div><p id="feedbackText">“문학에서는 안정적인 이해도를 보였지만, 문법에서 비슷한 개념을 구분하는 과정의 오류가 반복되고 있습니다. 다음 학습에서는 문법 적용 문제를 우선 배정하고, 근거를 설명하는 훈련과 재평가를 통해 개선 여부를 확인하겠습니다.”</p><div class="teacher"><span>국어 김성재 강사 · 2310 APEX</span><span>가상 학생에 대한 피드백 예시</span></div></section>
+  <footer class="bottom"><strong>2310 APEX</strong>오답 진단 · 보완 학습 · 재평가<span>본 페이지는 학부모 설명용 독립 데모이며, 실사용 APEX 전체 기능과 연결되어 있지 않습니다.</span><span>김성재 강사 수강 상담은 안내받으신 홍보 문자로 회신해 주세요.</span></footer>
 </main>
 <script>
 'use strict';
@@ -170,7 +227,7 @@ const students={
   detail:{'1-2':['독서의 세부 조건','지문에 제시된 단서를 끝까지 확인하지 않았습니다.','조건을 근거 문장에 대응시켜 설명합니다.'],'1-4':['화자의 태도','시적 상황과 화자의 태도를 혼동했습니다.','시어와 서술 태도를 연결해 설명하게 합니다.'],'1-10':['표현의 기능 판단','표현을 문자 그대로만 해석해 정서적 기능을 놓쳤습니다.','앞뒤 표현과 화자의 태도를 비교합니다.'],'1-12':['근거 연결','선지 판단에 필요한 조건 하나를 놓쳤습니다.','근거 확인 순서를 점검합니다.'],'2-4':['화자 정서 반복 오류','앞 회차처럼 표현에 드러난 태도를 과장해 판단했습니다.','정서의 강도를 뒷받침하는 표현을 표시합니다.'],'2-7':['문법 개념 적용','같은 개념을 다른 예문에 적용하면서 기준이 흔들렸습니다.','적용 조건을 재정리합니다.'],'2-9':['인물의 심리 추론','대화와 행동을 근거로 한 심리 판단을 일부 생략했습니다.','인물 행동에 대한 명시적 근거를 찾습니다.'],'2-10':['표현의 역할 반복 오류','앞 회차와 유사하게 표현의 효과와 기능을 혼동했습니다.','표현법 자체와 문맥에서의 기능을 분리해 설명합니다.']}
  }
 };
-let current='A',filter='all',selected={session:1,number:6};
+let current='A',filter='all',selected=null;
 const els={questions:document.getElementById('questions'),detail:document.getElementById('detail')};
 function fmt(x){return x.toFixed(1)+'%'}
 function countRight(s,session){return 12-s.wrong[session].length}
@@ -189,7 +246,7 @@ function updateSummary(){
  document.querySelectorAll('.barrow').forEach(row=>{const a=row.querySelector('strong').textContent,percent=count[a].right/count[a].total*100;const fill=row.querySelector('.fill'),num=row.querySelector('.num');fill.style.width=percent+'%';fill.classList.toggle('low',a===weak);num.textContent=fmt(percent);num.style.color=a===weak?'var(--red)':'';});
  put('count1','1회차 · '+one+' / 12문항');put('count2','2회차 · '+two+' / 12문항');put('score1',fmt(p1));put('score2',fmt(p2));document.getElementById('track1').style.width=p1+'%';document.getElementById('track2').style.width=p2+'%';
  put('changeInsight',s.change);put('repeatText',s.recurring);put('feedbackText','“'+s.feedback+'”');
- document.getElementById('insights').innerHTML=s.ins.map((a,i)=>'<article class="panel insight"><small>'+String(i+1).padStart(2,'0')+' · '+escapeHTML(a[0])+'</small><strong>'+escapeHTML(a[1])+'</strong><p>'+escapeHTML(a[2])+'</p></article>').join('');
+ document.getElementById('insights').innerHTML=s.ins.map((a,i)=>'<article class="panel insight"><small>'+String(i+1).padStart(2,'0')+' · '+escapeHTML(({PRIORITY:'우선 보완',CAUSE:'지도 방법','FOLLOW-UP':'재확인'})[a[0]]||a[0])+'</small><strong>'+escapeHTML(a[1])+'</strong><p>'+escapeHTML(a[2])+'</p></article>').join('');
  document.querySelectorAll('[data-student]').forEach(b=>{let active=b.dataset.student===current;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
 }
 function renderQuestions(){
@@ -199,16 +256,17 @@ function renderQuestions(){
   const group=document.createElement('div');group.className='qgroup';
   const title=document.createElement('h4');title.innerHTML=k+'회차 · 오답 '+wrong[k].length+'문항 <span>총 12문항</span>';group.appendChild(title);
   const list=document.createElement('div');list.className='qlist';
-  for(let n=1;n<=12;n++){const b=document.createElement('button');b.type='button';const w=wrong[k].includes(n);b.className='q'+(w?' wrong':'')+(selected.session===k&&selected.number===n?' current':'');b.textContent=String(n).padStart(2,'0');b.setAttribute('aria-label',k+'회차 '+n+'번 '+(w?'오답':'정답'));b.setAttribute('aria-pressed',String(selected.session===k&&selected.number===n));b.addEventListener('click',()=>{selected={session:k,number:n};renderQuestions();});list.appendChild(b);}
+  for(let n=1;n<=12;n++){const b=document.createElement('button');b.type='button';const w=wrong[k].includes(n);b.className='q'+(w?' wrong':'')+(selected&&selected.session===k&&selected.number===n?' current':'');b.textContent=String(n).padStart(2,'0');b.setAttribute('aria-label',k+'회차 '+n+'번 '+(w?'오답':'정답'));b.setAttribute('aria-pressed',String(!!selected&&selected.session===k&&selected.number===n));b.addEventListener('click',()=>{selected={session:k,number:n};renderQuestions();});list.appendChild(b);}
   group.appendChild(list);els.questions.appendChild(group);
  }
+ if(!selected){els.detail.hidden=true;els.detail.innerHTML='';return;}els.detail.hidden=false;
  const k=selected.session,n=selected.number,key=k+'-'+n,w=wrong[k].includes(n),a=areas[k][n-1],d=s.detail[key];
  const explanation=w?'<h4>'+escapeHTML(d[0])+'</h4><p><strong>오답 원인 예시:</strong> '+escapeHTML(d[1])+'</p><p class="coachtip"><b>강사 보완 처방:</b> '+escapeHTML(d[2])+'</p>':'<h4>'+escapeHTML(a)+' · 정답 문항</h4><p>정답으로 처리된 문항입니다. 정답 여부 외에도 선택지 판단의 근거를 설명할 수 있는지 확인합니다.</p><p class="coachtip"><b>강사 확인 포인트:</b> 풀이 과정과 근거 설명을 확인하여 정답의 안정성을 점검합니다.</p>';
  els.detail.innerHTML='<div class="detail-header"><span class="chip">'+k+'회차 '+n+'번</span><span class="chip">'+escapeHTML(a)+'</span><span class="chip '+(w?'alert':'')+'">'+(w?'오답 · 보완 대상':'정답')+'</span></div>'+explanation;
 }
 function render(){updateSummary();renderQuestions()}
-document.querySelectorAll('[data-student]').forEach(b=>b.addEventListener('click',()=>{current=b.dataset.student;filter='all';selected={session:1,number:students[current].wrong[1][0]};document.querySelectorAll('[data-filter]').forEach(el=>{const active=el.dataset.filter==='all';el.classList.toggle('active',active);el.setAttribute('aria-selected',String(active));});render();}));
-document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(el=>{const active=el===b;el.classList.toggle('active',active);el.setAttribute('aria-selected',String(active));});if(filter!=='all'&&selected.session!==Number(filter))selected={session:Number(filter),number:students[current].wrong[Number(filter)][0]};renderQuestions();}));
+document.querySelectorAll('[data-student]').forEach(b=>b.addEventListener('click',()=>{current=b.dataset.student;filter='all';selected=null;document.querySelectorAll('[data-filter]').forEach(el=>{const active=el.dataset.filter==='all';el.classList.toggle('active',active);el.setAttribute('aria-selected',String(active));});render();}));
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(el=>{const active=el===b;el.classList.toggle('active',active);el.setAttribute('aria-selected',String(active));});selected=null;renderQuestions();}));
 render();
 </script>
 </body>
