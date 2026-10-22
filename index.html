@@ -1,273 +1,356 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b1d36">
-  <meta name="description" content="2310 APEX 국어 학습 분석 시스템의 학부모용 체험 리포트입니다. 모든 학생 정보와 수치는 가상 예시입니다.">
-  <title>2310 APEX | 학부모 체험 리포트</title>
-  <style>
-
-:root{--ink:#192737;--muted:#647286;--line:#e1e7ee;--bg:#f7f9fc;--card:#fff;--blue:#315f9d;--navy:#15263c;--red:#b15a4c;--green:#287b65}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#122e43">
+<meta name="description" content="2310 APEX 주간지 학습 분석 통합 학부모 리포트의 익명화 체험 예시">
+<title>2310 APEX | 주간지 학부모 통합 리포트 체험</title>
+<style>
+:root{--navy:#122e43;--navy-2:#203f56;--ink:#152d40;--text:#3c4f5e;--muted:#738494;--blue:#7399b4;--blue-light:#eaf1f6;--cream:#f7f5ee;--cream-dark:#b49a68;--red:#b6534e;--red-bg:#fff0ed;--green:#237865;--line:#dbe4eb;--page:#f6f8fa;--white:#fff;--radius:13px}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:20px}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;line-height:1.6;word-break:keep-all}
-button{font:inherit;cursor:pointer}a{color:inherit;text-decoration:none}
-button:focus-visible,a:focus-visible{outline:3px solid #709be1;outline-offset:3px}
-[hidden]{display:none!important}
-.top{background:#fff;border-bottom:1px solid var(--line)}
-.top-in{max-width:1020px;margin:0 auto;padding:20px 25px 28px}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{font-size:22px;font-weight:850;letter-spacing:-.9px;color:#15263c}
-.brand span{color:#315f9d!important}.brand small{display:block;font-size:9px;letter-spacing:1.5px;color:#7b899b;font-weight:650;margin-top:-5px}
-.navtag{font-size:11px;color:#637187;border:1px solid #dde4ec;border-radius:5px;padding:5px 9px;white-space:nowrap}
-.intro{padding-top:31px;max-width:720px}
-.eyebrow{font-size:12px;font-weight:700;color:#315f9d;letter-spacing:0}
-.intro h1{font-size:clamp(25px,3.8vw,34px);font-weight:800;line-height:1.32;letter-spacing:-.9px;margin:9px 0 11px}
-.intro h1 em{color:#315f9d;font-style:normal}
-.intro p{font-size:14px;color:#5d6b80;line-height:1.8;margin:0;max-width:680px}
-.intro-cta{display:inline-flex;align-items:center;font-size:12px;font-weight:700;color:#315f9d;border-bottom:1px solid #9db9df;padding:0 0 2px;margin-top:16px}
-.layout{max-width:1020px;margin:0 auto;padding:18px 25px 56px}
-.sample{display:flex;gap:8px;align-items:flex-start;font-size:12px;color:#6a7584;background:#f0f3f7;border:1px solid #e2e7ed;border-radius:7px;padding:11px 13px}
-.sample strong{font-weight:800;color:#47566c}
-.panel{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:none}
-.demo-selector{padding:20px 22px 17px;margin-top:15px}
-.demo-selector-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:12px}
-.demo-selector-head h2{font-size:16px;letter-spacing:-.25px;margin:0;font-weight:800}
-.demo-selector-head span{font-size:11px;color:#8996a5}
-.sample-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-.sample-tab{border:1px solid #e0e6ed;background:#fff;border-radius:7px;padding:12px 13px;text-align:left;min-width:0;color:var(--ink);transition:background .12s,border-color .12s}
-.sample-tab.active{border-color:#3b6eab;background:#f0f5fb}
-.sample-tab .tab-name{display:block;font-weight:800;font-size:14px;color:#273952}
-.sample-tab.active .tab-name{color:#245a9b}
-.sample-tab .tab-type{display:block;color:#738296;font-size:12px;margin-top:2px}
-.profile{display:none}
-.diagnosis{margin-top:13px;padding:18px 21px;border-radius:8px;background:#eef3f9;border-left:3px solid #366cab}
-.overline{font-size:11px;font-weight:750;color:#557aa7;letter-spacing:0}
-.diagnosis h3{font-size:17px;line-height:1.5;margin:7px 0 5px;letter-spacing:-.4px}
-.diagnosis p{margin:0;font-size:13px;color:#59697c;line-height:1.75}
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:12px 0 0}
-.metric{padding:18px 17px}
-.metric-label{font-size:12px;color:#6c7a8d;font-weight:650}
-.metric-num{font-size:27px;font-weight:850;letter-spacing:-.75px;margin:7px 0 4px;line-height:1.2;color:#1d3049}
-.metric .growth{color:#267660}.metric .bad{color:#a5554b}
-.metric small{display:block;color:#8390a0;font-size:11px;line-height:1.6}
-.section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin:30px 0 11px}
-.section-title h3{font-size:18px;line-height:1.35;letter-spacing:-.5px;margin:0;font-weight:800}
-.section-title p{margin:4px 0 0;font-size:12px;color:#8390a0}
-.title-mark{display:none}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.section-inner,.question-panel{padding:22px}
-.panel-label{font-size:14px;font-weight:800;margin:0 0 3px}
-.sub{font-size:12px;color:#8591a0;margin:0 0 18px}
-.barrow{display:grid;grid-template-columns:50px 1fr 54px;gap:10px;align-items:center;margin:16px 0;font-size:12px}
-.barrow strong{font-weight:700}
-.track{height:8px;border-radius:5px;background:#edf1f6;overflow:hidden}
-.fill{height:100%;background:#638bbd;border-radius:5px}.fill.low{background:#c78a80}
-.num{text-align:right;font-size:12px;font-weight:700}
-.footnote{margin-top:18px;padding-top:13px;border-top:1px solid #edf0f4;font-size:11px;line-height:1.65;color:#8a96a4}
-.progressitem{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:16px 0 5px;font-size:13px}
-.progressitem span{font-weight:650}.progressitem strong{font-size:17px;color:#315f9d}
-.smalltrack{height:7px;background:#edf1f6;overflow:hidden;border-radius:5px;margin:8px 0 17px}
-.smalltrack b{display:block;height:100%;border-radius:5px;background:#638bbd}
-.delta{margin-top:9px;border-left:2px solid #a7b9ce;background:#f6f8fb;padding:9px 12px;font-size:12px;color:#546477;line-height:1.7}
-.tabs{display:flex;gap:2px;background:#f0f3f7;padding:3px;border-radius:6px;flex-shrink:0}
-.tabs button{border:0;background:transparent;color:#69798d;border-radius:4px;font-size:12px;padding:7px 14px;font-weight:700}
-.tabs button.active{background:#fff;color:#264e7c;box-shadow:0 1px 2px #22334b10}
-.question-top{display:flex;justify-content:space-between;gap:15px;align-items:flex-start;flex-wrap:wrap}
-.question-top p{margin:3px 0 0;font-size:12px;color:#8591a0}
-.legend{display:flex;align-items:center;gap:12px;font-size:11px;color:#78879a}
-.dot{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:4px;background:#dbe5f0}
-.dot.wrong{background:#e4bab3}
-.qgroup{margin-top:19px}.qgroup h4{display:flex;justify-content:space-between;gap:10px;margin:0 0 10px;font-size:13px;color:#4e6077}
-.qgroup h4 span{font-weight:450;color:#8b98a8;font-size:11px}
-.qlist{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:7px}
-.q{border:1px solid #e2e9f1;background:#f4f7fa;height:40px;border-radius:6px;color:#526d8b;font-weight:700;font-size:12px;min-width:0}
-.q.wrong{background:#fbefec;color:#a14c42;border-color:#ebc9c2}
-.q.current{outline:2px solid #4778b0;outline-offset:0}
-.q.current.wrong{outline-color:#b7645b}
-.detail{border:1px solid #dce5ef;border-radius:7px;padding:18px;margin-top:15px;background:#fbfcfe;min-height:0}
-.detail-header{display:flex;flex-wrap:wrap;gap:6px}
-.chip{display:inline-block;font-size:11px;border-radius:4px;background:#eaf0f7;color:#536d8c;padding:3px 7px;font-weight:650}
-.chip.alert{background:#f8e9e6;color:#a4574c}
-.detail h4{font-size:15px;margin:13px 0 7px;letter-spacing:-.3px}
-.detail p{font-size:13px;color:#54667a;line-height:1.8;margin:7px 0}
-.detail .coachtip{border-top:1px solid #e1e8f0;padding-top:11px;margin-top:12px}
-.detail .coachtip b{color:#315f9d}
-.report-disclaimer{display:block;color:#909cab;font-size:11px;margin-top:13px}
-.pattern{border:1px solid var(--line);border-left:3px solid #8da6c4;background:#fff;border-radius:7px;padding:17px 19px;margin-top:12px;font-size:13px;color:#5b6d81;line-height:1.75}
-.pattern strong{display:block;font-size:13px;color:#283f58;margin-bottom:4px}
-.insights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.insight{padding:19px}.insight small{font-size:11px;color:#7287a1;font-weight:700}.insight strong{display:block;font-size:14px;margin:7px 0}.insight p{font-size:12px;color:#5e7085;line-height:1.75;margin:0}
-.actionstep{display:flex;gap:0;border:1px solid var(--line);border-radius:8px;background:#fff;overflow:hidden}
-.step-card{flex:1;padding:17px 19px;border-right:1px solid var(--line)}.step-card:last-child{border-right:0}
-.step-card b{display:block;color:#7288a1;font-size:11px;margin-bottom:4px}
-.step-card strong{display:block;font-size:13px;margin-bottom:3px}
-.step-card p{font-size:12px;color:#748399;margin:0;line-height:1.65}
-.quote{margin-top:23px;border-radius:8px;border:1px solid #dce4ed;background:#fff;padding:22px 24px;color:var(--ink)}
-.quote .qtitle{font-size:12px;color:#406b9b;font-weight:750;letter-spacing:0}
-.quote p{font-size:14px;line-height:1.85;font-weight:550;color:#344b63;margin:10px 0 14px;letter-spacing:-.15px}
-.quote .teacher{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:11px;color:#8a97a7}
-.bottom{margin-top:27px;text-align:center;font-size:12px;color:#8d98a8;line-height:1.8}
-.bottom strong{display:block;font-size:16px;color:#385370;letter-spacing:-.4px;margin-bottom:4px}
-.bottom span{display:block;margin-top:4px}
-@media(max-width:800px){
-.top-in{padding:18px 19px 25px}.layout{padding:15px 16px 42px}
-.two{grid-template-columns:1fr}.insights{grid-template-columns:1fr}
-.qlist{grid-template-columns:repeat(6,minmax(0,1fr))}
-.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
-.actionstep{display:grid;grid-template-columns:1fr}
-.step-card{border-right:0;border-bottom:1px solid var(--line)}
-.step-card:last-child{border-bottom:0}
-}
-@media(max-width:480px){
-.top-in{padding:16px 16px 22px}.layout{padding:12px 12px 35px}
-.brand{font-size:20px}.navtag{font-size:10px;padding:4px 7px}
-.intro{padding-top:25px}.intro h1{font-size:25px;letter-spacing:-.8px}
-.intro p{font-size:13px}
-.sample{font-size:11px;padding:10px 11px}
-.demo-selector{padding:15px 13px}.demo-selector-head{display:block}
-.demo-selector-head h2{font-size:15px}.demo-selector-head span{display:block;margin-top:2px}
-.sample-tabs{gap:6px;margin-top:13px}
-.sample-tab{padding:11px 7px}.sample-tab .tab-name{font-size:13px}.sample-tab .tab-type{font-size:10px}
-.diagnosis{padding:15px 15px}.diagnosis h3{font-size:16px}.diagnosis p{font-size:12px}
-.metric{padding:15px 13px}.metric-num{font-size:24px}.metric-label{font-size:11px}
-.section-title{margin:26px 0 10px;display:block}.section-title h3{font-size:17px}
-.question-title .tabs{width:100%;margin-top:10px}.tabs button{flex:1}
-.section-inner,.question-panel{padding:17px 15px}
-.barrow{grid-template-columns:40px minmax(0,1fr) 51px;gap:7px}
-.q{height:44px;min-height:44px}
-.insight{padding:17px}
-.quote{padding:18px}.quote p{font-size:13px}.quote .teacher{display:block}
-.quote .teacher span{display:block}
-}
-@media(max-width:350px){.sample-tab .tab-type{font-size:9px}.metric-num{font-size:22px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-@media print{body{background:#fff}.top{border:none}.tabs{display:none}.q{break-inside:avoid}}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:var(--page);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;letter-spacing:-.025em;line-height:1.6;word-break:keep-all;-webkit-font-smoothing:antialiased}
+button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #7da3cc;outline-offset:3px}
+button:disabled{cursor:default}
+.header{background:var(--navy);color:var(--white)}
+.header-inner{max-width:1040px;margin:0 auto;padding:15px 28px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{font-size:21px;font-weight:820;letter-spacing:-.04em}.logo span{font-weight:500;margin-left:6px;font-size:11px;letter-spacing:.12em;color:#b2cad7}
+.header-mark{font-size:11px;font-weight:650;color:#c3d4dd}
+.container{max-width:1040px;margin:0 auto;padding:35px 28px 64px}
+.micro{color:#57728a;font-size:12px;letter-spacing:.045em;font-weight:750}
+h1,h2,h3,p{margin-top:0}
+.title-row{display:flex;align-items:end;justify-content:space-between;gap:16px}
+h1{font-size:clamp(26px,4vw,37px);line-height:1.25;letter-spacing:-.055em;margin:10px 0 7px;font-weight:820}
+.lead{font-size:14px;color:var(--text);margin:0;line-height:1.75}
+.pills{display:flex;gap:6px;flex-wrap:wrap;margin-top:15px}
+.pill{font-size:11px;border:1px solid #d7e1e8;background:white;border-radius:999px;padding:5px 10px;color:#586e7f;font-weight:650}
+.pill.demo{background:#f1f6f9;color:#486c86;border-color:#cfdee9}
+.report-btn{border:1px solid #b9cbd6;background:#fff;color:#345d78;border-radius:8px;padding:10px 13px;font-size:12px;font-weight:750;white-space:nowrap}
+.notice{margin-top:20px;border-left:3px solid #839fb0;background:#eef3f6;padding:12px 15px;font-size:12px;color:#536c7d;line-height:1.75}
+.notice strong{color:#25465f}
+.section{margin-top:29px}
+.section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px}
+.section-heading h2{font-size:19px;letter-spacing:-.045em;margin:0;font-weight:820}
+.section-heading .hint{color:#7a8b97;font-size:12px;margin:0;line-height:1.5;text-align:right}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 2px 9px rgba(17,53,82,.025)}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.kpi{padding:20px 19px}
+.kpi-label{color:#627889;font-size:12px;font-weight:720}
+.kpi strong{display:block;font-size:clamp(22px,3vw,32px);letter-spacing:-.05em;margin:5px 0 2px;font-weight:800;font-variant-numeric:tabular-nums}
+.kpi small{color:#8192a1;font-size:11px;display:block;line-height:1.4}
+.kpi:nth-child(2){background:#f5f8fb}
+.keyfinding{margin-top:12px;border:1px solid #d5e2ea;background:#edf3f7;border-radius:10px;padding:16px 19px;display:flex;gap:13px;align-items:flex-start}
+.keyfinding .keynum{font-weight:800;font-size:11px;color:#456d87;white-space:nowrap;margin-top:2px;letter-spacing:.045em}
+.keyfinding strong{font-weight:780;display:block;font-size:15px;line-height:1.45}
+.keyfinding p{margin:3px 0 0;font-size:12px;color:#546c7d;line-height:1.7}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pad{padding:22px}
+.panel-title{font-size:14px;font-weight:790;letter-spacing:-.025em;margin:0 0 17px}
+.compare-row{display:grid;grid-template-columns:110px minmax(0,1fr) 57px;gap:9px;align-items:center;margin:16px 0}
+.compare-row .name{font-size:12px;color:#485f72;font-weight:660}
+.bar-track{height:10px;border-radius:8px;background:#e9eff3;overflow:hidden}
+.bar-fill{height:100%;width:var(--value);background:var(--navy);border-radius:8px}
+.bar-fill.secondary{background:#91aec0}
+.bar-fill.muted{background:#bda16b}
+.compare-row .value{font-size:13px;text-align:right;font-weight:790;font-variant-numeric:tabular-nums}
+.mini-note{font-size:11px;color:#8191a0;line-height:1.65;margin:12px 0 0}
+.result-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.result{border:1px solid #e1e9ee;border-radius:9px;padding:13px 14px}
+.result .round{font-size:12px;color:#567088;font-weight:720}
+.result b{display:block;font-size:25px;letter-spacing:-.035em;line-height:1.35;margin-top:2px;font-variant-numeric:tabular-nums}
+.result small{color:#8093a1;font-size:11px}
+.result .roundbar{height:6px;margin-top:12px;background:#edf2f5;border-radius:4px;overflow:hidden}
+.result .roundbar>span{display:block;height:100%;width:var(--value);background:#7c9eb5}
+.area-row{display:grid;grid-template-columns:132px minmax(0,1fr) 36px;gap:10px;align-items:center;margin:14px 0}
+.area-row span{font-size:12px;color:#4c6273;line-height:1.4}
+.area-row strong{font-size:12px;text-align:right;font-variant-numeric:tabular-nums}
+.area-row .bar-track{height:9px}
+.area-row .bar-fill{background:#8aa6b9}
+.area-row:nth-of-type(3) .bar-fill{background:#baaa86}
+.area-row:nth-of-type(4) .bar-fill{background:#baaa86}
+.area-note{font-size:11px;color:#7d8f9f;margin:18px 0 0;line-height:1.75;padding-top:12px;border-top:1px solid #edf1f4}
+.switcher{display:flex;gap:7px;background:#eff3f6;border-radius:8px;padding:4px;width:max-content;max-width:100%}
+.switcher button{border:0;background:transparent;color:#6c8292;border-radius:6px;padding:8px 20px;font-size:12px;font-weight:750}
+.switcher button[aria-pressed="true"]{background:#fff;box-shadow:0 1px 4px #213d5118;color:#234d67}
+.question-card{padding:21px}
+.question-instruct{margin:15px 0 14px;font-size:12px;color:#728795}
+.question-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:7px}
+.q{height:40px;min-width:0;border:1px solid #dde6eb;border-radius:7px;background:#f4f7f9;color:#638096;font-size:12px;font-weight:750}
+.q.wrong{background:var(--red-bg);color:var(--red);border-color:#edc7c2}
+.q[aria-pressed="true"]{outline:2px solid #285f85;outline-offset:2px;box-shadow:0 2px 7px rgba(30,61,80,.09)}
+.q.wrong[aria-pressed="true"]{outline-color:#b6534e;background:#fbe5df}
+.q:focus-visible{outline:3px solid #2d6e99;outline-offset:2px}
+.legend{display:flex;gap:13px;align-items:center;color:#8091a0;font-size:11px;margin-top:13px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;background:#f4f7f9;border:1px solid #dde6eb;border-radius:2px;margin-right:5px;vertical-align:middle}
+.legend i.bad{background:#fff0ed;border-color:#edc7c2}
+.details-panel{margin-top:17px;background:#f8fafb;border:1px solid #dfE8ee;border-radius:10px;padding:17px 18px}
+.details-panel[hidden]{display:none}
+.detail-top{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.tag{font-size:11px;font-weight:720;border-radius:4px;padding:3px 7px;background:#e8eff4;color:#4a6b81}
+.tag.bad{color:#a64d48;background:#f9e8e5}
+.details-panel h3{font-size:16px;line-height:1.45;margin:11px 0 8px}
+.detail-label{font-size:11px;color:#61798c;font-weight:750;margin-top:12px;margin-bottom:3px}
+.detail-text{font-size:13px;color:#415d70;line-height:1.75;margin:0}
+.detail-foot{border-top:1px solid #dfe7ec;margin-top:14px;padding-top:11px;font-size:11px;color:#7a8b98;line-height:1.7}
+.full-list details{border:1px solid #dce5eb;border-radius:10px;background:#fff;margin-top:10px;overflow:hidden}
+.full-list summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;font-size:13px;font-weight:780;cursor:pointer}
+.full-list summary::-webkit-details-marker{display:none}
+.full-list summary .count{color:#7890a2;font-size:11px;font-weight:630}
+.full-list summary::after{content:'+';font-weight:500;font-size:21px;color:#59798e}
+.full-list details[open] summary::after{content:'−'}
+.full-list .list-body{padding:0 18px 18px}
+.full-list .item{display:grid;grid-template-columns:79px minmax(0,1fr);gap:10px;padding:10px 0;border-top:1px solid #eef2f5;font-size:12px}
+.full-list .item .number{color:#a4534e;font-weight:800}
+.full-list .item .item-title{font-weight:700;margin-bottom:3px}
+.full-list .item .item-text{color:#6a7d8b;line-height:1.7}
+.priority-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.priority{padding:19px 19px 17px}
+.priority .priority-num{color:#6c899b;font-size:11px;font-weight:790}
+.priority h3{font-size:15px;margin:6px 0 4px;line-height:1.5}
+.priority .ids{font-size:11px;color:#8a99a4;line-height:1.5;min-height:31px}
+.priority p{font-size:12px;color:#506879;line-height:1.8;margin:13px 0 0}
+.status{padding:18px 20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.status-block{display:flex;gap:9px;align-items:flex-start}
+.status-ico{flex:0 0 20px;width:20px;height:20px;border-radius:100%;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;background:#728b9e;font-weight:800;margin-top:1px}
+.status-ico.ok{background:var(--green)}
+.status-block b{display:block;font-size:12px}.status-block span{display:block;color:#8593a0;font-size:11px;margin-top:2px;line-height:1.5}
+.teacher{background:#f0f4f7;border-radius:10px;padding:19px 21px;margin-top:20px;border:1px solid #dce6ed}
+.teacher h3{font-size:13px;margin:0 0 8px;letter-spacing:-.015em}
+.teacher p{font-size:13px;line-height:1.85;color:#4b6578;margin:0}
+.teacher footer{font-size:11px;color:#7a8f9e;text-align:right;margin-top:9px}
+.report-foot{margin-top:30px;padding-top:17px;border-top:1px solid #dbe4eb;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#8799a7;font-size:11px;line-height:1.65}
+.report-foot b{color:#415d70;font-weight:760}
 
+/* 오답 문항 → 맞춤 재숙제 → 재평가 연계 */
+.assignment-intro{padding:18px 20px;display:flex;align-items:start;justify-content:space-between;gap:16px;background:#f0f5f8}
+.assignment-intro strong{font-size:14px;font-weight:800;display:block}
+.assignment-intro p{font-size:12px;color:#567080;line-height:1.8;margin:5px 0 0;max-width:695px}
+.assignment-intro p b{font-weight:800;color:#2b5168}
+.assignment-pending{flex:none;border-radius:5px;border:1px solid #c9dbe5;background:#fff;color:#52748a;padding:6px 8px;font-size:11px;font-weight:700;white-space:nowrap}
+.assignment-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:11px 0 13px}
+.assignment-steps>div{background:#fff;border:1px solid var(--line);border-radius:9px;padding:13px 12px;min-width:0}
+.step-index{display:block;font-size:10px;font-weight:800;letter-spacing:.03em;color:#7695a9;margin-bottom:5px}
+.assignment-steps b{display:block;font-size:12px;line-height:1.45}
+.assignment-steps small{display:block;font-size:11px;color:#7c90a0;line-height:1.55;margin-top:4px}
+.assignment-group{margin-bottom:9px;overflow:hidden}
+.assignment-group summary{display:flex;gap:13px;align-items:center;list-style:none;cursor:pointer;padding:16px 17px;min-height:77px}
+.assignment-group summary::-webkit-details-marker{display:none}
+.priority-rank{flex:0 0 auto;color:#48718d;font-size:11px;font-weight:800;background:#e8f0f5;border-radius:5px;padding:5px 8px}
+.assignment-summary{flex:1;min-width:0;display:block}
+.assignment-summary strong{display:block;font-size:14px;line-height:1.45}
+.assignment-summary small{display:block;font-size:11px;line-height:1.6;color:#7a8d9b;font-weight:550;margin-top:2px}
+.assignment-state{border:1px solid #e3d9c3;background:#fcf8ef;color:#8e7342;border-radius:5px;padding:4px 7px;font-size:11px;font-weight:700;white-space:nowrap}
+.assignment-chevron{border-right:2px solid #758c9d;border-bottom:2px solid #758c9d;transform:rotate(45deg);width:8px;height:8px;flex:none;margin-left:3px;transition:transform .15s}
+.assignment-group[open] .assignment-chevron{transform:rotate(225deg)}
+.assignment-body{padding:0 17px 15px;border-top:1px solid #edf1f4}
+.assignment-cells{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-top:13px}
+.assignment-cells>div{border-left:2px solid #aac1d0;padding-left:11px}
+.assignment-cells b{font-size:12px;color:#2c566e}
+.assignment-cells p{font-size:12px;line-height:1.75;color:#516b7c;margin:6px 0 0}
+.assignment-audit{background:#f6f8fa;border-radius:6px;padding:10px 11px;margin:13px 0 0;color:#657d8d;font-size:11px;line-height:1.7}
+.assignment-audit strong{color:#3a6178}.assignment-audit span{margin:0 3px;color:#b5c3cd}
+.plan-footnote{font-size:11px;line-height:1.75;color:#7b8e9d;margin:9px 0 0}
+.assignment-detail-link{display:inline-flex;margin-top:12px;font-size:12px;font-weight:700;color:#2c678d;border:1px solid #c6d8e5;background:#fff;border-radius:7px;padding:8px 11px;text-align:left}
+@media(max-width:760px){.assignment-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.assignment-intro{flex-direction:column;gap:9px}.assignment-cells{grid-template-columns:1fr}}
+@media(max-width:420px){.assignment-steps>div{padding:11px 10px}.assignment-steps b{font-size:11px}.assignment-steps small{font-size:10px}.assignment-group summary{gap:7px;padding:13px 11px;min-height:72px}.assignment-summary strong{font-size:13px}.assignment-summary small{font-size:10px}.priority-rank{font-size:10px;padding:4px 6px}.assignment-state{font-size:10px;padding:3px 4px}.assignment-body{padding:0 12px 13px}.assignment-intro{padding:15px}.assignment-cells p{font-size:11px}}
+@media(max-width:760px){.q{height:44px}.switcher button{min-height:44px}.container{padding:25px 16px 42px}.header-inner{padding:14px 17px}.title-row{align-items:start}.kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cols{grid-template-columns:1fr}.question-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.priority-list{grid-template-columns:1fr}.priority .ids{min-height:0}.status{grid-template-columns:1fr}.section{margin-top:26px}}
+@media(max-width:420px){.header-mark{font-size:10px}.logo{font-size:18px}.logo span{font-size:9px}.container{padding:21px 13px 35px}h1{font-size:27px}.lead{font-size:12px}.title-row{flex-direction:column;align-items:stretch}.report-btn{align-self:flex-start}.kpi{padding:16px 14px}.kpi strong{font-size:25px}.kpi small{font-size:10px}.section-heading{display:block}.section-heading h2{font-size:17px}.section-heading .hint{text-align:left;margin-top:4px;font-size:11px}.pad,.question-card{padding:17px 15px}.keyfinding{display:block;padding:14px 15px}.keyfinding .keynum{display:block;margin-bottom:7px}.compare-row{grid-template-columns:87px minmax(0,1fr) 45px;gap:6px}.compare-row .name,.compare-row .value{font-size:11px}.result{padding:12px}.result b{font-size:22px}.area-row{grid-template-columns:100px minmax(0,1fr) 31px;gap:6px}.area-row span,.area-row strong{font-size:11px}.full-list .item{grid-template-columns:70px minmax(0,1fr);gap:7px}.full-list summary{padding:13px 14px}.full-list .list-body{padding:0 14px 14px}}
+@media print{
+.assignment-steps{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:5px;margin:5px 0}.assignment-steps>div{padding:7px}.assignment-steps small{font-size:8px}.assignment-steps b{font-size:9px}.assignment-intro{padding:9px;display:block}.assignment-intro p,.plan-footnote{font-size:9px}.assignment-group summary{min-height:0;padding:8px}.assignment-group .assignment-body{display:block!important;padding:0 10px 9px}.assignment-cells{grid-template-columns:1fr 1fr!important;padding-top:7px}.assignment-cells p{font-size:9px}.assignment-cells b{font-size:9px}.assignment-group{break-inside:avoid;margin-bottom:5px}.assignment-detail-link{display:none!important}.assignment-audit{margin-top:5px;padding:6px;font-size:8px}
+
+ body{background:#fff!important;font-size:12px} .header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .header-inner{padding:10px 16px}.container{max-width:none;padding:12px 10px}.micro{font-size:10px}
+ h1{font-size:28px;margin:5px 0}.lead{font-size:12px}.pills{margin-top:8px}.pill{padding:2px 6px;font-size:9px}
+ .notice{margin-top:9px;padding:8px 10px;font-size:10px}.section{break-inside:auto;margin-top:14px}
+ .section-heading{margin-bottom:6px}.section-heading h2{font-size:15px}.section-heading .hint{font-size:10px}
+ .report-btn,.switcher,.legend,.question-card{display:none!important}
+ .kpi-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:7px}.kpi{padding:10px}.kpi strong{font-size:20px}.kpi-label,.kpi small{font-size:10px}
+ .keyfinding{padding:8px 10px;margin-top:7px}.keyfinding strong{font-size:12px}.keyfinding p{font-size:10px}
+ .cols{grid-template-columns:1fr 1fr!important;gap:8px}.pad{padding:12px}
+ .panel-title{font-size:12px;margin-bottom:8px}.result{padding:7px}.result b{font-size:16px}.compare-row{margin:8px 0;grid-template-columns:88px minmax(0,1fr) 44px}
+ .area-row{grid-template-columns:100px minmax(0,1fr) 26px;margin:9px 0;gap:5px}.area-row span,.area-row strong{font-size:10px}.area-note,.mini-note{font-size:9px;margin-top:7px;padding-top:5px}
+ .full-list{display:block!important}.full-list details{margin-top:0;break-inside:auto}.full-list summary{padding:9px 12px;font-size:11px}.full-list .list-body{display:block!important;padding:0 12px 8px}
+ .full-list .item{font-size:9.5px;padding:6px 0;grid-template-columns:61px minmax(0,1fr);break-inside:avoid}.full-list .item .item-text{line-height:1.4}
+ .priority-list{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px}.priority{padding:10px}.priority h3{font-size:12px;margin:4px 0}.priority p{font-size:10px;margin-top:5px}.priority .ids{font-size:9px;min-height:0}
+ .status{grid-template-columns:repeat(3,minmax(0,1fr))!important;padding:9px;gap:5px}.status-block b{font-size:10px}.status-block span{font-size:9px}
+ .teacher{margin-top:9px;padding:9px}.teacher p{font-size:10px}.teacher h3{font-size:11px}.teacher footer{font-size:9px}
+ .report-foot{margin-top:9px;padding-top:6px;font-size:9px}
+ .card{box-shadow:none}.section,.cols,.priority-list{break-inside:auto}.status-block,.priority,.kpi,.result{break-inside:avoid}
+}
+
+/* V4.50: same URL / refreshed record demo, not connected to any real student DB */
+.demo-state{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:19px 0 16px;padding:16px 18px;background:#edf3f8;border:1px solid #dce5ed;border-radius:12px}
+.demo-state b{display:block;color:#203e56;font-size:14px}.demo-state small{display:block;color:#647f94;font-size:12px;margin-top:4px}
+.demo-state .state-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.demo-state button{min-height:42px;background:#fff;border:1px solid #cbdae5;padding:9px 12px;border-radius:8px;color:#203e56;font-weight:650;font-size:12px}
+.demo-state button[aria-pressed=true]{color:#fff;background:#234a68;border-color:#234a68}
+.live-note{font-size:12px;color:#455d71;margin:10px 0 16px;padding:12px 14px;background:#fff;border:1px solid #dce5ee;border-radius:8px}
+.stage-value{color:#244968;font-weight:750}
+@media(max-width:700px){.demo-state{display:block;padding:14px}.demo-state .state-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:12px}.demo-state button{padding:8px 4px;font-size:11px}}
+@media print{.demo-state{display:none}.live-note{break-inside:avoid}}
 </style>
 </head>
 <body>
-<header class="top"><div class="top-in">
-<div class="nav"><div class="brand">2310 <span>APEX</span><small>STUDENT ANALYSIS</small></div><span class="navtag">학부모 열람용 · 샘플</span></div>
-<div class="intro"><div class="eyebrow">김성재 강사 · 예비 고1 국어</div><h1>주간지 학습 분석 <em>리포트</em></h1><p>맞힌 문제 수보다 중요한 것은 틀린 이유입니다. 오답 패턴을 확인하고, 학생에게 필요한 보완 학습을 구체적으로 안내합니다.</p><a class="intro-cta" href="#report">분석 사례 확인하기 ↓</a></div>
-</div></header>
-<main class="layout">
-  <div class="sample" role="note"><span aria-hidden="true">※</span><div><strong>체험용 가상 리포트</strong> — 학생, 점수, 오답 사유와 피드백은 기능 설명을 위해 구성한 예시이며 실제 학생 기록이 아닙니다.</div></div>
-  <section class="panel demo-selector" id="report" aria-labelledby="demo-header"><div class="demo-selector-head"><h2 id="demo-header">분석 사례 선택</h2><span>문법 · 독서 · 문학 사례를 비교할 수 있습니다.</span></div><div class="sample-tabs" role="group" aria-label="샘플 학생 선택"><button type="button" class="sample-tab active" data-student="A" aria-pressed="true"><span class="tab-name">학생 A</span><span class="tab-type">문법 취약</span></button><button type="button" class="sample-tab" data-student="B" aria-pressed="false"><span class="tab-name">학생 B</span><span class="tab-type">독서 취약</span></button><button type="button" class="sample-tab" data-student="C" aria-pressed="false"><span class="tab-name">학생 C</span><span class="tab-type">문학 취약</span></button></div></section>
-  <section class="panel profile" aria-label="예시 학생 정보"><div class="profile-name"><div class="avatar" id="avatar">A</div><div><span class="overline">STUDENT ANALYSIS · SAMPLE</span><h2 id="profileTitle">예비 고1 · 샘플 학생 A</h2><p>국어 주간지 테스트 · 1·2회차 통합 분석</p></div></div><span class="reportpill">DEMO REPORT</span></section>
-  <section class="diagnosis" aria-live="polite"><span class="overline">핵심 진단</span><h3 id="diagnosisTitle">개념을 이해해도 새로운 사례에서 판단이 흔들립니다.</h3><p id="diagnosisText">같은 개념을 적용하는 과정에서 반복 오답이 확인되었습니다.</p></section>
-  <section class="stats" aria-label="핵심 분석 지표">
-   <article class="panel metric"><div class="metric-label">종합 정답률</div><div class="metric-num" id="totalPct">70.8%</div><small id="totalCount">총 24문항 중 17문항 정답</small></article>
-   <article class="panel metric"><div class="metric-label">샘플 집단 평균</div><div class="metric-num" id="groupPct">68.1%</div><small>가상 학생 3명 · 참고용</small></article>
-   <article class="panel metric"><div class="metric-label">1→2회차 변화</div><div class="metric-num growth" id="deltaPct">+8.3%p</div><small id="deltaFoot">66.7% → 75.0%</small></article>
-   <article class="panel metric"><div class="metric-label">최우선 보완 영역</div><div class="metric-num bad" id="weakArea" style="font-size:26px">문법</div><small id="weakFoot">8문항 중 4문항 오답</small></article>
+<header class="header"><div class="header-inner"><div class="logo">2310 APEX <span>WEEKLY REPORT</span></div><div class="header-mark">학부모 열람용 · 통합 분석 시연</div></div></header>
+<main class="container" id="main">
+  <section class="demo-state" aria-label="동일 링크 업데이트 시뮬레이션"><div><b>한 번 보낸 링크에서 진행 상황 업데이트</b><small>시연 버튼: 실제 학생 DB·문자 발송과 연결되지 않습니다.</small></div><div class="state-tabs" role="group" aria-label="가상 학습 진행 상태"><button type="button" data-stage="initial" aria-pressed="true">분석 발행</button><button type="button" data-stage="submitted" aria-pressed="false">재숙제 제출</button><button type="button" data-stage="rechecked" aria-pressed="false">재평가 완료</button></div></section><div class="live-note" id="liveNote" aria-live="polite">최초 분석 상태 · 재숙제와 재평가 결과는 아직 없습니다. 강사 검수 후 진행 기록을 반영합니다.</div>
+  <div class="micro">국어 주간지 · 제01주차 / 1·2회차</div>
+  <div class="title-row">
+    <div><h1>주간지 학습 분석 리포트</h1><p class="lead">학생 A · 1·2회차 정오답 분석 · 김성재 강사 보완 지도</p></div>
+    <button class="report-btn" id="printBtn" type="button">인쇄 · PDF 저장</button>
+  </div>
+  <div class="pills"><span class="pill demo">익명화 체험 자료</span><span class="pill">정오답 기록 기반</span><span class="pill">집단 비교: 3명</span><span class="pill">진행 기록: 시연 데이터</span></div>
+  <div class="notice"><strong>안내</strong> · 아래 수치와 오답 주제는 제공된 리포트에서 가져왔으며 학생 이름과 학교는 표시하지 않았습니다. 실제 선택 답안·정답표·풀이 흔적이 없어 오답 원인은 확정하지 않았고, 보완 학습은 강사 검수 전 <strong>제안</strong>입니다.</div>
+
+  <section class="section" aria-labelledby="sum-title">
+    <div class="section-heading"><h2 id="sum-title">01 · 이번 주 학습 결과</h2><p class="hint">24문항 중 17문항 정답</p></div>
+    <div class="kpi-grid">
+      <div class="card kpi"><div class="kpi-label">전체 정답률</div><strong>70.8%</strong><small>17 / 24문항</small></div>
+      <div class="card kpi"><div class="kpi-label">전체 오답</div><strong>7문항</strong><small>1회 4개 · 2회 3개</small></div>
+      <div class="card kpi"><div class="kpi-label">집단 평균</div><strong>79.2%</strong><small>실제 응시자 3명</small></div>
+      <div class="card kpi"><div class="kpi-label">평균 대비</div><strong>−8.4%p</strong><small>참고 지표 · 등급 환산 아님</small></div>
+    </div>
+    <div class="keyfinding"><div class="keynum">핵심 관찰</div><div><strong>오답 7개 중 4개가 문학의 감상·표현 판단에서 확인됩니다.</strong><p>오답 개수 기준의 분포이며, 실제 원인과 우선 지도 순서는 강사의 추가 확인이 필요합니다.</p></div></div>
   </section>
-  <div class="section-title"><div><h3><i class="title-mark"></i>학습 결과</h3><p>영역별 정답률과 회차별 변화</p></div></div>
-  <section class="two">
-   <article class="panel section-inner"><div class="panel-label">영역별 학습 정확도</div><p class="sub">샘플 구성: 문학·독서·문법 각 8문항 기준</p>
-    <div class="barrow"><strong>문학</strong><div class="track"><div id="fill-문학" class="fill" style="width:87.5%"></div></div><div class="num">87.5%</div></div>
-    <div class="barrow"><strong>독서</strong><div class="track"><div id="fill-독서" class="fill" style="width:75.0%"></div></div><div class="num">75.0%</div></div>
-    <div class="barrow"><strong>문법</strong><div class="track"><div id="fill-문법" class="fill low" style="width:50.0%"></div></div><div class="num" style="color:var(--red)">50.0%</div></div>
-    <div class="footnote">같은 정답률이라도 문항의 성격과 오답 원인에 따라 학습 우선순위가 달라집니다.</div>
-   </article>
-   <article class="panel section-inner"><div class="panel-label">주간지 회차별 성취도</div><p class="sub">매회 12문항 · 서로 다른 회차의 성취도 비교</p>
-     <div class="progressitem"><span id="count1">1회차 · 8 / 12문항</span><strong id="score1">66.7%</strong></div><div class="smalltrack"><b id="track1" style="width:66.7%"></b></div>
-     <div class="progressitem"><span id="count2">2회차 · 9 / 12문항</span><strong id="score2">75.0%</strong></div><div class="smalltrack"><b id="track2" style="width:75%"></b></div>
-     <div class="delta" id="changeInsight">회차별 점수뿐 아니라 반복되는 판단 오류를 함께 확인합니다.</div>
-     <div class="footnote">회차별 난이도가 다를 수 있어 점수 변화만으로 실력 향상을 단정하지 않습니다.</div>
-   </article>
+
+  <section class="section cols" aria-label="회차별 학습 현황과 영역별 오답 분포">
+    <div class="card pad">
+      <h2 class="panel-title">02 · 회차별 결과와 비교</h2>
+      <div class="result-list">
+        <div class="result"><div class="round">1회차</div><b>66.7%</b><small>8 / 12문항 정답</small><div class="roundbar"><span style="--value:66.7%"></span></div></div>
+        <div class="result"><div class="round">2회차</div><b>75.0%</b><small>9 / 12문항 정답</small><div class="roundbar"><span style="--value:75%"></span></div></div>
+      </div>
+      <div class="compare-row"><span class="name">학생 정답률</span><div class="bar-track"><div class="bar-fill" style="--value:70.8%"></div></div><span class="value">70.8%</span></div>
+      <div class="compare-row"><span class="name">집단 평균</span><div class="bar-track"><div class="bar-fill secondary" style="--value:79.2%"></div></div><span class="value">79.2%</span></div>
+      <p class="mini-note">두 회차의 문항이 서로 다르므로 정답률 차이만으로 실력 향상을 단정하지 않습니다. 집단 평균 역시 3명 기준의 참고값입니다.</p>
+    </div>
+    <div class="card pad">
+      <h2 class="panel-title">03 · 오답 분야 분포</h2>
+      <div class="area-row"><span>문학 감상·표현</span><div class="bar-track"><div class="bar-fill" style="--value:57.14%"></div></div><strong>4 / 7</strong></div>
+      <div class="area-row"><span>경제 지문 분석</span><div class="bar-track"><div class="bar-fill muted" style="--value:28.57%"></div></div><strong>2 / 7</strong></div>
+      <div class="area-row"><span>문법</span><div class="bar-track"><div class="bar-fill muted" style="--value:14.29%"></div></div><strong>1 / 7</strong></div>
+      <p class="area-note">오답이 발생한 문항의 분류입니다. <strong>영역별 정답률이나 개념 숙달도</strong>를 의미하지 않습니다. 서로 다른 영역의 총 출제 문항 수는 별도 대조가 필요합니다.</p>
+    </div>
   </section>
-  <div class="section-title question-title"><div><h3><i class="title-mark"></i>문항별 오답 확인</h3><p>오답 문항을 누르면 판단 오류와 보완 지도를 확인할 수 있습니다.</p></div><div class="tabs" role="tablist" aria-label="회차 선택"><button class="active" type="button" data-filter="all" role="tab" aria-selected="true">전체</button><button type="button" data-filter="1" role="tab" aria-selected="false">1회차</button><button type="button" data-filter="2" role="tab" aria-selected="false">2회차</button></div></div>
-  <section class="panel question-panel">
-    <div class="question-top"><div><div class="panel-label">문항별 정오답 현황</div><p>문항을 터치하면 원인 분석과 지도 방향이 펼쳐집니다.</p></div><div class="legend"><span><i class="dot"></i>정답</span><span><i class="dot wrong"></i>오답</span></div></div>
-    <div id="questions" aria-label="회차별 문제 선택"></div>
-    <div class="detail" id="detail" aria-live="polite" hidden></div><span class="report-disclaimer">분석 설명은 실제 시험지를 검토해 도출한 결과가 아닌 기능 안내용 가상 사례입니다.</span>
+
+  <section class="section" aria-labelledby="qtitle">
+    <div class="section-heading"><h2 id="qtitle">04 · 문항별 정오답 상세 분석</h2><p class="hint">빨간 문항을 누르면 상세 분석 표시</p></div>
+    <div class="card question-card">
+      <div class="switcher" role="group" aria-label="회차 선택"><button data-session="1" type="button" aria-pressed="true">1회차</button><button data-session="2" type="button" aria-pressed="false">2회차</button></div>
+      <p class="question-instruct" id="sessionText">1회차 · 12문항 중 4문항 오답 (06, 07, 10, 12번)</p>
+      <div id="questions" class="question-grid" role="group" aria-label="문항별 정오답"></div>
+      <div class="legend"><span><i class="bad"></i>오답</span><span><i></i>정답</span><span>빨간 번호를 눌러 오답 분석을 확인하세요</span></div>
+      <div id="detail" class="details-panel" hidden aria-live="polite" role="region" aria-label="선택 문항 상세 분석" tabindex="-1"></div>
+    </div>
+    <div class="full-list">
+      <details id="wrongList"><summary><span>오답 7문항 한눈에 보기 <span class="count">· 전체 출제 포인트 확인</span></span></summary><div class="list-body" id="wrongItems"></div></details>
+    </div>
   </section>
-  <div class="pattern" id="repeatPattern" role="status"><strong>반복 오답 추적</strong><span id="repeatText">1·2회차를 함께 살펴 동일 유형이 반복되는지 확인합니다.</span></div>
-  <div class="section-title"><div><h3><i class="title-mark"></i>맞춤 보완 계획</h3><p>점수 나열이 아니라 원인 → 보완 → 재확인으로 이어지는 지도</p></div></div>
-  <section class="insights" id="insights" aria-live="polite"></section>
-  <div class="section-title"><div><h3><i class="title-mark"></i>관리 방식</h3><p>진단과 학습 보완을 연결하는 3단계 절차</p></div></div>
-  <section class="actionstep" aria-label="오답 개선 프로세스"><div class="step-card"><b>STEP 01 · 진단</b><strong>틀린 이유 분류</strong><p>문항별 오류의 원인을 개념·근거·적용 과정으로 나누어 확인합니다.</p></div><div class="step-card"><b>STEP 02 · 보완</b><strong>유형별 맞춤 과제</strong><p>반복되는 오류 유형을 우선 배정하고, 강사가 설명 과정까지 점검합니다.</p></div><div class="step-card"><b>STEP 03 · 재확인</b><strong>유사·변형 문항 재평가</strong><p>학습 후 같은 유형에서 오류가 줄었는지 확인하고 다음 과제를 조정합니다.</p></div></section>
-  <div class="quote"><div class="qtitle">김성재 강사 피드백</div><p id="feedbackText">“문학에서는 안정적인 이해도를 보였지만, 문법에서 비슷한 개념을 구분하는 과정의 오류가 반복되고 있습니다. 다음 학습에서는 문법 적용 문제를 우선 배정하고, 근거를 설명하는 훈련과 재평가를 통해 개선 여부를 확인하겠습니다.”</p><div class="teacher"><span>국어 김성재 강사 · 2310 APEX</span><span>가상 학생에 대한 피드백 예시</span></div></section>
-  <footer class="bottom"><strong>2310 APEX</strong>오답 진단 · 보완 학습 · 재평가<span>본 페이지는 학부모 설명용 독립 데모이며, 실사용 APEX 전체 기능과 연결되어 있지 않습니다.</span><span>김성재 강사 수강 상담은 안내받으신 홍보 문자로 회신해 주세요.</span></footer>
+
+  <section class="section" aria-labelledby="plan-title" id="assignmentPlan">
+    <div class="section-heading"><h2 id="plan-title">05 · 맞춤 재숙제·재평가 운영 계획</h2><p class="hint">오답 7문항 → 3개 보완 과제 묶음 · 강사 확정 전</p></div>
+    <div class="assignment-intro card">
+      <div><strong>틀린 문제를 해설하는 데서 끝내지 않습니다.</strong><p>이번 주 오답의 출제 포인트에 맞춰 <b>새로운 유사 유형 문항</b>을 재숙제로 배정하고, 풀이 과정과 재평가 결과를 확인하는 방식입니다. 아래 내용은 배정 전 운영 예시입니다.</p></div>
+      <span class="assignment-pending">과제 배정 전</span>
+    </div>
+    <div class="assignment-steps" aria-label="재숙제 운영 4단계">
+      <div><span class="step-index">01</span><b>오답 근거 확인</b><small>답안·선택지·판단 오류 점검</small></div>
+      <div><span class="step-index">02</span><b>유사 문제 재숙제</b><small>개념별 새 문항 배정</small></div>
+      <div><span class="step-index">03</span><b>재채점·재평가</b><small>다른 문항으로 적용력 확인</small></div>
+      <div><span class="step-index">04</span><b>결과 기록·재지도</b><small>반복 오답 추적 및 추가 과제</small></div>
+    </div>
+    <div class="assignment-groups" id="assignmentGroups">
+      <details class="assignment-group card" id="assignment-literature" open>
+        <summary><span class="priority-rank">우선 01</span><span class="assignment-summary"><strong>문학 감상·표현</strong><small>기존 오답: 1회 10·12번 / 2회 11·12번</small></span><span class="assignment-state">배정 예정</span><span class="assignment-chevron" aria-hidden="true"></span></summary>
+        <div class="assignment-body">
+          <div class="assignment-cells"><div><b>재숙제 문항 유형</b><p>시구의 표현 효과, 작품 간 공통 표현, 화자 태도·상징을 원문 근거로 판단하는 <strong>새로운 유사 문항</strong></p></div><div><b>재평가 확인 기준</b><p>선지의 근거를 직접 표시하고, 오답 선지가 왜 성립하지 않는지 설명할 수 있는지 확인</p></div></div>
+          <p class="assignment-audit"><strong>진행 기록</strong> · 새 문제 배정 전 <span>·</span> 제출 기록 없음 <span>·</span> 재평가 미실시 <span>·</span> 문항 수·기한 미정</p>
+        </div>
+      </details>
+      <details class="assignment-group card" id="assignment-economy">
+        <summary><span class="priority-rank">우선 02</span><span class="assignment-summary"><strong>경제 지문 분석</strong><small>기존 오답: 1회 06·07번</small></span><span class="assignment-state">배정 예정</span><span class="assignment-chevron" aria-hidden="true"></span></summary>
+        <div class="assignment-body">
+          <div class="assignment-cells"><div><b>재숙제 문항 유형</b><p>명시적·암묵적 비용과 경제적 이윤 구분, 손익분기점 조건 비교에 관한 <strong>새로운 자료 적용 문항</strong></p></div><div><b>재평가 확인 기준</b><p>주어진 조건을 표로 재구성하고, 수치·조건 변경 시 판단 결과가 달라지는 이유를 설명하는지 확인</p></div></div>
+          <p class="assignment-audit"><strong>진행 기록</strong> · 새 문제 배정 전 <span>·</span> 제출 기록 없음 <span>·</span> 재평가 미실시 <span>·</span> 문항 수·기한 미정</p>
+        </div>
+      </details>
+      <details class="assignment-group card" id="assignment-grammar">
+        <summary><span class="priority-rank">우선 03</span><span class="assignment-summary"><strong>문법 적용</strong><small>기존 오답: 2회 05번</small></span><span class="assignment-state">배정 예정</span><span class="assignment-chevron" aria-hidden="true"></span></summary>
+        <div class="assignment-body">
+          <div class="assignment-cells"><div><b>재숙제 문항 유형</b><p>수식 대상과 문장 성분을 구별하는 <strong>새로운 예문 판단 문항</strong></p></div><div><b>재평가 확인 기준</b><p>수식어와 피수식어를 표시하고, 부사어·관형어의 기능과 문장 성분을 근거로 구분하는지 확인</p></div></div>
+          <p class="assignment-audit"><strong>진행 기록</strong> · 새 문제 배정 전 <span>·</span> 제출 기록 없음 <span>·</span> 재평가 미실시 <span>·</span> 문항 수·기한 미정</p>
+        </div>
+      </details>
+    </div>
+    <p class="plan-footnote">※ 여기 적힌 재숙제는 실제로 배포한 문제가 아닙니다. 문항 수, 제출 기한, 제출 여부, 재평가 점수는 APEX에서 과제를 확정·배정하고 결과를 입력한 뒤에만 표시합니다. 우선순위는 오답 문항 수와 출제 포인트를 바탕으로 한 <b>초안</b>입니다.</p>
+  </section>
+
+  <section class="section" aria-labelledby="status-title">
+    <div class="section-heading"><h2 id="status-title">06 · 학습 관리 진행 상태</h2><p class="hint">완료하지 않은 지도는 완료로 표시하지 않습니다</p></div>
+    <div class="card status" id="progressStatus">
+      <div class="status-block"><div class="status-ico ok">✓</div><div><b>정오답 집계 완료</b><span>1·2회차 24문항 결과 확인</span></div></div>
+      <div class="status-block"><div class="status-ico">2</div><div><b>재숙제 배정 준비</b><span>강사 검수 후 새 문항 확정</span></div></div>
+      <div class="status-block"><div class="status-ico">3</div><div><b>재평가 미실시</b><span>과제 제출·재채점 결과 없음</span></div></div>
+    </div>
+    <div class="teacher"><h3>김성재 강사 · 확인 후 피드백 확정</h3><p>현재 리포트에서 가장 먼저 검토할 부분은 문학 관련 오답 4문항입니다. 다만 <strong>오답 번호만으로 학생의 판단 과정을 단정할 수 없으므로</strong>, 실제 선택 답안과 문제의 근거를 확인한 후 개별 보완 과제를 확정해야 합니다. 그다음 기존 오답에 대응하는 새로운 문항을 재숙제로 배정하고, 재채점 및 재평가 결과에 따라 추가 지도가 필요한지 기록합니다.</p><footer>가상 안내용 문구 · 강사 확정 피드백이 아닙니다</footer></div>
+  </section>
+  <footer class="report-foot"><span><b>2310 APEX</b> · 학부모용 통합 리포트 디자인 시안</span><span>익명화된 기존 리포트 재구성 · 실제 발송용 리포트 아님</span></footer>
 </main>
 <script>
 'use strict';
-const areas={
-  1:['독서','독서','독서','문학','문학','문법','문법','문법','문법','문학','문학','독서'],
-  2:['독서','독서','독서','문학','문법','문학','문법','문법','문학','문학','독서','문법']
+const DATA = {
+  session1: {wrong:[6,7,10,12]},
+  session2: {wrong:[5,11,12]},
+  detail: {
+    '1-6':{area:'경제 지문 분석',title:'경제적 이윤·회계적 이윤',check:'명시적 비용·암묵적 비용과 경제적 이윤의 관계를 구분할 수 있는지 확인합니다.',practice:'이윤 계산에 포함되는 비용의 범위를 구분한 뒤 관련 개념을 지문에서 다시 찾아보는 활동을 제안합니다.'},
+    '1-7':{area:'경제 지문 분석',title:'손익분기점과 비용 구조',check:'고정비·변동비와 연도별 손익분기점을 비교하는 판단 근거를 확인합니다.',practice:'비용 구조와 수익 조건을 표로 다시 정리하여 손익분기점 변화의 이유를 설명하는 활동을 제안합니다.'},
+    '1-10':{area:'문학 감상·표현',title:'시가 공통 표현법',check:'(가)~(다)의 표현상 공통점과 선지에 제시된 근거가 일치하는지 확인합니다.',practice:'각 작품에서 공통으로 확인되는 표현을 본문에서 직접 표시하고, 선지의 조건과 대조하는 연습을 제안합니다.'},
+    '1-12':{area:'문학 감상·표현',title:'시어·시구의 의미 해석',check:'제시된 시구와 화자의 정서·상황을 원문에 근거하여 대조하는지 확인합니다.',practice:'시구의 표현 효과와 화자의 정서를 별도로 적고, 본문 근거를 연결하는 연습을 제안합니다.'},
+    '2-5':{area:'문법',title:'부사어·관형어 수식 관계',check:'부사·관형어·조사 결합의 수식 대상과 문장 성분을 구별하는지 확인합니다.',practice:'수식 받는 말을 표시하고, 다른 예문에서 수식 관계를 바르게 판정하는 연습을 제안합니다.'},
+    '2-11':{area:'문학 감상·표현',title:'시적 소재 변화와 풍자',check:'두터비·백송골의 관계를 바꾸었을 때 풍자의 의미가 어떻게 달라지는지 확인합니다.',practice:'소재 간 관계를 도식화하고, 관계가 바뀔 때 풍자 효과가 달라지는 이유를 설명하는 연습을 제안합니다.'},
+    '2-12':{area:'문학 감상·표현',title:'매화의 상징·화자 태도',check:'시구에서 매화를 대하는 화자의 태도와 매화의 상징을 문맥으로 판단하는지 확인합니다.',practice:'관련 시구를 근거로 매화의 상징과 화자의 태도를 분리해 설명하는 활동을 제안합니다.'}
+  }
 };
-const students={
- A:{tag:'문법 개념 적용',wrong:{1:[6,7,10,12],2:[5,11,12]},
-  title:'개념은 알고 있지만, 새로운 사례에서 판단이 흔들립니다.',
-  summary:'문법 적용 문항 4개에서 오답이 발생했습니다. 유사한 개념을 구별하고 조건을 실제 사례에 옮기는 과정이 우선 보완 대상입니다.',
-  recurring:'두 회차에서 문법의 개념 비교·사례 적용 오류가 반복되었습니다. 정답률 상승과 별개로 같은 사고 과정의 취약점이 남아 있습니다.',
-  change:'2회차 정답률은 높아졌지만 문법 적용 오류는 남았습니다. 점수보다 반복 오답을 먼저 관리합니다.',
-  ins:[['PRIORITY','문법 비교 기준 재정리','헷갈리는 개념을 표로 비교하고 서로 다른 예문에서 적용 조건을 확인합니다.'],['CAUSE','사례에 조건 적용 훈련','정답 번호가 아니라 개념의 핵심 조건과 반례를 학생이 직접 설명하도록 지도합니다.'],['FOLLOW-UP','변형 문항 재평가 예정','같은 개념을 다른 사례에 적용해 보는 짧은 확인 테스트를 배정합니다.']],
-  feedback:'문학은 비교적 안정적이지만 문법 적용 과정에서 유사한 개념을 구분하는 오류가 반복됩니다. 개념 비교와 반례 설명을 우선 지도하고, 변형 문제를 통해 같은 실수가 줄어드는지 확인하겠습니다.',
-  detail:{'1-6':['유사 문법 개념 구분','설명 속 두 개념의 공통점만 확인하고 차이를 놓친 유형입니다.','구별 기준과 반례를 정리한 뒤 스스로 설명하도록 지도합니다.'], '1-7':['개념을 실제 사례에 적용','개념 자체는 알고 있으나 사례가 달라지자 판단 기준이 흐려졌습니다.','적용 조건에 표시한 뒤 변형 사례에 같은 기준을 적용합니다.'], '1-10':['시적 표현의 기능','작품 속 표현의 기능을 앞뒤 맥락과 연결하지 못했습니다.','화자의 태도와 앞뒤 표현을 연결해 근거를 제시합니다.'], '1-12':['지문 근거와 선지 연결','지문의 조건 일부를 놓치고 선택지를 판단했습니다.','선지의 판단 조건마다 지문 근거를 표시합니다.'], '2-5':['반복되는 문법 적용 오류','앞 회차와 유사한 문법 적용 문제에서 다시 오류가 발생했습니다.','개념을 재설명하고 여러 변형 사례를 비교합니다.'], '2-11':['선지 표현 범위 검토','선지가 지문의 표현 범위를 확대했으나 이를 놓쳤습니다.','전체·일부·반드시 등 범위 표현을 확인하도록 훈련합니다.'], '2-12':['새 사례에서 개념 전이','배운 문법 개념을 다른 사례에 옮길 때 다시 흔들렸습니다.','핵심 보완 대상으로 지정해 집중 점검 후 재확인합니다.']}
- },
- B:{tag:'독서 선지 판단',wrong:{1:[1,3,8,10,12],2:[2,3,11]},
-  title:'지문을 읽었지만, 선택지의 근거를 끝까지 검증하지 못합니다.',
-  summary:'독서 8문항 중 6문항에서 오류가 발생했습니다. 세부 조건과 표현 범위를 대조하는 판단 과정에 집중할 필요가 있습니다.',
-  recurring:'1·2회차 모두 독서 선지를 판단할 때 핵심 조건을 빠뜨린 오류가 나타났습니다. 독해 내용 요약보다 선지 검증 과정에 초점을 맞춥니다.',
-  change:'2회차 점수는 높아졌지만 독서 영역에 오답이 집중됩니다. 독서 선택지의 조건 검증을 최우선으로 배정합니다.',
-  ins:[['PRIORITY','지문 근거 표시 훈련','선택지마다 지문 속 근거 문장을 표시하고 조건이 일치하는지 확인합니다.'],['CAUSE','범위·인과·예외 구별','일부를 전체로 바꾸거나 원인과 결과를 뒤집는 표현을 찾아냅니다.'],['FOLLOW-UP','선지 검증 재평가 예정','지문이 짧더라도 모든 선택지의 참·거짓 근거를 말로 설명하게 합니다.']],
-  feedback:'독서에서 지문을 이해한 이후 선택지의 조건을 검증하는 과정이 불안정합니다. 특히 표현의 범위가 달라지는 선지를 놓치는 경향이 나타납니다. 근거 표시와 조건 대조 훈련을 진행하고 재평가하겠습니다.',
-  detail:{'1-1':['조건 일치 여부','선지의 조건 한 가지가 지문과 다른데 이를 놓쳤습니다.','선지의 판단 조건을 나눠 지문과 일대일로 대조합니다.'],'1-3':['선지의 표현 범위','일부에 해당하는 정보를 전체의 성질처럼 일반화했습니다.','일부·전체·항상과 같은 표현을 표시하도록 지도합니다.'],'1-8':['문법 확인 문항','규칙을 적용할 때 예외 조건을 확인하지 않았습니다.','적용 기준과 예외를 함께 정리합니다.'],'1-10':['문학 표현 해석','표현의 기능을 맥락과 분리해 이해했습니다.','앞뒤 문맥을 근거로 기능을 판단합니다.'],'1-12':['지문 내 정보 연결','서로 다른 두 문장을 함께 확인해야 하나 한 문장만 근거로 삼았습니다.','복수 근거를 표시하고 결론을 검증합니다.'],'2-2':['선택지의 인과 관계','지문에 제시된 인과 관계를 역으로 해석했습니다.','원인과 결과의 방향을 화살표로 표시합니다.'],'2-3':['표현 범위의 반복 오류','앞 회차와 유사하게 선택지의 범위를 과도하게 넓게 해석했습니다.','범위 판단에 필요한 반례를 작성합니다.'],'2-11':['예외 조건의 누락','문장 끝에 제시된 단서와 예외 조건을 반영하지 못했습니다.','단서 표현을 확인하는 마지막 검산 단계를 추가합니다.']}
- },
- C:{tag:'문학 표현 해석',wrong:{1:[2,4,10,12],2:[4,7,9,10]},
-  title:'작품의 분위기는 느끼지만, 표현과 정서의 근거를 연결하지 못합니다.',
-  summary:'문학 8문항 중 5문항에서 오답이 발생했습니다. 화자의 태도와 표현 기법을 작품의 구체적 근거로 설명하는 훈련이 필요합니다.',
-  recurring:'두 회차에서 문학의 표현 기능과 화자 정서 판단 오류가 반복되었습니다. 감상 중심의 풀이를 근거 중심으로 바꾸는 것이 핵심입니다.',
-  change:'두 회차의 총점은 같지만 취약한 문학 유형이 반복됩니다. 점수 변화가 없어도 문항별 판단 과정에서 보완 과제를 찾아냅니다.',
-  ins:[['PRIORITY','화자 태도·표현 기능 구분','정서 어휘를 외우기보다 어떤 표현이 그 해석을 뒷받침하는지 찾습니다.'],['CAUSE','작품 맥락에서 근거 찾기','시어와 사건을 주변 문맥에 연결해 선지의 과장·비약을 걸러냅니다.'],['FOLLOW-UP','근거 설명형 재평가 예정','새 작품에서도 선택지 판단 근거를 작품의 표현과 연결하도록 점검합니다.']],
-  feedback:'두 회차의 총점은 같지만 문학 해석에서 유사한 오류가 반복되고 있습니다. 표현의 기능과 화자의 정서를 추측으로 판단하기보다 작품 속 근거로 설명하도록 지도하고, 새로운 작품에서 적용 여부를 확인하겠습니다.',
-  detail:{'1-2':['독서의 세부 조건','지문에 제시된 단서를 끝까지 확인하지 않았습니다.','조건을 근거 문장에 대응시켜 설명합니다.'],'1-4':['화자의 태도','시적 상황과 화자의 태도를 혼동했습니다.','시어와 서술 태도를 연결해 설명하게 합니다.'],'1-10':['표현의 기능 판단','표현을 문자 그대로만 해석해 정서적 기능을 놓쳤습니다.','앞뒤 표현과 화자의 태도를 비교합니다.'],'1-12':['근거 연결','선지 판단에 필요한 조건 하나를 놓쳤습니다.','근거 확인 순서를 점검합니다.'],'2-4':['화자 정서 반복 오류','앞 회차처럼 표현에 드러난 태도를 과장해 판단했습니다.','정서의 강도를 뒷받침하는 표현을 표시합니다.'],'2-7':['문법 개념 적용','같은 개념을 다른 예문에 적용하면서 기준이 흔들렸습니다.','적용 조건을 재정리합니다.'],'2-9':['인물의 심리 추론','대화와 행동을 근거로 한 심리 판단을 일부 생략했습니다.','인물 행동에 대한 명시적 근거를 찾습니다.'],'2-10':['표현의 역할 반복 오류','앞 회차와 유사하게 표현의 효과와 기능을 혼동했습니다.','표현법 자체와 문맥에서의 기능을 분리해 설명합니다.']}
- }
-};
-let current='A',filter='all',selected=null;
-const els={questions:document.getElementById('questions'),detail:document.getElementById('detail')};
-function fmt(x){return x.toFixed(1)+'%'}
-function countRight(s,session){return 12-s.wrong[session].length}
-function totals(s){return countRight(s,1)+countRight(s,2)}
-function calcAreas(s){const counts={'문학':{right:0,total:0},'독서':{right:0,total:0},'문법':{right:0,total:0}};for(const k of [1,2])for(let n=1;n<=12;n++){const a=areas[k][n-1];counts[a].total++;if(!s.wrong[k].includes(n))counts[a].right++;}return counts;}
-function escapeHTML(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]));}
-function put(id,t){document.getElementById(id).textContent=t;}
-function updateSummary(){
- const s=students[current],count=calcAreas(s);const one=countRight(s,1),two=countRight(s,2);const p1=one/12*100,p2=two/12*100,diff=(two-one)/12*100;
- put('avatar',current);put('profileTitle','예비 고1 · 샘플 학생 '+current);put('diagnosisTitle',s.title);put('diagnosisText',s.summary);
- put('totalPct',fmt(totals(s)/24*100));put('totalCount','총 24문항 중 '+totals(s)+'문항 정답');
- const group=Object.values(students).reduce((acc,z)=>acc+totals(z),0)/72*100;put('groupPct',fmt(group));
- const delta=document.getElementById('deltaPct');delta.textContent=(diff>0?'+':'')+diff.toFixed(1)+'%p';delta.classList.toggle('growth',diff>0);delta.classList.toggle('bad',diff<0);
- put('deltaFoot',fmt(p1)+' → '+fmt(p2));
- const ranking=Object.entries(count).sort((a,b)=>a[1].right/a[1].total-b[1].right/b[1].total),weak=ranking[0][0];put('weakArea',weak);put('weakFoot',count[weak].total+'문항 중 '+(count[weak].total-count[weak].right)+'문항 오답');
- document.querySelectorAll('.barrow').forEach(row=>{const a=row.querySelector('strong').textContent,percent=count[a].right/count[a].total*100;const fill=row.querySelector('.fill'),num=row.querySelector('.num');fill.style.width=percent+'%';fill.classList.toggle('low',a===weak);num.textContent=fmt(percent);num.style.color=a===weak?'var(--red)':'';});
- put('count1','1회차 · '+one+' / 12문항');put('count2','2회차 · '+two+' / 12문항');put('score1',fmt(p1));put('score2',fmt(p2));document.getElementById('track1').style.width=p1+'%';document.getElementById('track2').style.width=p2+'%';
- put('changeInsight',s.change);put('repeatText',s.recurring);put('feedbackText','“'+s.feedback+'”');
- document.getElementById('insights').innerHTML=s.ins.map((a,i)=>'<article class="panel insight"><small>'+String(i+1).padStart(2,'0')+' · '+escapeHTML(({PRIORITY:'우선 보완',CAUSE:'지도 방법','FOLLOW-UP':'재확인'})[a[0]]||a[0])+'</small><strong>'+escapeHTML(a[1])+'</strong><p>'+escapeHTML(a[2])+'</p></article>').join('');
- document.querySelectorAll('[data-student]').forEach(b=>{let active=b.dataset.student===current;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+const assignmentFor = { '1-6':'assignment-economy','1-7':'assignment-economy', '1-10':'assignment-literature','1-12':'assignment-literature','2-5':'assignment-grammar','2-11':'assignment-literature','2-12':'assignment-literature' };
+let session=1, selected=null;
+const $=id=>document.getElementById(id);
+const make=(tag,css,text)=>{const e=document.createElement(tag);if(css)e.className=css;if(text!==undefined)e.textContent=text;return e};
+function put(parent,tag,css,text){const e=make(tag,css,text);parent.appendChild(e);return e;}
+function setSession(n){session=n; selected=null;document.querySelectorAll('[data-session]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.session)===n)));const errors=DATA['session'+n].wrong;$('sessionText').textContent=`${n}회차 · 12문항 중 ${errors.length}문항 오답 (${errors.map(v=>String(v).padStart(2,'0')).join(', ')}번)`;renderQuestions();}
+function renderQuestions(){const grid=$('questions');grid.replaceChildren();const bad=DATA['session'+session].wrong;for(let n=1;n<=12;n++){const wrong=bad.includes(n);const b=put(grid,'button','q'+(wrong?' wrong':''),String(n).padStart(2,'0'));b.type='button';b.setAttribute('aria-pressed',String(selected===n));b.setAttribute('aria-label',`${session}회차 ${n}번 ${wrong?'오답':'정답'} 문항 상세 확인`);b.addEventListener('click',()=>{selected=n;renderQuestions();if(window.matchMedia('(max-width:760px)').matches){requestAnimationFrame(()=>{const d=$('detail');d.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});});}});}renderDetail();}
+function renderDetail(){const d=$('detail');d.replaceChildren();if(selected===null){d.hidden=true;return;}d.hidden=false;const n=selected,id=`${session}-${n}`,v=DATA.detail[id],bad=!!v;const tags=put(d,'div','detail-top');put(tags,'span','tag'+(bad?' bad':''),`${session}회차 · ${String(n).padStart(2,'0')}번`);put(tags,'span','tag'+(bad?' bad':''),bad?'오답':'정답');if(!bad){put(d,'h3','', '정답 처리된 문항입니다.');put(d,'p','detail-text','현재 자료에 학생이 선택한 답과 풀이 근거가 제공되지 않아 별도의 판단 분석을 생성하지 않았습니다.');return;}put(tags,'span','tag',v.area);put(d,'h3','',v.title);put(d,'div','detail-label','① 출제 포인트·판단 근거');put(d,'p','detail-text',v.check);put(d,'div','detail-label','② 김성재 강사 보완 지도 · 검수 전 제안');put(d,'p','detail-text',v.practice);const link=put(d,'button','assignment-detail-link','③ 이 오답에 연결된 재숙제·재평가 계획 보기 →');link.type='button';link.addEventListener('click',()=>{const target=$(assignmentFor[id]);if(!target)return;target.open=true;target.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'center'});});put(d,'div','detail-foot','채점상 오답으로 기록된 문항입니다. 정답표와 학생의 선택 답안이 아직 제공되지 않았으므로 정확한 오답 원인과 실제 강사 코칭 내용은 확정 전입니다.');}
+function initList(){const parent=$('wrongItems');Object.entries(DATA.detail).forEach(([key,d])=>{const [round,num]=key.split('-');const box=put(parent,'div','item');put(box,'span','number',`${round}회 ${String(num).padStart(2,'0')}번`);const info=put(box,'div','');put(info,'div','item-title',d.title);put(info,'div','item-text',d.check);});}
+document.querySelectorAll('[data-session]').forEach(b=>b.addEventListener('click',()=>setSession(Number(b.dataset.session))));
+let printListWasOpen=false;let printAssignOpen=[];
+window.addEventListener('beforeprint',()=>{printListWasOpen=$('wrongList').open;$('wrongList').open=true;printAssignOpen=[...document.querySelectorAll('.assignment-group')].map(e=>e.open);document.querySelectorAll('.assignment-group').forEach(e=>{e.open=true});});
+window.addEventListener('afterprint',()=>{$('wrongList').open=printListWasOpen;document.querySelectorAll('.assignment-group').forEach((e,i)=>{e.open=printAssignOpen[i]||false});});
+$('printBtn').addEventListener('click',()=>{window.print();});
+initList();setSession(1);
+
+// Simulated stage progression never modifies the first test score or stores real student data.
+function setStage(stage){
+ const labels={initial:'최초 분석 발행',submitted:'재숙제 제출 · 채점 대기',rechecked:'재평가 실시 · 후속 지도 확인'};
+ const msg={
+  initial:'최초 분석 상태 · 재숙제와 재평가 결과는 아직 없습니다. 강사 검수 후 진행 기록을 반영합니다.',
+  submitted:'가상 시연: 새로운 유사 문제 재숙제가 제출됐습니다. 아직 채점·재평가 결과는 없습니다. 최초 성적 70.8%는 유지됩니다.',
+  rechecked:'가상 시연: 재평가 10문항 중 8문항 정답, 남은 2문항 추가 보완 예정입니다. 실제 실시 기록은 아닙니다. 최초 성적 70.8%는 유지됩니다.'
+ };
+ document.querySelectorAll('[data-stage]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.stage===stage)));
+ $('liveNote').textContent=labels[stage]+' · '+msg[stage];
+ const cards=$('progressStatus').querySelectorAll('.status-block');
+ const first=cards[0]?.querySelector('span'); if(first)first.textContent='최초 시험 결과 보존 · 17/24문항';
+ const second=cards[1]?.querySelector('b'),secondInfo=cards[1]?.querySelector('span');
+ const third=cards[2]?.querySelector('b'),thirdInfo=cards[2]?.querySelector('span');
+ if(second)second.textContent=stage==='initial'?'재숙제 배정 준비':'재숙제 제출 (시연)';
+ if(secondInfo)secondInfo.textContent=stage==='initial'?'강사 검수 후 새 문항 확정':'가상 과제 제출 상태 · 실제 제출 기록 아님';
+ if(third)third.textContent=stage==='rechecked'?'재평가 완료 (시연)':'재평가 미실시';
+ if(thirdInfo)thirdInfo.textContent=stage==='rechecked'?'가상 8/10 정답 · 2문항 추가 점검':'실제 재평가 결과 없음';
+ document.querySelectorAll('.assignment-state').forEach(x=>x.textContent=stage==='initial'?'배정 예정':stage==='submitted'?'제출(시연)':'재평가(시연)');
 }
-function renderQuestions(){
- const s=students[current],wrong=s.wrong;els.questions.innerHTML='';
- for(const k of [1,2]){
-  if(filter!=='all'&&filter!==String(k))continue;
-  const group=document.createElement('div');group.className='qgroup';
-  const title=document.createElement('h4');title.innerHTML=k+'회차 · 오답 '+wrong[k].length+'문항 <span>총 12문항</span>';group.appendChild(title);
-  const list=document.createElement('div');list.className='qlist';
-  for(let n=1;n<=12;n++){const b=document.createElement('button');b.type='button';const w=wrong[k].includes(n);b.className='q'+(w?' wrong':'')+(selected&&selected.session===k&&selected.number===n?' current':'');b.textContent=String(n).padStart(2,'0');b.setAttribute('aria-label',k+'회차 '+n+'번 '+(w?'오답':'정답'));b.setAttribute('aria-pressed',String(!!selected&&selected.session===k&&selected.number===n));b.addEventListener('click',()=>{selected={session:k,number:n};renderQuestions();});list.appendChild(b);}
-  group.appendChild(list);els.questions.appendChild(group);
- }
- if(!selected){els.detail.hidden=true;els.detail.innerHTML='';return;}els.detail.hidden=false;
- const k=selected.session,n=selected.number,key=k+'-'+n,w=wrong[k].includes(n),a=areas[k][n-1],d=s.detail[key];
- const explanation=w?'<h4>'+escapeHTML(d[0])+'</h4><p><strong>오답 원인 예시:</strong> '+escapeHTML(d[1])+'</p><p class="coachtip"><b>강사 보완 처방:</b> '+escapeHTML(d[2])+'</p>':'<h4>'+escapeHTML(a)+' · 정답 문항</h4><p>정답으로 처리된 문항입니다. 정답 여부 외에도 선택지 판단의 근거를 설명할 수 있는지 확인합니다.</p><p class="coachtip"><b>강사 확인 포인트:</b> 풀이 과정과 근거 설명을 확인하여 정답의 안정성을 점검합니다.</p>';
- els.detail.innerHTML='<div class="detail-header"><span class="chip">'+k+'회차 '+n+'번</span><span class="chip">'+escapeHTML(a)+'</span><span class="chip '+(w?'alert':'')+'">'+(w?'오답 · 보완 대상':'정답')+'</span></div>'+explanation;
-}
-function render(){updateSummary();renderQuestions()}
-document.querySelectorAll('[data-student]').forEach(b=>b.addEventListener('click',()=>{current=b.dataset.student;filter='all';selected=null;document.querySelectorAll('[data-filter]').forEach(el=>{const active=el.dataset.filter==='all';el.classList.toggle('active',active);el.setAttribute('aria-selected',String(active));});render();}));
-document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(el=>{const active=el===b;el.classList.toggle('active',active);el.setAttribute('aria-selected',String(active));});selected=null;renderQuestions();}));
-render();
+document.querySelectorAll('[data-stage]').forEach(b=>b.addEventListener('click',()=>setStage(b.dataset.stage)));
+setStage('initial');
+
 </script>
 </body>
 </html>
