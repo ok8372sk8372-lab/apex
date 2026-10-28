@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#122e43">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="description" content="2310 APEX 국어 주간지 학생별 학습 분석 리포트">
+<title>2310 APEX | 휘문고1 김선욱 주간지 학습 분석</title>
+<style>
+:root{--navy:#122e43;--navy-2:#203f56;--ink:#152d40;--text:#3c4f5e;--muted:#738494;--blue:#7399b4;--blue-light:#eaf1f6;--cream:#f7f5ee;--cream-dark:#b49a68;--red:#b6534e;--red-bg:#fff0ed;--green:#237865;--line:#dbe4eb;--page:#f6f8fa;--white:#fff;--radius:13px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:var(--page);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;letter-spacing:-.025em;line-height:1.6;word-break:keep-all;-webkit-font-smoothing:antialiased}
+button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #7da3cc;outline-offset:3px}
+button:disabled{cursor:default}
+.header{background:var(--navy);color:var(--white)}
+.header-inner{max-width:1040px;margin:0 auto;padding:15px 28px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{font-size:21px;font-weight:820;letter-spacing:-.04em}.logo span{font-weight:500;margin-left:6px;font-size:11px;letter-spacing:.12em;color:#b2cad7}
+.header-mark{font-size:11px;font-weight:650;color:#c3d4dd}
+.container{max-width:1040px;margin:0 auto;padding:35px 28px 64px}
+.micro{color:#57728a;font-size:12px;letter-spacing:.045em;font-weight:750}
+h1,h2,h3,p{margin-top:0}
+.title-row{display:flex;align-items:end;justify-content:space-between;gap:16px}
+h1{font-size:clamp(26px,4vw,37px);line-height:1.25;letter-spacing:-.055em;margin:10px 0 7px;font-weight:820}
+.lead{font-size:14px;color:var(--text);margin:0;line-height:1.75}
+.pills{display:flex;gap:6px;flex-wrap:wrap;margin-top:15px}
+.pill{font-size:11px;border:1px solid #d7e1e8;background:white;border-radius:999px;padding:5px 10px;color:#586e7f;font-weight:650}
+.pill.demo{background:#f1f6f9;color:#486c86;border-color:#cfdee9}
+.report-btn{border:1px solid #b9cbd6;background:#fff;color:#345d78;border-radius:8px;padding:10px 13px;font-size:12px;font-weight:750;white-space:nowrap}
+.notice{margin-top:20px;border-left:3px solid #839fb0;background:#eef3f6;padding:12px 15px;font-size:12px;color:#536c7d;line-height:1.75}
+.notice strong{color:#25465f}
+.section{margin-top:29px}
+.section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px}
+.section-heading h2{font-size:19px;letter-spacing:-.045em;margin:0;font-weight:820}
+.section-heading .hint{color:#7a8b97;font-size:12px;margin:0;line-height:1.5;text-align:right}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 2px 9px rgba(17,53,82,.025)}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.kpi{padding:20px 19px}
+.kpi-label{color:#627889;font-size:12px;font-weight:720}
+.kpi strong{display:block;font-size:clamp(22px,3vw,32px);letter-spacing:-.05em;margin:5px 0 2px;font-weight:800;font-variant-numeric:tabular-nums}
+.kpi small{color:#8192a1;font-size:11px;display:block;line-height:1.4}
+.kpi:nth-child(2){background:#f5f8fb}
+.keyfinding{margin-top:12px;border:1px solid #d5e2ea;background:#edf3f7;border-radius:10px;padding:16px 19px;display:flex;gap:13px;align-items:flex-start}
+.keyfinding .keynum{font-weight:800;font-size:11px;color:#456d87;white-space:nowrap;margin-top:2px;letter-spacing:.045em}
+.keyfinding strong{font-weight:780;display:block;font-size:15px;line-height:1.45}
+.keyfinding p{margin:3px 0 0;font-size:12px;color:#546c7d;line-height:1.7}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pad{padding:22px}
+.panel-title{font-size:14px;font-weight:790;letter-spacing:-.025em;margin:0 0 17px}
+.compare-row{display:grid;grid-template-columns:110px minmax(0,1fr) 57px;gap:9px;align-items:center;margin:16px 0}
+.compare-row .name{font-size:12px;color:#485f72;font-weight:660}
+.bar-track{height:10px;border-radius:8px;background:#e9eff3;overflow:hidden}
+.bar-fill{height:100%;width:var(--value);background:var(--navy);border-radius:8px}
+.bar-fill.secondary{background:#91aec0}
+.bar-fill.muted{background:#bda16b}
+.compare-row .value{font-size:13px;text-align:right;font-weight:790;font-variant-numeric:tabular-nums}
+.mini-note{font-size:11px;color:#8191a0;line-height:1.65;margin:12px 0 0}
+.result-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.result{border:1px solid #e1e9ee;border-radius:9px;padding:13px 14px}
+.result .round{font-size:12px;color:#567088;font-weight:720}
+.result b{display:block;font-size:25px;letter-spacing:-.035em;line-height:1.35;margin-top:2px;font-variant-numeric:tabular-nums}
+.result small{color:#8093a1;font-size:11px}
+.result .roundbar{height:6px;margin-top:12px;background:#edf2f5;border-radius:4px;overflow:hidden}
+.result .roundbar>span{display:block;height:100%;width:var(--value);background:#7c9eb5}
+.area-row{display:grid;grid-template-columns:132px minmax(0,1fr) 36px;gap:10px;align-items:center;margin:14px 0}
+.area-row span{font-size:12px;color:#4c6273;line-height:1.4}
+.area-row strong{font-size:12px;text-align:right;font-variant-numeric:tabular-nums}
+.area-row .bar-track{height:9px}
+.area-row .bar-fill{background:#8aa6b9}
+.area-row:nth-of-type(3) .bar-fill{background:#baaa86}
+.area-row:nth-of-type(4) .bar-fill{background:#baaa86}
+.area-note{font-size:11px;color:#7d8f9f;margin:18px 0 0;line-height:1.75;padding-top:12px;border-top:1px solid #edf1f4}
+.switcher{display:flex;gap:7px;background:#eff3f6;border-radius:8px;padding:4px;width:max-content;max-width:100%}
+.switcher button{border:0;background:transparent;color:#6c8292;border-radius:6px;padding:8px 20px;font-size:12px;font-weight:750}
+.switcher button[aria-pressed="true"]{background:#fff;box-shadow:0 1px 4px #213d5118;color:#234d67}
+.question-card{padding:21px}
+.question-instruct{margin:15px 0 14px;font-size:12px;color:#728795}
+.question-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:7px}
+.q{height:40px;min-width:0;border:1px solid #dde6eb;border-radius:7px;background:#f4f7f9;color:#638096;font-size:12px;font-weight:750}
+.q.wrong{background:var(--red-bg);color:var(--red);border-color:#edc7c2}
+.q[aria-pressed="true"]{outline:2px solid #285f85;outline-offset:2px;box-shadow:0 2px 7px rgba(30,61,80,.09)}
+.q.wrong[aria-pressed="true"]{outline-color:#b6534e;background:#fbe5df}
+.q:focus-visible{outline:3px solid #2d6e99;outline-offset:2px}
+.legend{display:flex;gap:13px;align-items:center;color:#8091a0;font-size:11px;margin-top:13px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;background:#f4f7f9;border:1px solid #dde6eb;border-radius:2px;margin-right:5px;vertical-align:middle}
+.legend i.bad{background:#fff0ed;border-color:#edc7c2}
+.details-panel{margin-top:17px;background:#f8fafb;border:1px solid #dfE8ee;border-radius:10px;padding:17px 18px}
+.details-panel[hidden]{display:none}
+.detail-top{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.tag{font-size:11px;font-weight:720;border-radius:4px;padding:3px 7px;background:#e8eff4;color:#4a6b81}
+.tag.bad{color:#a64d48;background:#f9e8e5}
+.details-panel h3{font-size:16px;line-height:1.45;margin:11px 0 8px}
+.detail-label{font-size:11px;color:#61798c;font-weight:750;margin-top:12px;margin-bottom:3px}
+.detail-text{font-size:13px;color:#415d70;line-height:1.75;margin:0}
+.detail-foot{border-top:1px solid #dfe7ec;margin-top:14px;padding-top:11px;font-size:11px;color:#7a8b98;line-height:1.7}
+.full-list details{border:1px solid #dce5eb;border-radius:10px;background:#fff;margin-top:10px;overflow:hidden}
+.full-list summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;font-size:13px;font-weight:780;cursor:pointer}
+.full-list summary::-webkit-details-marker{display:none}
+.full-list summary .count{color:#7890a2;font-size:11px;font-weight:630}
+.full-list summary::after{content:'+';font-weight:500;font-size:21px;color:#59798e}
+.full-list details[open] summary::after{content:'−'}
+.full-list .list-body{padding:0 18px 18px}
+.full-list .item{display:grid;grid-template-columns:79px minmax(0,1fr);gap:10px;padding:10px 0;border-top:1px solid #eef2f5;font-size:12px}
+.full-list .item .number{color:#a4534e;font-weight:800}
+.full-list .item .item-title{font-weight:700;margin-bottom:3px}
+.full-list .item .item-text{color:#6a7d8b;line-height:1.7}
+.priority-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.priority{padding:19px 19px 17px}
+.priority .priority-num{color:#6c899b;font-size:11px;font-weight:790}
+.priority h3{font-size:15px;margin:6px 0 4px;line-height:1.5}
+.priority .ids{font-size:11px;color:#8a99a4;line-height:1.5;min-height:31px}
+.priority p{font-size:12px;color:#506879;line-height:1.8;margin:13px 0 0}
+.status{padding:18px 20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.status-block{display:flex;gap:9px;align-items:flex-start}
+.status-ico{flex:0 0 20px;width:20px;height:20px;border-radius:100%;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;background:#728b9e;font-weight:800;margin-top:1px}
+.status-ico.ok{background:var(--green)}
+.status-block b{display:block;font-size:12px}.status-block span{display:block;color:#8593a0;font-size:11px;margin-top:2px;line-height:1.5}
+.teacher{background:#f0f4f7;border-radius:10px;padding:19px 21px;margin-top:20px;border:1px solid #dce6ed}
+.teacher h3{font-size:13px;margin:0 0 8px;letter-spacing:-.015em}
+.teacher p{font-size:13px;line-height:1.85;color:#4b6578;margin:0}
+.teacher footer{font-size:11px;color:#7a8f9e;text-align:right;margin-top:9px}
+.report-foot{margin-top:30px;padding-top:17px;border-top:1px solid #dbe4eb;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#8799a7;font-size:11px;line-height:1.65}
+.report-foot b{color:#415d70;font-weight:760}
+
+/* 오답 문항 → 맞춤 재숙제 → 재평가 연계 */
+.assignment-intro{padding:18px 20px;display:flex;align-items:start;justify-content:space-between;gap:16px;background:#f0f5f8}
+.assignment-intro strong{font-size:14px;font-weight:800;display:block}
+.assignment-intro p{font-size:12px;color:#567080;line-height:1.8;margin:5px 0 0;max-width:695px}
+.assignment-intro p b{font-weight:800;color:#2b5168}
+.assignment-pending{flex:none;border-radius:5px;border:1px solid #c9dbe5;background:#fff;color:#52748a;padding:6px 8px;font-size:11px;font-weight:700;white-space:nowrap}
+.assignment-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:11px 0 13px}
+.assignment-steps>div{background:#fff;border:1px solid var(--line);border-radius:9px;padding:13px 12px;min-width:0}
+.step-index{display:block;font-size:10px;font-weight:800;letter-spacing:.03em;color:#7695a9;margin-bottom:5px}
+.assignment-steps b{display:block;font-size:12px;line-height:1.45}
+.assignment-steps small{display:block;font-size:11px;color:#7c90a0;line-height:1.55;margin-top:4px}
+.assignment-group{margin-bottom:9px;overflow:hidden}
+.assignment-group summary{display:flex;gap:13px;align-items:center;list-style:none;cursor:pointer;padding:16px 17px;min-height:77px}
+.assignment-group summary::-webkit-details-marker{display:none}
+.priority-rank{flex:0 0 auto;color:#48718d;font-size:11px;font-weight:800;background:#e8f0f5;border-radius:5px;padding:5px 8px}
+.assignment-summary{flex:1;min-width:0;display:block}
+.assignment-summary strong{display:block;font-size:14px;line-height:1.45}
+.assignment-summary small{display:block;font-size:11px;line-height:1.6;color:#7a8d9b;font-weight:550;margin-top:2px}
+.assignment-state{border:1px solid #e3d9c3;background:#fcf8ef;color:#8e7342;border-radius:5px;padding:4px 7px;font-size:11px;font-weight:700;white-space:nowrap}
+.assignment-chevron{border-right:2px solid #758c9d;border-bottom:2px solid #758c9d;transform:rotate(45deg);width:8px;height:8px;flex:none;margin-left:3px;transition:transform .15s}
+.assignment-group[open] .assignment-chevron{transform:rotate(225deg)}
+.assignment-body{padding:0 17px 15px;border-top:1px solid #edf1f4}
+.assignment-cells{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-top:13px}
+.assignment-cells>div{border-left:2px solid #aac1d0;padding-left:11px}
+.assignment-cells b{font-size:12px;color:#2c566e}
+.assignment-cells p{font-size:12px;line-height:1.75;color:#516b7c;margin:6px 0 0}
+.assignment-audit{background:#f6f8fa;border-radius:6px;padding:10px 11px;margin:13px 0 0;color:#657d8d;font-size:11px;line-height:1.7}
+.assignment-audit strong{color:#3a6178}.assignment-audit span{margin:0 3px;color:#b5c3cd}
+.plan-footnote{font-size:11px;line-height:1.75;color:#7b8e9d;margin:9px 0 0}
+.assignment-detail-link{display:inline-flex;margin-top:12px;font-size:12px;font-weight:700;color:#2c678d;border:1px solid #c6d8e5;background:#fff;border-radius:7px;padding:8px 11px;text-align:left}
+@media(max-width:760px){.assignment-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.assignment-intro{flex-direction:column;gap:9px}.assignment-cells{grid-template-columns:1fr}}
+@media(max-width:420px){.assignment-steps>div{padding:11px 10px}.assignment-steps b{font-size:11px}.assignment-steps small{font-size:10px}.assignment-group summary{gap:7px;padding:13px 11px;min-height:72px}.assignment-summary strong{font-size:13px}.assignment-summary small{font-size:10px}.priority-rank{font-size:10px;padding:4px 6px}.assignment-state{font-size:10px;padding:3px 4px}.assignment-body{padding:0 12px 13px}.assignment-intro{padding:15px}.assignment-cells p{font-size:11px}}
+@media(max-width:760px){.q{height:44px}.switcher button{min-height:44px}.container{padding:25px 16px 42px}.header-inner{padding:14px 17px}.title-row{align-items:start}.kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cols{grid-template-columns:1fr}.question-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.priority-list{grid-template-columns:1fr}.priority .ids{min-height:0}.status{grid-template-columns:1fr}.section{margin-top:26px}}
+@media(max-width:420px){.header-mark{font-size:10px}.logo{font-size:18px}.logo span{font-size:9px}.container{padding:21px 13px 35px}h1{font-size:27px}.lead{font-size:12px}.title-row{flex-direction:column;align-items:stretch}.report-btn{align-self:flex-start}.kpi{padding:16px 14px}.kpi strong{font-size:25px}.kpi small{font-size:10px}.section-heading{display:block}.section-heading h2{font-size:17px}.section-heading .hint{text-align:left;margin-top:4px;font-size:11px}.pad,.question-card{padding:17px 15px}.keyfinding{display:block;padding:14px 15px}.keyfinding .keynum{display:block;margin-bottom:7px}.compare-row{grid-template-columns:87px minmax(0,1fr) 45px;gap:6px}.compare-row .name,.compare-row .value{font-size:11px}.result{padding:12px}.result b{font-size:22px}.area-row{grid-template-columns:100px minmax(0,1fr) 31px;gap:6px}.area-row span,.area-row strong{font-size:11px}.full-list .item{grid-template-columns:70px minmax(0,1fr);gap:7px}.full-list summary{padding:13px 14px}.full-list .list-body{padding:0 14px 14px}}
+@media print{
+.assignment-steps{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:5px;margin:5px 0}.assignment-steps>div{padding:7px}.assignment-steps small{font-size:8px}.assignment-steps b{font-size:9px}.assignment-intro{padding:9px;display:block}.assignment-intro p,.plan-footnote{font-size:9px}.assignment-group summary{min-height:0;padding:8px}.assignment-group .assignment-body{display:block!important;padding:0 10px 9px}.assignment-cells{grid-template-columns:1fr 1fr!important;padding-top:7px}.assignment-cells p{font-size:9px}.assignment-cells b{font-size:9px}.assignment-group{break-inside:avoid;margin-bottom:5px}.assignment-detail-link{display:none!important}.assignment-audit{margin-top:5px;padding:6px;font-size:8px}
+
+ body{background:#fff!important;font-size:12px} .header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .header-inner{padding:10px 16px}.container{max-width:none;padding:12px 10px}.micro{font-size:10px}
+ h1{font-size:28px;margin:5px 0}.lead{font-size:12px}.pills{margin-top:8px}.pill{padding:2px 6px;font-size:9px}
+ .notice{margin-top:9px;padding:8px 10px;font-size:10px}.section{break-inside:auto;margin-top:14px}
+ .section-heading{margin-bottom:6px}.section-heading h2{font-size:15px}.section-heading .hint{font-size:10px}
+ .report-btn,.switcher,.legend,.question-card{display:none!important}
+ .kpi-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:7px}.kpi{padding:10px}.kpi strong{font-size:20px}.kpi-label,.kpi small{font-size:10px}
+ .keyfinding{padding:8px 10px;margin-top:7px}.keyfinding strong{font-size:12px}.keyfinding p{font-size:10px}
+ .cols{grid-template-columns:1fr 1fr!important;gap:8px}.pad{padding:12px}
+ .panel-title{font-size:12px;margin-bottom:8px}.result{padding:7px}.result b{font-size:16px}.compare-row{margin:8px 0;grid-template-columns:88px minmax(0,1fr) 44px}
+ .area-row{grid-template-columns:100px minmax(0,1fr) 26px;margin:9px 0;gap:5px}.area-row span,.area-row strong{font-size:10px}.area-note,.mini-note{font-size:9px;margin-top:7px;padding-top:5px}
+ .full-list{display:block!important}.full-list details{margin-top:0;break-inside:auto}.full-list summary{padding:9px 12px;font-size:11px}.full-list .list-body{display:block!important;padding:0 12px 8px}
+ .full-list .item{font-size:9.5px;padding:6px 0;grid-template-columns:61px minmax(0,1fr);break-inside:avoid}.full-list .item .item-text{line-height:1.4}
+ .priority-list{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px}.priority{padding:10px}.priority h3{font-size:12px;margin:4px 0}.priority p{font-size:10px;margin-top:5px}.priority .ids{font-size:9px;min-height:0}
+ .status{grid-template-columns:repeat(3,minmax(0,1fr))!important;padding:9px;gap:5px}.status-block b{font-size:10px}.status-block span{font-size:9px}
+ .teacher{margin-top:9px;padding:9px}.teacher p{font-size:10px}.teacher h3{font-size:11px}.teacher footer{font-size:9px}
+ .report-foot{margin-top:9px;padding-top:6px;font-size:9px}
+ .card{box-shadow:none}.section,.cols,.priority-list{break-inside:auto}.status-block,.priority,.kpi,.result{break-inside:avoid}
+}
+
+/* V4.50: same URL / refreshed record demo, not connected to any real student DB */
+.demo-state{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:19px 0 16px;padding:16px 18px;background:#edf3f8;border:1px solid #dce5ed;border-radius:12px}
+.demo-state b{display:block;color:#203e56;font-size:14px}.demo-state small{display:block;color:#647f94;font-size:12px;margin-top:4px}
+.demo-state .state-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.demo-state button{min-height:42px;background:#fff;border:1px solid #cbdae5;padding:9px 12px;border-radius:8px;color:#203e56;font-weight:650;font-size:12px}
+.demo-state button[aria-pressed=true]{color:#fff;background:#234a68;border-color:#234a68}
+.live-note{font-size:12px;color:#455d71;margin:10px 0 16px;padding:12px 14px;background:#fff;border:1px solid #dce5ee;border-radius:8px}
+.stage-value{color:#244968;font-weight:750}
+@media(max-width:700px){.demo-state{display:block;padding:14px}.demo-state .state-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:12px}.demo-state button{padding:8px 4px;font-size:11px}}
+@media print{.demo-state{display:none}.live-note{break-inside:avoid}}
+
+
+/* 실제 학생별 정오답 리포트 */
+body{letter-spacing:-.02em}
+.masthead{display:flex;justify-content:space-between;align-items:end;gap:18px}
+.student-name{font-weight:830;color:#213f56}
+.score-inset{font-size:11px;color:#698498;text-align:right}
+.notice{background:#eef4f7;border-color:#86a5b6}
+.sub-label{display:block;color:#7b90a0;font-size:11px;margin-top:8px}
+.overview-band{padding:20px;background:#fff;border:1px solid var(--line);border-radius:var(--radius)}
+.group-row{display:grid;grid-template-columns:118px minmax(0,1fr) 57px;gap:9px;align-items:center;margin:13px 0}
+.group-row .name{font-size:12px;color:#516a7b;font-weight:680}
+.group-row .value{font-size:12px;color:#233f56;font-weight:780;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.overview-band .bar-track{height:11px}
+.group-row.missed .bar-fill{background:#bb9288}
+.plan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.plan-card{padding:19px 20px;scroll-margin-top:16px}
+.plan-card h3{font-size:14px;line-height:1.5;margin:6px 0}
+.plan-card p{margin:0;font-size:12px;color:#536b7e;line-height:1.78}
+.plan-card .plan-link{font-size:11px;color:#a5544d;font-weight:790}
+.plan-card:target{border-color:#90aebf;box-shadow:0 0 0 3px #e2edf4}
+.q{height:46px;font-size:13px}
+.question-grid{grid-template-columns:repeat(17,minmax(0,1fr));gap:5px}
+.question-instruct{line-height:1.75}
+.original-map{border-top:1px solid #e4edf2;margin-top:14px;padding-top:13px;font-size:11px;color:#7890a1;line-height:1.8}
+.details-panel{background:#f5f9fb}
+.label-note{font-size:11px;color:#7e91a0;margin-top:11px}
+.plan-intro{padding:16px 19px;background:#eef4f7;color:#4a667a;border:1px solid #d6e5ed;border-radius:10px;font-size:12px;line-height:1.8;margin-bottom:12px}
+.plan-intro strong{color:#274b63}
+.print-only{display:none}
+.no-share{color:#748b9c;font-size:11px}
+@media(max-width:900px){.question-grid{grid-template-columns:repeat(9,minmax(0,1fr))}}
+@media(max-width:760px){.question-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.plan-grid{grid-template-columns:1fr}.group-row{grid-template-columns:112px minmax(0,1fr) 55px}.masthead{display:block}.score-inset{text-align:left;margin-top:8px}}
+@media(max-width:420px){.question-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.q{height:44px}.group-row{grid-template-columns:100px minmax(0,1fr) 50px;gap:6px}.group-row .name,.group-row .value{font-size:10px}.plan-card{padding:16px}}
+@media print{
+.print-only{display:block}.question-card,.report-btn{display:none!important}
+.plan-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.plan-card{padding:12px}
+.plan-card h3{font-size:11px}.plan-card p{font-size:10px}
+.overview-band{padding:12px}
+.group-row{margin:7px 0;grid-template-columns:115px minmax(0,1fr) 55px}
+.keyfinding{break-inside:avoid}
+.student-name{font-size:inherit}
+.print-only table{width:100%;border-collapse:collapse;font-size:10px}
+.print-only td,.print-only th{border-bottom:1px solid #e3e8ec;padding:5px 6px;text-align:left}
+.print-only th{background:#eef4f7}
+}</style>
+</head>
+<body>
+<header class="header"><div class="header-inner"><div class="logo">2310 APEX <span>WEEKLY REPORT</span></div><div class="header-mark">학부모 열람용 · 학생별 개별 리포트</div></div></header>
+<main class="container" id="main">
+<div class="masthead"><div><div class="micro">국어의 역사 · 중세 국어 문법 | 개인 학습 분석</div><h1>주간지 학습 분석 리포트</h1><p class="lead"><span class="student-name">휘문고 1학년 김선욱</span> 학생 · 지정 응시 문항 분석</p></div><button type="button" id="printBtn" class="report-btn">인쇄 / PDF로 저장</button></div>
+<div class="pills"><span class="pill">2310 APEX</span><span class="pill">문법 N제 5 · 국어의 역사</span><span class="pill">실제 응시 17문항</span><span class="pill">새 번호 1~17</span></div>
+<div class="notice"><strong>채점 범위 안내</strong> · 원본 문항 1, 2, 3, 4, 5, 8, 9, 10, 11, 13, 14, 15, 18, 20, 21, 27, 30번만 응시한 것으로 반영했습니다. 이외 문항은 <strong>미응시</strong>이며 성적에 포함하지 않았습니다. 정오답은 전달받은 기록을 기준으로 표시합니다.</div>
+<section class="section" aria-labelledby="sum-title"><div class="section-heading"><h2 id="sum-title">01 · 이번 주 학습 결과</h2><p class="hint">응시 17문항 기준 · 미응시 문항 제외</p></div>
+<div class="kpi-grid">
+<div class="card kpi"><div class="kpi-label">전체 정답률</div><strong>100%</strong><small>17 / 17문항 정답</small></div>
+<div class="card kpi"><div class="kpi-label">전체 오답</div><strong>0문항</strong><small>전 문항 정답 처리</small></div>
+<div class="card kpi"><div class="kpi-label">3명 집단 평균</div><strong>90.2%</strong><small>46 / 51 문항 · 응시자 3명</small></div>
+<div class="card kpi"><div class="kpi-label">평균 대비</div><strong>+9.8%p</strong><small>참고 지표 · 등급 환산 아님</small></div>
+</div>
+<div class="keyfinding"><div class="keynum">KEY FINDING</div><div><strong>전 문항 정답 기록</strong><p>실제 응시 17문항에서 전 문항 정답을 기록했습니다.</p></div></div></section>
+<section class="section cols" aria-label="집단 비교와 영역별 성취">
+<div class="card pad"><h2 class="panel-title">02 · 3명 집단 기준 비교</h2><div class="compare-row"><span class="name">해당 학생</span><div class="bar-track"><div class="bar-fill " style="--value:100.00%"></div></div><span class="value">100%</span></div><div class="compare-row"><span class="name">집단 평균</span><div class="bar-track"><div class="bar-fill secondary" style="--value:90.20%"></div></div><span class="value">90.2%</span></div><p class="mini-note">집단 평균은 동일한 17문항에 응시한 3명의 정답 46개를 전체 51개로 나누어 계산했습니다. 표본이 3명이므로 공식 석차나 등급을 의미하지 않습니다.</p></div>
+<div class="card pad"><h2 class="panel-title">03 · 개념 영역별 점검</h2><div class="group-row"><span class="name">훈민정음 제자</span><div class="bar-track"><div class="bar-fill" style="--value:100.00%"></div></div><span class="value">2/2</span></div><div class="group-row"><span class="name">국어사·표기</span><div class="bar-track"><div class="bar-fill" style="--value:100.00%"></div></div><span class="value">5/5</span></div><div class="group-row"><span class="name">격조사</span><div class="bar-track"><div class="bar-fill" style="--value:100.00%"></div></div><span class="value">6/6</span></div><div class="group-row"><span class="name">높임 표현</span><div class="bar-track"><div class="bar-fill" style="--value:100.00%"></div></div><span class="value">3/3</span></div><div class="group-row"><span class="name">품사·형태</span><div class="bar-track"><div class="bar-fill" style="--value:100.00%"></div></div><span class="value">1/1</span></div><p class="mini-note">영역별 정답/응시 개수를 표시합니다. 특히 1문항만 포함된 영역은 성취도를 단정할 수 없습니다.</p></div>
+</section>
+<section class="section" aria-labelledby="qtitle"><div class="section-heading"><h2 id="qtitle">04 · 문항별 정오답 상세 분석</h2><p class="hint">정답·오답 모두 클릭하면 출제 개념과 판단 근거가 표시됩니다</p></div>
+<div class="card question-card"><div class="question-instruct">시험지에서 실제 푼 17문항만 추렸습니다. 아래의 번호는 <strong>새롭게 붙인 1~17번</strong>이며, 문항을 누르면 원본 번호도 함께 표시됩니다.</div>
+<div id="questions" class="question-grid" role="group" aria-label="응시 문항 17개"><button type="button" class="q" data-q="0" aria-pressed="false" aria-controls="detail" aria-label="새 1번 원본 1번 정답 문항 상세 보기">1</button><button type="button" class="q" data-q="1" aria-pressed="false" aria-controls="detail" aria-label="새 2번 원본 2번 정답 문항 상세 보기">2</button><button type="button" class="q" data-q="2" aria-pressed="false" aria-controls="detail" aria-label="새 3번 원본 3번 정답 문항 상세 보기">3</button><button type="button" class="q" data-q="3" aria-pressed="false" aria-controls="detail" aria-label="새 4번 원본 4번 정답 문항 상세 보기">4</button><button type="button" class="q" data-q="4" aria-pressed="false" aria-controls="detail" aria-label="새 5번 원본 5번 정답 문항 상세 보기">5</button><button type="button" class="q" data-q="5" aria-pressed="false" aria-controls="detail" aria-label="새 6번 원본 8번 정답 문항 상세 보기">6</button><button type="button" class="q" data-q="6" aria-pressed="false" aria-controls="detail" aria-label="새 7번 원본 9번 정답 문항 상세 보기">7</button><button type="button" class="q" data-q="7" aria-pressed="false" aria-controls="detail" aria-label="새 8번 원본 10번 정답 문항 상세 보기">8</button><button type="button" class="q" data-q="8" aria-pressed="false" aria-controls="detail" aria-label="새 9번 원본 11번 정답 문항 상세 보기">9</button><button type="button" class="q" data-q="9" aria-pressed="false" aria-controls="detail" aria-label="새 10번 원본 13번 정답 문항 상세 보기">10</button><button type="button" class="q" data-q="10" aria-pressed="false" aria-controls="detail" aria-label="새 11번 원본 14번 정답 문항 상세 보기">11</button><button type="button" class="q" data-q="11" aria-pressed="false" aria-controls="detail" aria-label="새 12번 원본 15번 정답 문항 상세 보기">12</button><button type="button" class="q" data-q="12" aria-pressed="false" aria-controls="detail" aria-label="새 13번 원본 18번 정답 문항 상세 보기">13</button><button type="button" class="q" data-q="13" aria-pressed="false" aria-controls="detail" aria-label="새 14번 원본 20번 정답 문항 상세 보기">14</button><button type="button" class="q" data-q="14" aria-pressed="false" aria-controls="detail" aria-label="새 15번 원본 21번 정답 문항 상세 보기">15</button><button type="button" class="q" data-q="15" aria-pressed="false" aria-controls="detail" aria-label="새 16번 원본 27번 정답 문항 상세 보기">16</button><button type="button" class="q" data-q="16" aria-pressed="false" aria-controls="detail" aria-label="새 17번 원본 30번 정답 문항 상세 보기">17</button></div><div class="legend"><span><i></i>정답</span><span><i class="bad"></i>오답</span><span>번호를 선택해 자세한 분석 열기</span></div>
+<div id="detail" class="details-panel" hidden aria-live="polite" role="region" aria-label="선택 문항의 상세 학습 분석" tabindex="-1"></div>
+<div class="original-map">문항 번호 대응 · 새 1~17번 = 원본 1 · 2 · 3 · 4 · 5 · 8 · 9 · 10 · 11 · 13 · 14 · 15 · 18 · 20 · 21 · 27 · 30번 순서</div>
+</div></section>
+<section class="section" aria-labelledby="plan-title"><div class="section-heading"><h2 id="plan-title">05 · 심화·유지 학습 제안</h2><p class="hint">제안 사항 · 실제 배정 및 완료 기록 아님</p></div>
+<div class="plan-intro"><strong>서답형 문장 분석과 원문-현대어 비교 문제로 확장해 보세요.</strong><div class="sub-label">아래 활동은 현재 정오답과 문제의 출제 개념에 따른 제안입니다. 재숙제 제출·재평가 실시 여부는 아직 제공되지 않았습니다.</div></div>
+<div class="plan-grid"><article class="card plan-card"><span class="priority-num">심화 제안 01</span><h3>문항 근거 설명 연습</h3><p>이번 시험의 정답 처리된 주요 유형에서 선지를 선택한 근거를 문헌에 연결해 구술 또는 짧은 글로 설명합니다.</p></article><article class="card plan-card"><span class="priority-num">심화 제안 02</span><h3>개념 혼합 변형 문제</h3><p>제자 원리, 조사, 높임, 표기법을 서로 섞은 변형 문제로 정답의 재현성을 확인합니다.</p></article><article class="card plan-card"><span class="priority-num">심화 제안 03</span><h3>단기 재점검</h3><p>다음 평가에서는 기존 17문항과 다른 사례를 활용해 유지 여부를 확인합니다. 실제 실시 일정은 별도 확정이 필요합니다.</p></article></div></section>
+<section class="section" aria-labelledby="progress-title"><div class="section-heading"><h2 id="progress-title">06 · 학습 관리 진행 상태</h2><p class="hint">확인된 사실과 추후 계획을 구분합니다</p></div>
+<div class="card status"><div class="status-block"><div class="status-ico ok">✓</div><div><b>이번 시험 기록 확인</b><span>17문항 채점 결과 반영</span></div></div>
+<div class="status-block"><div class="status-ico">2</div><div><b>심화 과제 제안</b><span>과제 배정·제출 기록 없음</span></div></div>
+<div class="status-block"><div class="status-ico">3</div><div><b>재평가 미실시</b><span>추후 결과 반영 전</span></div></div></div>
+<div class="teacher"><h3>2310 APEX · 학습 지도 코멘트</h3><p>문헌 비교형 문제와 개념 적용형 문제를 모두 정답 처리한 점이 확인됩니다. 추가 진단에서는 단순 선택을 넘어 고전 원문 근거를 설명하는 능력을 확인하는 것이 좋겠습니다.</p><footer>출제 포인트 기반 분석 · 담당 강사 최종 지도 전</footer></div>
+</section>
+<section class="section print-only" aria-label="인쇄 시 전체 문항 목록"><h2>응시 17문항 · 번호 대조표</h2><table><thead><tr><th>새 번호</th><th>원본 번호</th><th>출제 개념</th><th>채점</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>초성·중성 제자 원리</td><td>정답</td></tr><tr><td>2</td><td>2</td><td>훈민정음 언해의 언어 특징</td><td>정답</td></tr><tr><td>3</td><td>3</td><td>중세어 조사와 구개음화</td><td>정답</td></tr><tr><td>4</td><td>4</td><td>주체 높임과 객체 높임</td><td>정답</td></tr><tr><td>5</td><td>5</td><td>두음 법칙·이어 적기 종합</td><td>정답</td></tr><tr><td>6</td><td>8</td><td>관형격 조사 ‘·의·ㅅ’</td><td>정답</td></tr><tr><td>7</td><td>9</td><td>주체·객체 높임 선어말 어미</td><td>정답</td></tr><tr><td>8</td><td>10</td><td>중세 국어 조사 기능 비교</td><td>정답</td></tr><tr><td>9</td><td>11</td><td>주격 조사 ‘이·ㅣ·Ø’</td><td>정답</td></tr><tr><td>10</td><td>13</td><td>관형격·부사격 ‘/의’</td><td>정답</td></tr><tr><td>11</td><td>14</td><td>두음 법칙과 국어사 비교</td><td>정답</td></tr><tr><td>12</td><td>15</td><td>이어·끊어·거듭 적기</td><td>정답</td></tr><tr><td>13</td><td>18</td><td>명사형 어미와 파생 접미사</td><td>정답</td></tr><tr><td>14</td><td>20</td><td>직접 높임과 간접 높임</td><td>정답</td></tr><tr><td>15</td><td>21</td><td>초성·중성·종성 제자 원리 응용</td><td>정답</td></tr><tr><td>16</td><td>27</td><td>주격·목적격·관형격·부사격·호격</td><td>정답</td></tr><tr><td>17</td><td>30</td><td>부사격 조사의 의미와 이형태</td><td>정답</td></tr></tbody></table></section>
+<footer class="report-foot"><span><b>2310 APEX · 국어 주간지 분석</b><br>응시 범위 17문항 / 3명 집단 평균 참고</span><span>실제 선택 답안과 공식 정답표가 제공되지 않아 학생의 구체적 오답 원인은 단정하지 않았습니다.<br>학생별 열람 링크이며, 웹에 공개될 수 있으므로 공유 범위를 주의해 주세요.</span></footer>
+</main>
+<script>
+(function(){
+"use strict";
+const ITEMS=[{"src":1,"grp":"훈민정음 제자","title":"초성·중성 제자 원리","point":"훈민정음의 기본자는 발음 기관 및 천·지·인의 모양을 본떠 만들었고, 초성에는 가획자·이체자, 중성에는 초출자·재출자가 있습니다.","check":"이체자 ‘ㆁ·ㄹ·ㅿ’은 가획만으로 설명할 수 없습니다. 초성 기본자 ‘ㄱ·ㄴ·ㅁ·ㅅ·ㅇ’, 중성 기본자 ‘ㆍ·ㅡ·ㅣ’와 구별해야 합니다.","practice":"기본자 / 가획자 / 이체자와 중성 기본자 / 초출자 / 재출자를 나란히 분류해 보기."},{"src":2,"grp":"국어사·표기","title":"훈민정음 언해의 언어 특징","point":"‘나랏 말미’의 관형격 조사, ‘어린’의 의미, ‘들’의 어두 자음군 등 현대 국어와 다른 특징을 구별하는 문항입니다.","check":"음운 변화, 단어 의미의 변화, 조사 기능, 표기 방식을 동일한 기준으로 판단하면 안 됩니다.","practice":"자료 속 ㉠~㉤을 현대어 풀이와 한 줄씩 연결하고 변화 유형을 분류하기."},{"src":3,"grp":"국어사·표기","title":"중세어 조사와 구개음화","point":"주격 조사 ‘ㅣ’, 목적격 조사 ‘’, 연결 어미 ‘-고져’, ‘펴디’의 구개음화 미적용 여부를 검토합니다.","check":"‘펴디’와 현대어 ‘펴지’를 비교할 때 중세 국어에 구개음화가 반영되지 않았다는 점을 구별해야 합니다.","practice":"체언의 끝소리, 조사 종류, 용언 어미를 분리하여 판단 근거를 표시하기."},{"src":4,"grp":"높임 표현","title":"주체 높임과 객체 높임","point":"‘니샤도’의 ‘-샤-’는 주체 높임, ‘從디’의 ‘--’은 객체 높임을 나타냅니다.","check":"주체를 높이는 ‘-시-/-샤-’와 객체를 높이는 ‘--/--/--’은 높임 대상이 다릅니다.","practice":"각 문장의 동작 주체와 높임 대상인 객체에 표시한 뒤 선어말 어미를 연결하기."},{"src":5,"grp":"국어사·표기","title":"두음 법칙·이어 적기 종합","point":"‘닐오’의 두음 법칙 미적용, ‘조초미’의 이어 적기, ‘對答샤’의 주체 높임 등 중세어 특징을 종합합니다.","check":"‘-샤-’는 주체 높임이며, 문헌 표기에 드러난 옛 자음과 현대어 대응 형태를 구별해야 합니다.","practice":"제시 어형을 현대어와 대응시키고 음운·표기·높임 요소를 각각 분리하기."},{"src":8,"grp":"격조사","title":"관형격 조사 ‘·의·ㅅ’","point":"관형격 조사는 선행 체언이 사람·동물인지, 높임의 대상인지, 마지막 모음이 양성·음성인지에 따라 달라집니다.","check":"동물 ‘거붑’ 뒤에는 음성 모음 환경의 관형격 ‘의’, 무정 명사 ‘하’ 뒤에는 관형격 ‘ㅅ’이 결합합니다.","practice":"유정성 → 존대 여부 → 모음 조화 순서로 조사를 선택하는 표를 만들어 적용하기."},{"src":9,"grp":"높임 표현","title":"주체·객체 높임 선어말 어미","point":"‘묻고’의 ‘--’은 객체 높임, ‘니르샤’의 ‘-샤-’는 주체 높임에 쓰입니다.","check":"한 문장에서도 주체 높임과 객체 높임의 대상이 달라질 수 있으므로, 어미의 기능을 먼저 가려야 합니다.","practice":"주어 / 목적어·부사어를 식별한 뒤 높임 선어말 어미의 대상을 지정하기."},{"src":10,"grp":"격조사","title":"중세 국어 조사 기능 비교","point":"중세어 주격, 관형격, 목적격, 부사격 조사 형태가 문장 안에서 담당하는 기능을 비교합니다.","check":"겉모양이 비슷한 조사가 있어도 문장에서의 역할에 따라 격이 달라집니다.","practice":"조사가 붙은 체언의 문장 성분을 먼저 찾고, 결합 환경을 검증하기."},{"src":11,"grp":"격조사","title":"주격 조사 ‘이·ㅣ·Ø’","point":"중세 주격 조사는 자음 뒤 ‘이’, ‘ㅣ’ 이외의 모음 뒤 ‘ㅣ’, ‘ㅣ’나 반모음 ‘ㅣ’ 뒤에서는 영 형태가 쓰였습니다.","check":"현대 국어의 ‘이/가’ 교체만으로 중세 주격 조사를 판단하지 않아야 합니다.","practice":"‘얌·불휘·大丈夫’의 끝소리를 기준으로 주격 조사 형태를 직접 넣기."},{"src":13,"grp":"격조사","title":"관형격·부사격 ‘/의’","point":"중세어 ‘/의’는 관형격 조사뿐 아니라 시간·장소를 나타내는 부사격 조사로도 쓰였습니다.","check":"‘거부븨 터리’는 관형격, ‘바 비취니’는 시간 부사격, ‘겨틔 서서’는 장소 부사격에 해당합니다.","practice":"뒤의 체언을 꾸미는지, 서술어에 시간·장소 의미를 더하는지 구분하기."},{"src":14,"grp":"국어사·표기","title":"두음 법칙과 국어사 비교","point":"중세어 ‘니샤’는 현대어 ‘이르시되’와 대응되며, 옛 표기에는 현대 국어의 두음 법칙이 적용되지 않았습니다.","check":"‘니-’에서 두음 법칙 미적용을 확인하고, ‘-샤-’의 주체 높임 기능과 별도로 분석해야 합니다.","practice":"중세어 첫 음절과 현대어 첫 음절을 대응해 두음 법칙 적용 여부를 판정하기."},{"src":15,"grp":"국어사·표기","title":"이어·끊어·거듭 적기","point":"이어 적기는 소리 나는 대로 연결, 끊어 적기는 형태소의 본모양을 밝혀 분리, 거듭 적기는 종성과 다음 초성에 같은 자음을 적는 방식입니다.","check":"중세·근대 자료의 표기 방식은 실제 어형의 형태소 경계를 기준으로 분류해야 합니다.","practice":"‘우름·우서·미워·잇스면’ 등을 형태소 단위로 나눈 뒤 표기 방식을 설명하기."},{"src":18,"grp":"품사·형태","title":"명사형 어미와 파생 접미사","point":"중세어에는 명사 파생 접미사 ‘-(/으)ㅁ’, 명사형 어미 ‘-옴/-움’, 명사 파생 접미사 ‘-/-의’, 부사 파생 접미사 ‘-이’가 구별됩니다.","check":"‘노’는 명사 ‘높이’, ‘노피’는 부사 ‘높이’와 대응합니다. ‘거름’은 파생 명사, ‘거룸’은 용언의 명사형입니다.","practice":"형태보다 문장 속 품사와 기능을 먼저 구분한 뒤 접사·어미를 대응하기."},{"src":20,"grp":"높임 표현","title":"직접 높임과 간접 높임","point":"인물을 직접 높이는 경우와 신체·소유물·생각 등을 높여 그 인물을 간접적으로 높이는 경우를 구분합니다.","check":"‘왕의 이름’, ‘임금의 은사’처럼 인물이 아닌 관련 대상이 높임의 표면적 대상일 수 있습니다.","practice":"높임 표현에 밑줄을 긋고 실제 존대 대상이 인물인지 관련 대상인지 표시하기."},{"src":21,"grp":"훈민정음 제자","title":"초성·중성·종성 제자 원리 응용","point":"초성은 ‘ㅅ’에 가획한 ‘ㅈ·ㅊ’, 중성은 초출자 ‘ㅗ’에 ‘ㆍ’를 더한 ‘ㅛ’, 종성은 이체자 ‘ㆁ·ㄹ·ㅿ’ 조건을 동시에 만족해야 합니다.","check":"글자 카드의 완성된 음절만 보고 고르지 말고 초성·중성·종성을 개별적으로 분해해야 합니다.","practice":"자모 세 조건의 교집합을 표시한 뒤 조건을 하나씩 대조하는 연습하기."},{"src":27,"grp":"격조사","title":"주격·목적격·관형격·부사격·호격","point":"중세어 격조사에 대한 설명과 실제 용례가 일치하는지 확인하는 문항입니다.","check":"주격 ‘ㅣ’, 목적격 ‘/을’, 관형격 ‘ㅅ’, 부사격 ‘로’, 호격 ‘하’의 형태·기능을 구별합니다.","practice":"용례마다 체언의 받침·의미와 문장 성분을 표시하고 조사 종류를 검증하기."},{"src":30,"grp":"격조사","title":"부사격 조사의 의미와 이형태","point":"장소 ‘애/에/예’, 비교 ‘라와·이’, 출발점 ‘로/으로’ 등 중세어 부사격 조사를 현대어와 비교합니다.","check":"‘바래/지븨/블라와/거부븨/저그로’의 형태소 분석을 통해 음운 조건과 의미를 구별해야 합니다.","practice":"조사가 결합한 체언과 조사 기능을 한 줄씩 대응하여 이유를 설명하기."}];
+const WRONG=new Set([]);
+const buttons=[...document.querySelectorAll("[data-q]")];
+const panel=document.getElementById("detail");
+const reduceMotion=()=>window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function child(parent,tag,cls,content){
+  const el=document.createElement(tag);
+  if(cls)el.className=cls;
+  if(content!==undefined)el.textContent=content;
+  parent.appendChild(el);return el;
+}
+function show(i){
+ const q=ITEMS[i],wrong=WRONG.has(q.src);
+ buttons.forEach((b,k)=>b.setAttribute("aria-pressed",String(k===i)));
+ panel.replaceChildren();panel.hidden=false;
+ const tags=child(panel,"div","detail-top");
+ child(tags,"span","tag"+(wrong?" bad":""),"새 "+(i+1)+"번 · 원본 "+q.src+"번");
+ child(tags,"span","tag"+(wrong?" bad":""),wrong?"오답":"정답");
+ child(tags,"span","tag",q.grp);
+ child(panel,"h3","",q.title);
+ child(panel,"div","detail-label","① 출제 포인트");
+ child(panel,"p","detail-text",q.point);
+ child(panel,"div","detail-label","② 핵심 판단 근거");
+ child(panel,"p","detail-text",q.check);
+ child(panel,"div","detail-label",wrong?"③ 보완 학습 제안":"③ 심화·유지 점검");
+ child(panel,"p","detail-text",q.practice);
+ if(wrong){
+   const link=child(panel,"button","assignment-detail-link","해당 문항의 보완 학습 계획 보기");
+   link.type="button";
+   link.addEventListener("click",()=>{
+      const item=document.getElementById("plan-"+q.src);
+      if(item)item.scrollIntoView({behavior:reduceMotion()?"auto":"smooth",block:"center"});
+   });
+   child(panel,"div","detail-foot","오답으로 기록된 문항입니다. 학생이 고른 선택지가 제공되지 않았으므로 실제 오답 원인은 확정하지 않았습니다.");
+ }else{
+   child(panel,"div","detail-foot","정답으로 처리된 문항입니다. 정답 여부만으로 실제 풀이 과정까지 확인한 것은 아니므로 근거를 설명할 수 있는지 추가 점검할 수 있습니다.");
+ }
+ if(window.matchMedia("(max-width:760px)").matches){
+   requestAnimationFrame(()=>panel.scrollIntoView({behavior:reduceMotion()?"auto":"smooth",block:"nearest"}));
+ }
+}
+buttons.forEach((b,i)=>b.addEventListener("click",()=>show(i)));
+document.getElementById("printBtn").addEventListener("click",()=>window.print());
+})();
+</script>
+</body></html>
