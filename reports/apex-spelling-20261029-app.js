@@ -35,8 +35,11 @@ function question(q){
 }
 function fill(data){
  if(!Array.isArray(data)||data.length!==22)throw Error("문항 데이터 검증 실패");
+ target.replaceChildren();
+ details.replaceChildren();
  data.forEach(question);
  const plans=document.getElementById("plans");
+ plans.replaceChildren();
  let order=0;
  data.filter(q=>wrong.has(q[0])).forEach(q=>{
   const [n,g,title,focus,basis,practice]=q;
@@ -45,6 +48,7 @@ function fill(data){
   add(card,"h3","",title);add(card,"p","",practice);
  });
  const rows=document.getElementById("printRows");
+ rows.replaceChildren();
  data.forEach(q=>{
   const tr=add(rows,"tr");
   add(tr,"td","",q[0]);add(tr,"td","",q[2]);
