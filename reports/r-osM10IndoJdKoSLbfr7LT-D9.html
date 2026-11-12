@@ -1,0 +1,328 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#122e43"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="referrer" content="no-referrer"><meta name="description" content="2310 APEX 둔촌고1 황현서 윤흥길 아홉 켤레의 구두로 남은 사내 주간지 학습 분석"><title>2310 APEX | 둔촌고1 황현서 주간지 학습 분석</title><style>
+:root{--navy:#122e43;--navy-2:#203f56;--ink:#152d40;--text:#3c4f5e;--muted:#738494;--blue:#7399b4;--blue-light:#eaf1f6;--cream:#f7f5ee;--cream-dark:#b49a68;--red:#b6534e;--red-bg:#fff0ed;--green:#237865;--line:#dbe4eb;--page:#f6f8fa;--white:#fff;--radius:13px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:var(--page);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;letter-spacing:-.025em;line-height:1.6;word-break:keep-all;-webkit-font-smoothing:antialiased}
+button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #7da3cc;outline-offset:3px}
+button:disabled{cursor:default}
+.header{background:var(--navy);color:var(--white)}
+.header-inner{max-width:1040px;margin:0 auto;padding:15px 28px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{font-size:21px;font-weight:820;letter-spacing:-.04em}.logo span{font-weight:500;margin-left:6px;font-size:11px;letter-spacing:.12em;color:#b2cad7}
+.header-mark{font-size:11px;font-weight:650;color:#c3d4dd}
+.container{max-width:1040px;margin:0 auto;padding:35px 28px 64px}
+.micro{color:#57728a;font-size:12px;letter-spacing:.045em;font-weight:750}
+h1,h2,h3,p{margin-top:0}
+.title-row{display:flex;align-items:end;justify-content:space-between;gap:16px}
+h1{font-size:clamp(26px,4vw,37px);line-height:1.25;letter-spacing:-.055em;margin:10px 0 7px;font-weight:820}
+.lead{font-size:14px;color:var(--text);margin:0;line-height:1.75}
+.pills{display:flex;gap:6px;flex-wrap:wrap;margin-top:15px}
+.pill{font-size:11px;border:1px solid #d7e1e8;background:white;border-radius:999px;padding:5px 10px;color:#586e7f;font-weight:650}
+.pill.demo{background:#f1f6f9;color:#486c86;border-color:#cfdee9}
+.report-btn{border:1px solid #b9cbd6;background:#fff;color:#345d78;border-radius:8px;padding:10px 13px;font-size:12px;font-weight:750;white-space:nowrap}
+.notice{margin-top:20px;border-left:3px solid #839fb0;background:#eef3f6;padding:12px 15px;font-size:12px;color:#536c7d;line-height:1.75}
+.notice strong{color:#25465f}
+.section{margin-top:29px}
+.section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px}
+.section-heading h2{font-size:19px;letter-spacing:-.045em;margin:0;font-weight:820}
+.section-heading .hint{color:#7a8b97;font-size:12px;margin:0;line-height:1.5;text-align:right}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 2px 9px rgba(17,53,82,.025)}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.kpi{padding:20px 19px}
+.kpi-label{color:#627889;font-size:12px;font-weight:720}
+.kpi strong{display:block;font-size:clamp(22px,3vw,32px);letter-spacing:-.05em;margin:5px 0 2px;font-weight:800;font-variant-numeric:tabular-nums}
+.kpi small{color:#8192a1;font-size:11px;display:block;line-height:1.4}
+.kpi:nth-child(2){background:#f5f8fb}
+.keyfinding{margin-top:12px;border:1px solid #d5e2ea;background:#edf3f7;border-radius:10px;padding:16px 19px;display:flex;gap:13px;align-items:flex-start}
+.keyfinding .keynum{font-weight:800;font-size:11px;color:#456d87;white-space:nowrap;margin-top:2px;letter-spacing:.045em}
+.keyfinding strong{font-weight:780;display:block;font-size:15px;line-height:1.45}
+.keyfinding p{margin:3px 0 0;font-size:12px;color:#546c7d;line-height:1.7}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pad{padding:22px}
+.panel-title{font-size:14px;font-weight:790;letter-spacing:-.025em;margin:0 0 17px}
+.compare-row{display:grid;grid-template-columns:110px minmax(0,1fr) 57px;gap:9px;align-items:center;margin:16px 0}
+.compare-row .name{font-size:12px;color:#485f72;font-weight:660}
+.bar-track{height:10px;border-radius:8px;background:#e9eff3;overflow:hidden}
+.bar-fill{height:100%;width:var(--value);background:var(--navy);border-radius:8px}
+.bar-fill.secondary{background:#91aec0}
+.bar-fill.muted{background:#bda16b}
+.compare-row .value{font-size:13px;text-align:right;font-weight:790;font-variant-numeric:tabular-nums}
+.mini-note{font-size:11px;color:#8191a0;line-height:1.65;margin:12px 0 0}
+.result-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.result{border:1px solid #e1e9ee;border-radius:9px;padding:13px 14px}
+.result .round{font-size:12px;color:#567088;font-weight:720}
+.result b{display:block;font-size:25px;letter-spacing:-.035em;line-height:1.35;margin-top:2px;font-variant-numeric:tabular-nums}
+.result small{color:#8093a1;font-size:11px}
+.result .roundbar{height:6px;margin-top:12px;background:#edf2f5;border-radius:4px;overflow:hidden}
+.result .roundbar>span{display:block;height:100%;width:var(--value);background:#7c9eb5}
+.area-row{display:grid;grid-template-columns:132px minmax(0,1fr) 36px;gap:10px;align-items:center;margin:14px 0}
+.area-row span{font-size:12px;color:#4c6273;line-height:1.4}
+.area-row strong{font-size:12px;text-align:right;font-variant-numeric:tabular-nums}
+.area-row .bar-track{height:9px}
+.area-row .bar-fill{background:#8aa6b9}
+.area-row:nth-of-type(3) .bar-fill{background:#baaa86}
+.area-row:nth-of-type(4) .bar-fill{background:#baaa86}
+.area-note{font-size:11px;color:#7d8f9f;margin:18px 0 0;line-height:1.75;padding-top:12px;border-top:1px solid #edf1f4}
+.switcher{display:flex;gap:7px;background:#eff3f6;border-radius:8px;padding:4px;width:max-content;max-width:100%}
+.switcher button{border:0;background:transparent;color:#6c8292;border-radius:6px;padding:8px 20px;font-size:12px;font-weight:750}
+.switcher button[aria-pressed="true"]{background:#fff;box-shadow:0 1px 4px #213d5118;color:#234d67}
+.question-card{padding:21px}
+.question-instruct{margin:15px 0 14px;font-size:12px;color:#728795}
+.question-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:7px}
+.q{height:40px;min-width:0;border:1px solid #dde6eb;border-radius:7px;background:#f4f7f9;color:#638096;font-size:12px;font-weight:750}
+.q.wrong{background:var(--red-bg);color:var(--red);border-color:#edc7c2}
+.q[aria-pressed="true"]{outline:2px solid #285f85;outline-offset:2px;box-shadow:0 2px 7px rgba(30,61,80,.09)}
+.q.wrong[aria-pressed="true"]{outline-color:#b6534e;background:#fbe5df}
+.q:focus-visible{outline:3px solid #2d6e99;outline-offset:2px}
+.legend{display:flex;gap:13px;align-items:center;color:#8091a0;font-size:11px;margin-top:13px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;background:#f4f7f9;border:1px solid #dde6eb;border-radius:2px;margin-right:5px;vertical-align:middle}
+.legend i.bad{background:#fff0ed;border-color:#edc7c2}
+.details-panel{margin-top:17px;background:#f8fafb;border:1px solid #dfE8ee;border-radius:10px;padding:17px 18px}
+.details-panel[hidden]{display:none}
+.detail-top{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.tag{font-size:11px;font-weight:720;border-radius:4px;padding:3px 7px;background:#e8eff4;color:#4a6b81}
+.tag.bad{color:#a64d48;background:#f9e8e5}
+.details-panel h3{font-size:16px;line-height:1.45;margin:11px 0 8px}
+.detail-label{font-size:11px;color:#61798c;font-weight:750;margin-top:12px;margin-bottom:3px}
+.detail-text{font-size:13px;color:#415d70;line-height:1.75;margin:0}
+.detail-foot{border-top:1px solid #dfe7ec;margin-top:14px;padding-top:11px;font-size:11px;color:#7a8b98;line-height:1.7}
+.full-list details{border:1px solid #dce5eb;border-radius:10px;background:#fff;margin-top:10px;overflow:hidden}
+.full-list summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;font-size:13px;font-weight:780;cursor:pointer}
+.full-list summary::-webkit-details-marker{display:none}
+.full-list summary .count{color:#7890a2;font-size:11px;font-weight:630}
+.full-list summary::after{content:'+';font-weight:500;font-size:21px;color:#59798e}
+.full-list details[open] summary::after{content:'−'}
+.full-list .list-body{padding:0 18px 18px}
+.full-list .item{display:grid;grid-template-columns:79px minmax(0,1fr);gap:10px;padding:10px 0;border-top:1px solid #eef2f5;font-size:12px}
+.full-list .item .number{color:#a4534e;font-weight:800}
+.full-list .item .item-title{font-weight:700;margin-bottom:3px}
+.full-list .item .item-text{color:#6a7d8b;line-height:1.7}
+.priority-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.priority{padding:19px 19px 17px}
+.priority .priority-num{color:#6c899b;font-size:11px;font-weight:790}
+.priority h3{font-size:15px;margin:6px 0 4px;line-height:1.5}
+.priority .ids{font-size:11px;color:#8a99a4;line-height:1.5;min-height:31px}
+.priority p{font-size:12px;color:#506879;line-height:1.8;margin:13px 0 0}
+.status{padding:18px 20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.status-block{display:flex;gap:9px;align-items:flex-start}
+.status-ico{flex:0 0 20px;width:20px;height:20px;border-radius:100%;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;background:#728b9e;font-weight:800;margin-top:1px}
+.status-ico.ok{background:var(--green)}
+.status-block b{display:block;font-size:12px}.status-block span{display:block;color:#8593a0;font-size:11px;margin-top:2px;line-height:1.5}
+.teacher{background:#f0f4f7;border-radius:10px;padding:19px 21px;margin-top:20px;border:1px solid #dce6ed}
+.teacher h3{font-size:13px;margin:0 0 8px;letter-spacing:-.015em}
+.teacher p{font-size:13px;line-height:1.85;color:#4b6578;margin:0}
+.teacher footer{font-size:11px;color:#7a8f9e;text-align:right;margin-top:9px}
+.report-foot{margin-top:30px;padding-top:17px;border-top:1px solid #dbe4eb;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#8799a7;font-size:11px;line-height:1.65}
+.report-foot b{color:#415d70;font-weight:760}
+
+/* 오답 문항 → 맞춤 재숙제 → 재평가 연계 */
+.assignment-intro{padding:18px 20px;display:flex;align-items:start;justify-content:space-between;gap:16px;background:#f0f5f8}
+.assignment-intro strong{font-size:14px;font-weight:800;display:block}
+.assignment-intro p{font-size:12px;color:#567080;line-height:1.8;margin:5px 0 0;max-width:695px}
+.assignment-intro p b{font-weight:800;color:#2b5168}
+.assignment-pending{flex:none;border-radius:5px;border:1px solid #c9dbe5;background:#fff;color:#52748a;padding:6px 8px;font-size:11px;font-weight:700;white-space:nowrap}
+.assignment-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:11px 0 13px}
+.assignment-steps>div{background:#fff;border:1px solid var(--line);border-radius:9px;padding:13px 12px;min-width:0}
+.step-index{display:block;font-size:10px;font-weight:800;letter-spacing:.03em;color:#7695a9;margin-bottom:5px}
+.assignment-steps b{display:block;font-size:12px;line-height:1.45}
+.assignment-steps small{display:block;font-size:11px;color:#7c90a0;line-height:1.55;margin-top:4px}
+.assignment-group{margin-bottom:9px;overflow:hidden}
+.assignment-group summary{display:flex;gap:13px;align-items:center;list-style:none;cursor:pointer;padding:16px 17px;min-height:77px}
+.assignment-group summary::-webkit-details-marker{display:none}
+.priority-rank{flex:0 0 auto;color:#48718d;font-size:11px;font-weight:800;background:#e8f0f5;border-radius:5px;padding:5px 8px}
+.assignment-summary{flex:1;min-width:0;display:block}
+.assignment-summary strong{display:block;font-size:14px;line-height:1.45}
+.assignment-summary small{display:block;font-size:11px;line-height:1.6;color:#7a8d9b;font-weight:550;margin-top:2px}
+.assignment-state{border:1px solid #e3d9c3;background:#fcf8ef;color:#8e7342;border-radius:5px;padding:4px 7px;font-size:11px;font-weight:700;white-space:nowrap}
+.assignment-chevron{border-right:2px solid #758c9d;border-bottom:2px solid #758c9d;transform:rotate(45deg);width:8px;height:8px;flex:none;margin-left:3px;transition:transform .15s}
+.assignment-group[open] .assignment-chevron{transform:rotate(225deg)}
+.assignment-body{padding:0 17px 15px;border-top:1px solid #edf1f4}
+.assignment-cells{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-top:13px}
+.assignment-cells>div{border-left:2px solid #aac1d0;padding-left:11px}
+.assignment-cells b{font-size:12px;color:#2c566e}
+.assignment-cells p{font-size:12px;line-height:1.75;color:#516b7c;margin:6px 0 0}
+.assignment-audit{background:#f6f8fa;border-radius:6px;padding:10px 11px;margin:13px 0 0;color:#657d8d;font-size:11px;line-height:1.7}
+.assignment-audit strong{color:#3a6178}.assignment-audit span{margin:0 3px;color:#b5c3cd}
+.plan-footnote{font-size:11px;line-height:1.75;color:#7b8e9d;margin:9px 0 0}
+.assignment-detail-link{display:inline-flex;margin-top:12px;font-size:12px;font-weight:700;color:#2c678d;border:1px solid #c6d8e5;background:#fff;border-radius:7px;padding:8px 11px;text-align:left}
+@media(max-width:760px){.assignment-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.assignment-intro{flex-direction:column;gap:9px}.assignment-cells{grid-template-columns:1fr}}
+@media(max-width:420px){.assignment-steps>div{padding:11px 10px}.assignment-steps b{font-size:11px}.assignment-steps small{font-size:10px}.assignment-group summary{gap:7px;padding:13px 11px;min-height:72px}.assignment-summary strong{font-size:13px}.assignment-summary small{font-size:10px}.priority-rank{font-size:10px;padding:4px 6px}.assignment-state{font-size:10px;padding:3px 4px}.assignment-body{padding:0 12px 13px}.assignment-intro{padding:15px}.assignment-cells p{font-size:11px}}
+@media(max-width:760px){.q{height:44px}.switcher button{min-height:44px}.container{padding:25px 16px 42px}.header-inner{padding:14px 17px}.title-row{align-items:start}.kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cols{grid-template-columns:1fr}.question-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.priority-list{grid-template-columns:1fr}.priority .ids{min-height:0}.status{grid-template-columns:1fr}.section{margin-top:26px}}
+@media(max-width:420px){.header-mark{font-size:10px}.logo{font-size:18px}.logo span{font-size:9px}.container{padding:21px 13px 35px}h1{font-size:27px}.lead{font-size:12px}.title-row{flex-direction:column;align-items:stretch}.report-btn{align-self:flex-start}.kpi{padding:16px 14px}.kpi strong{font-size:25px}.kpi small{font-size:10px}.section-heading{display:block}.section-heading h2{font-size:17px}.section-heading .hint{text-align:left;margin-top:4px;font-size:11px}.pad,.question-card{padding:17px 15px}.keyfinding{display:block;padding:14px 15px}.keyfinding .keynum{display:block;margin-bottom:7px}.compare-row{grid-template-columns:87px minmax(0,1fr) 45px;gap:6px}.compare-row .name,.compare-row .value{font-size:11px}.result{padding:12px}.result b{font-size:22px}.area-row{grid-template-columns:100px minmax(0,1fr) 31px;gap:6px}.area-row span,.area-row strong{font-size:11px}.full-list .item{grid-template-columns:70px minmax(0,1fr);gap:7px}.full-list summary{padding:13px 14px}.full-list .list-body{padding:0 14px 14px}}
+@media print{
+.assignment-steps{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:5px;margin:5px 0}.assignment-steps>div{padding:7px}.assignment-steps small{font-size:8px}.assignment-steps b{font-size:9px}.assignment-intro{padding:9px;display:block}.assignment-intro p,.plan-footnote{font-size:9px}.assignment-group summary{min-height:0;padding:8px}.assignment-group .assignment-body{display:block!important;padding:0 10px 9px}.assignment-cells{grid-template-columns:1fr 1fr!important;padding-top:7px}.assignment-cells p{font-size:9px}.assignment-cells b{font-size:9px}.assignment-group{break-inside:avoid;margin-bottom:5px}.assignment-detail-link{display:none!important}.assignment-audit{margin-top:5px;padding:6px;font-size:8px}
+
+ body{background:#fff!important;font-size:12px} .header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .header-inner{padding:10px 16px}.container{max-width:none;padding:12px 10px}.micro{font-size:10px}
+ h1{font-size:28px;margin:5px 0}.lead{font-size:12px}.pills{margin-top:8px}.pill{padding:2px 6px;font-size:9px}
+ .notice{margin-top:9px;padding:8px 10px;font-size:10px}.section{break-inside:auto;margin-top:14px}
+ .section-heading{margin-bottom:6px}.section-heading h2{font-size:15px}.section-heading .hint{font-size:10px}
+ .report-btn,.switcher,.legend,.question-card{display:none!important}
+ .kpi-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:7px}.kpi{padding:10px}.kpi strong{font-size:20px}.kpi-label,.kpi small{font-size:10px}
+ .keyfinding{padding:8px 10px;margin-top:7px}.keyfinding strong{font-size:12px}.keyfinding p{font-size:10px}
+ .cols{grid-template-columns:1fr 1fr!important;gap:8px}.pad{padding:12px}
+ .panel-title{font-size:12px;margin-bottom:8px}.result{padding:7px}.result b{font-size:16px}.compare-row{margin:8px 0;grid-template-columns:88px minmax(0,1fr) 44px}
+ .area-row{grid-template-columns:100px minmax(0,1fr) 26px;margin:9px 0;gap:5px}.area-row span,.area-row strong{font-size:10px}.area-note,.mini-note{font-size:9px;margin-top:7px;padding-top:5px}
+ .full-list{display:block!important}.full-list details{margin-top:0;break-inside:auto}.full-list summary{padding:9px 12px;font-size:11px}.full-list .list-body{display:block!important;padding:0 12px 8px}
+ .full-list .item{font-size:9.5px;padding:6px 0;grid-template-columns:61px minmax(0,1fr);break-inside:avoid}.full-list .item .item-text{line-height:1.4}
+ .priority-list{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px}.priority{padding:10px}.priority h3{font-size:12px;margin:4px 0}.priority p{font-size:10px;margin-top:5px}.priority .ids{font-size:9px;min-height:0}
+ .status{grid-template-columns:repeat(3,minmax(0,1fr))!important;padding:9px;gap:5px}.status-block b{font-size:10px}.status-block span{font-size:9px}
+ .teacher{margin-top:9px;padding:9px}.teacher p{font-size:10px}.teacher h3{font-size:11px}.teacher footer{font-size:9px}
+ .report-foot{margin-top:9px;padding-top:6px;font-size:9px}
+ .card{box-shadow:none}.section,.cols,.priority-list{break-inside:auto}.status-block,.priority,.kpi,.result{break-inside:avoid}
+}
+
+/* 학생별 리포트 */
+body{letter-spacing:-.02em}
+.masthead{display:flex;justify-content:space-between;align-items:end;gap:18px}
+.student-name{font-weight:830;color:#213f56}
+.score-inset{font-size:11px;color:#698498;text-align:right}
+.notice{background:#eef4f7;border-color:#86a5b6}
+.sub-label{display:block;color:#7b90a0;font-size:11px;margin-top:8px}
+.overview-band{padding:20px;background:#fff;border:1px solid var(--line);border-radius:var(--radius)}
+.group-row{display:grid;grid-template-columns:118px minmax(0,1fr) 57px;gap:9px;align-items:center;margin:13px 0}
+.group-row .name{font-size:12px;color:#516a7b;font-weight:680}
+.group-row .value{font-size:12px;color:#233f56;font-weight:780;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.overview-band .bar-track{height:11px}
+.group-row.missed .bar-fill{background:#bb9288}
+.plan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.plan-card{padding:19px 20px;scroll-margin-top:16px}
+.plan-card h3{font-size:14px;line-height:1.5;margin:6px 0}
+.plan-card p{margin:0;font-size:12px;color:#536b7e;line-height:1.78}
+.plan-card .plan-link{font-size:11px;color:#a5544d;font-weight:790}
+.plan-card:target{border-color:#90aebf;box-shadow:0 0 0 3px #e2edf4}
+.q{height:46px;font-size:13px}
+.question-grid{grid-template-columns:repeat(17,minmax(0,1fr));gap:5px}
+.question-instruct{line-height:1.75}
+.original-map{border-top:1px solid #e4edf2;margin-top:14px;padding-top:13px;font-size:11px;color:#7890a1;line-height:1.8}
+.details-panel{background:#f5f9fb}
+.label-note{font-size:11px;color:#7e91a0;margin-top:11px}
+.plan-intro{padding:16px 19px;background:#eef4f7;color:#4a667a;border:1px solid #d6e5ed;border-radius:10px;font-size:12px;line-height:1.8;margin-bottom:12px}
+.plan-intro strong{color:#274b63}
+.print-only{display:none}
+.no-share{color:#748b9c;font-size:11px}
+@media(max-width:900px){.question-grid{grid-template-columns:repeat(9,minmax(0,1fr))}}
+@media(max-width:760px){.question-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.plan-grid{grid-template-columns:1fr}.group-row{grid-template-columns:112px minmax(0,1fr) 55px}.masthead{display:block}.score-inset{text-align:left;margin-top:8px}}
+@media(max-width:420px){.question-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.q{height:44px}.group-row{grid-template-columns:100px minmax(0,1fr) 50px;gap:6px}.group-row .name,.group-row .value{font-size:10px}.plan-card{padding:16px}}
+@media print{
+.print-only{display:block}.question-card,.report-btn{display:none!important}
+.plan-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.plan-card{padding:12px}
+.plan-card h3{font-size:11px}.plan-card p{font-size:10px}
+.overview-band{padding:12px}
+.group-row{margin:7px 0;grid-template-columns:115px minmax(0,1fr) 55px}
+.keyfinding{break-inside:avoid}
+.student-name{font-size:inherit}
+.print-only table{width:100%;border-collapse:collapse;font-size:10px}
+.print-only td,.print-only th{border-bottom:1px solid #e3e8ec;padding:5px 6px;text-align:left}
+.print-only th{background:#eef4f7}
+}
+.question-grid{grid-template-columns:repeat(11,minmax(0,1fr))}.audit-table{width:100%;border-collapse:collapse;font-size:12px}.audit-table th,.audit-table td{padding:9px 10px;border-bottom:1px solid #e6edf2;text-align:left}.audit-table th{background:#eef4f7}.audit-table .bad{color:#ad514a;font-weight:750}.choice-list{margin:6px 0 0;padding:0;list-style:none}.choice-list li{padding:7px 0;border-top:1px solid #e3ebf0;font-size:12px;line-height:1.75;color:#476173}.detail-source{font-size:11px;color:#7c90a0;margin-top:12px}.static-detail{scroll-margin-top:20px}.static-detail summary{min-height:54px}.static-detail .detail-text{font-size:12px}.static-detail .detail-label{font-size:11px}.print-only h2{font-size:16px}.print-only th,.print-only td{font-size:10px}.score-inset{max-width:210px}.filter-note{font-size:11px;color:#7a8f9f;margin:0}.wrong-chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.wrong-chips a{text-decoration:none;color:#ab5049;background:#fff0ed;border:1px solid #ecc7c3;padding:5px 11px;border-radius:6px;font-size:12px;font-weight:750}.review-plan{padding:19px}.review-plan ol{padding-left:18px;margin:0;color:#4a6577;font-size:12px;line-height:1.9}.review-plan h3{font-size:14px}.section-heading a{font-size:12px;color:#466f89}.subtle{font-size:11px;color:#8192a0}.wrong-summary{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.wrong-summary b{color:#ad514a}.full-list summary::after{margin-left:auto}.full-list .list-body{padding-top:0} @media(max-width:760px){.question-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.audit-table td,.audit-table th{padding:7px 5px;font-size:11px}.score-inset{max-width:none}.switcher button{padding:7px 14px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}} @media print{.wrong-chips,.switcher,.filter-note{display:none!important}.full-list .static-detail{break-inside:avoid}.choice-list li{font-size:9px;padding:3px 0}.static-detail .detail-text{font-size:9.5px}.detail-source{font-size:8px}.static-detail .detail-label{font-size:9px;margin-top:6px}.audit-table td,.audit-table th{padding:4px 6px}.review-plan{padding:10px}.review-plan ol{font-size:10px}.review-plan h3{font-size:11px}.report-foot{break-inside:avoid}.print-table-section{break-before:page}}[hidden]{display:none!important}.question-grid{grid-template-columns:repeat(10,minmax(0,1fr))}.empty-state{padding:23px;border:1px solid #cde4db;background:#f0f8f4;border-radius:12px;color:#2d6958;font-size:13px}.empty-state strong{display:block;font-size:16px;margin-bottom:5px}.audit-scroll{overflow-x:auto}.audit-table th:first-child{width:45px}.audit-table th:last-child{width:50px}.audit-table td:nth-child(3){max-width:400px;overflow-wrap:anywhere}.score-note{font-size:11px;line-height:1.8;color:#738898;margin:12px 0 0}.details-panel p{overflow-wrap:anywhere}.area-row{grid-template-columns:140px minmax(0,1fr) 40px}@media(max-width:760px){.question-grid{grid-template-columns:repeat(6,minmax(0,1fr))}}@media(max-width:420px){.area-row{grid-template-columns:113px minmax(0,1fr) 37px}.header-mark{max-width:120px;text-align:right}.switcher button{padding:7px 11px}.audit-table td{font-size:10px}}@media print{.empty-state{padding:12px}.audit-table td,.audit-table th{font-size:9px}.audit-scroll{overflow:visible}}</style></head><body><header class="header"><div class="header-inner"><div class="logo">2310 APEX<span>WEEKLY REPORT</span></div><div class="header-mark">학부모 열람용 · 학생별 개별 리포트</div></div></header><main class="container"><div class="micro">윤흥길 「아홉 켤레의 구두로 남은 사내」 | 주간지 테스트</div><div class="title-row"><div><h1>주간지 학습 분석 리포트</h1><p class="lead"><strong class="student-name">둔촌고 1학년 황현서</strong> 학생 · 2026년 11월 12일</p></div><button type="button" id="printBtn" class="report-btn">인쇄 / PDF로 저장</button></div><div class="pills"><span class="pill">2310 APEX</span><span class="pill">둔촌고1 · 국어 내신대비</span><span class="pill">현대소설 · 윤흥길 「아홉 켤레의 구두로 남은 사내」</span><span class="pill">객관식 30문항</span></div>
+<section class="section">
+<div class="section-heading"><h2>이번 주 학습 결과</h2><p class="hint">객관식 30문항</p></div>
+<div class="kpi-grid"><div class="card kpi"><div class="kpi-label">정답</div><strong>28문항</strong><small>전체 30문항</small></div><div class="card kpi"><div class="kpi-label">정답률</div><strong>93.3%</strong><small>28 / 30문항</small></div><div class="card kpi"><div class="kpi-label">오답</div><strong>2문항</strong><small>16·21번</small></div><div class="card kpi"><div class="kpi-label">보완 영역</div><strong>어휘·감상</strong><small>문맥상 의미 · 비교 감상</small></div></div>
+<div class="keyfinding"><div><strong>16번은 바꿔 쓴 말의 뜻, 21번은 비교의 기준 확인</strong><p>16번에서는 ‘적시’가 알맞은 때를 뜻한다는 점을, 21번에서는 원장의 물질 중심 태도와 대비되는 인간상을 짚어 봅니다.</p></div></div>
+</section>
+<section class="section">
+<div class="section-heading"><h2>개념 영역별 결과</h2><p class="hint">영역별 정답 / 응시</p></div>
+<div class="cols"><div class="card pad"><div class="area-row"><span>주제·사회적 맥락</span><div class="bar-track"><div class="bar-fill" style="--value:83.33333333333333%"></div></div><strong>5/6</strong></div>
+<div class="area-row"><span>인물·갈등</span><div class="bar-track"><div class="bar-fill" style="--value:100%"></div></div><strong>10/10</strong></div>
+<div class="area-row"><span>서술·표현</span><div class="bar-track"><div class="bar-fill" style="--value:100%"></div></div><strong>7/7</strong></div>
+<div class="area-row"><span>소재·어휘</span><div class="bar-track"><div class="bar-fill" style="--value:85.71428571428571%"></div></div><strong>6/7</strong></div></div><div class="card pad"><h3 class="panel-title">잘 풀어낸 영역</h3><p class="detail-text">인물의 심리와 갈등, 서술 시점과 표현을 묻는 문항은 모두 맞혔습니다. 두 오답은 문맥상 어휘와 다른 작품을 연결해 감상하는 문항에서 나왔습니다.</p></div></div>
+</section>
+<section class="section">
+<div class="section-heading"><h2>문항별 분석</h2><p class="hint">번호를 누르면 정답과 판단 근거가 열립니다</p></div>
+<div class="card question-card">
+<div class="switcher" role="group" aria-label="문항 보기"><button id="allFilter" type="button" aria-pressed="true">전체 30문항</button><button id="wrongFilter" type="button" aria-pressed="false">오답 2문항</button></div>
+<div class="question-grid" aria-label="문항별 채점 결과"><button type="button" class="q" data-q="1" aria-label="1번 정답" aria-pressed="false" aria-controls="detail">1</button>
+<button type="button" class="q" data-q="2" aria-label="2번 정답" aria-pressed="false" aria-controls="detail">2</button>
+<button type="button" class="q" data-q="3" aria-label="3번 정답" aria-pressed="false" aria-controls="detail">3</button>
+<button type="button" class="q" data-q="4" aria-label="4번 정답" aria-pressed="false" aria-controls="detail">4</button>
+<button type="button" class="q" data-q="5" aria-label="5번 정답" aria-pressed="false" aria-controls="detail">5</button>
+<button type="button" class="q" data-q="6" aria-label="6번 정답" aria-pressed="false" aria-controls="detail">6</button>
+<button type="button" class="q" data-q="7" aria-label="7번 정답" aria-pressed="false" aria-controls="detail">7</button>
+<button type="button" class="q" data-q="8" aria-label="8번 정답" aria-pressed="false" aria-controls="detail">8</button>
+<button type="button" class="q" data-q="9" aria-label="9번 정답" aria-pressed="false" aria-controls="detail">9</button>
+<button type="button" class="q" data-q="10" aria-label="10번 정답" aria-pressed="false" aria-controls="detail">10</button>
+<button type="button" class="q" data-q="11" aria-label="11번 정답" aria-pressed="false" aria-controls="detail">11</button>
+<button type="button" class="q" data-q="12" aria-label="12번 정답" aria-pressed="false" aria-controls="detail">12</button>
+<button type="button" class="q" data-q="13" aria-label="13번 정답" aria-pressed="false" aria-controls="detail">13</button>
+<button type="button" class="q" data-q="14" aria-label="14번 정답" aria-pressed="false" aria-controls="detail">14</button>
+<button type="button" class="q" data-q="15" aria-label="15번 정답" aria-pressed="false" aria-controls="detail">15</button>
+<button type="button" class="q wrong" data-q="16" aria-label="16번 오답" aria-pressed="false" aria-controls="detail">16</button>
+<button type="button" class="q" data-q="17" aria-label="17번 정답" aria-pressed="false" aria-controls="detail">17</button>
+<button type="button" class="q" data-q="18" aria-label="18번 정답" aria-pressed="false" aria-controls="detail">18</button>
+<button type="button" class="q" data-q="19" aria-label="19번 정답" aria-pressed="false" aria-controls="detail">19</button>
+<button type="button" class="q" data-q="20" aria-label="20번 정답" aria-pressed="false" aria-controls="detail">20</button>
+<button type="button" class="q wrong" data-q="21" aria-label="21번 오답" aria-pressed="false" aria-controls="detail">21</button>
+<button type="button" class="q" data-q="22" aria-label="22번 정답" aria-pressed="false" aria-controls="detail">22</button>
+<button type="button" class="q" data-q="23" aria-label="23번 정답" aria-pressed="false" aria-controls="detail">23</button>
+<button type="button" class="q" data-q="24" aria-label="24번 정답" aria-pressed="false" aria-controls="detail">24</button>
+<button type="button" class="q" data-q="25" aria-label="25번 정답" aria-pressed="false" aria-controls="detail">25</button>
+<button type="button" class="q" data-q="26" aria-label="26번 정답" aria-pressed="false" aria-controls="detail">26</button>
+<button type="button" class="q" data-q="27" aria-label="27번 정답" aria-pressed="false" aria-controls="detail">27</button>
+<button type="button" class="q" data-q="28" aria-label="28번 정답" aria-pressed="false" aria-controls="detail">28</button>
+<button type="button" class="q" data-q="29" aria-label="29번 정답" aria-pressed="false" aria-controls="detail">29</button>
+<button type="button" class="q" data-q="30" aria-label="30번 정답" aria-pressed="false" aria-controls="detail">30</button></div>
+<p id="emptyFilter" class="empty-state" hidden>오답 문항이 없습니다.</p>
+<div class="legend"><span><i></i>정답</span><span><i class="bad"></i>오답</span></div><div id="detail" class="details-panel" aria-live="polite"><div class="detail-top"><span class="tag bad">16번</span><span class="tag bad">오답</span><span class="tag">소재·어휘</span></div>
+<h3>문맥상 ‘적시’의 뜻</h3><div class="detail-label">정답 ③</div><p class="detail-text">‘그가 적시에 일깨워 주었기’의 ‘적시’는 ‘알맞은 때’를 뜻한다. 권 씨의 말 덕분에 ‘나’가 돈을 돌려받는 문제를 그때 떠올렸다는 뜻이다. ‘갑자기’로 바꾸면 시점이 알맞았다는 의미가 사라진다.</p>
+<div class="detail-label">선지별 판단 근거</div><ul class="choice-list"><li><strong>①</strong> ‘상투적’은 늘 되풀이되어 새로움이 없다는 뜻이므로 ‘진부한’으로 바꿀 수 있다.</li><li><strong>②</strong> ‘경제권을 장악하고’는 경제권을 쥐고 있다는 뜻이다.</li><li><strong>③</strong> ‘적시’는 알맞은 때를 가리킨다. ‘갑자기’는 일이 뜻밖에 급작스럽게 일어남을 나타내므로 바꾸어 쓸 수 없다.</li><li><strong>④</strong> ‘기왕’과 ‘이왕’은 이 문맥에서 ‘이미 이렇게 된 이상’이라는 뜻이다.</li><li><strong>⑤</strong> ‘변통하다’는 이 문맥에서 필요한 돈을 융통한다는 뜻이다.</li></ul><div class="detail-label">다시 풀 때</div><p class="detail-text">‘알맞은 때에’와 ‘갑작스럽게’를 각각 넣어 읽고, 원문에 있던 의미가 유지되는지 확인해 보세요.</p>
+<p class="detail-source">시험지 정답·해설 26쪽 대조</p></div></div>
+</section>
+<section class="section full-list">
+<div class="section-heading"><h2>16·21번 오답 해설</h2><p class="hint">선지별 판단 근거</p></div>
+<details class="static-detail" id="wrong-16"><summary><span class="wrong-summary"><b>16번</b><span>문맥상 ‘적시’의 뜻</span></span><span class="count">정답 ③</span></summary><div class="list-body"><div class="detail-top"><span class="tag bad">16번</span><span class="tag bad">오답</span><span class="tag">소재·어휘</span></div>
+<h3>문맥상 ‘적시’의 뜻</h3><div class="detail-label">정답 ③</div><p class="detail-text">‘그가 적시에 일깨워 주었기’의 ‘적시’는 ‘알맞은 때’를 뜻한다. 권 씨의 말 덕분에 ‘나’가 돈을 돌려받는 문제를 그때 떠올렸다는 뜻이다. ‘갑자기’로 바꾸면 시점이 알맞았다는 의미가 사라진다.</p>
+<div class="detail-label">선지별 판단 근거</div><ul class="choice-list"><li><strong>①</strong> ‘상투적’은 늘 되풀이되어 새로움이 없다는 뜻이므로 ‘진부한’으로 바꿀 수 있다.</li><li><strong>②</strong> ‘경제권을 장악하고’는 경제권을 쥐고 있다는 뜻이다.</li><li><strong>③</strong> ‘적시’는 알맞은 때를 가리킨다. ‘갑자기’는 일이 뜻밖에 급작스럽게 일어남을 나타내므로 바꾸어 쓸 수 없다.</li><li><strong>④</strong> ‘기왕’은 이미 그렇게 된 바에라는 뜻으로 ‘이왕’과 통한다.</li><li><strong>⑤</strong> ‘변통하다’는 이 문맥에서 필요한 돈을 융통한다는 뜻이다.</li></ul><div class="detail-label">다시 풀 때</div><p class="detail-text">‘알맞은 때에’와 ‘갑작스럽게’를 각각 넣어 읽고, 원문에 있던 의미가 유지되는지 확인해 보세요.</p>
+<p class="detail-source">시험지 정답·해설 26쪽 대조</p></div></details>
+<details class="static-detail" id="wrong-21"><summary><span class="wrong-summary"><b>21번</b><span>원장의 태도와 대비되는 인간상</span></span><span class="count">정답 ⑤</span></summary><div class="list-body"><div class="detail-top"><span class="tag bad">21번</span><span class="tag bad">오답</span><span class="tag">주제·사회적 맥락</span></div>
+<h3>원장의 태도와 대비되는 인간상</h3><div class="detail-label">정답 ⑤</div><p class="detail-text">원장은 위급한 산모의 수술을 앞두고 비용 보증부터 요구한다. 이 태도에 실망한 ‘나’가 바랄 인간상은 물질을 앞세우는 현실 속에서도 마음의 맑음과 따뜻함을 지닌 사람이다. 이 인간상을 노래한 박두진의 「청산도」가 가장 적절하다.</p>
+<div class="detail-label">선지별 판단 근거</div><ul class="choice-list"><li><strong>①</strong> 이직의 시조는 겉과 속이 다른 위선을 비판한다. 화자가 만나고 싶은 인간상을 제시하는 데까지 나아가지는 않는다.</li><li><strong>②</strong> 황진이의 시조는 임을 향한 변함없는 마음과 기다림을 드러낸다.</li><li><strong>③</strong> 김소월의 「초혼」은 떠난 이를 절절하게 부르는 상실의 슬픔이 중심이다.</li><li><strong>④</strong> 황동규의 「즐거운 편지」는 상대를 향해 오래 지속되는 사랑을 노래한다.</li><li><strong>⑤</strong> 박두진의 「청산도」는 티끌 부는 세상에서도 마음이 맑은 사람을 그린다. 돈을 먼저 따지는 원장의 태도와 대비되는 인간상이다.</li></ul><div class="detail-label">다시 풀 때</div><p class="detail-text">원장의 태도를 먼저 한 문장으로 정리하고, 그와 대비되는 인물을 떠올린 뒤 시의 표현을 근거로 고르세요.</p>
+<p class="detail-source">시험지 정답·해설 26쪽 대조</p></div></details>
+</section>
+<section class="section">
+<div class="section-heading"><h2>다음 학습</h2></div>
+<div class="priority-list"><article class="card priority"><h3>16번 · 뜻을 풀고 문장에 넣어 보기</h3><p>‘적시에 일깨워 주었다’를 ‘알맞은 때에 일깨워 주었다’로 바꾸어 봅니다. ‘갑자기’로 바꾸었을 때 무엇이 달라지는지 설명합니다.</p></article><article class="card priority"><h3>21번 · 인물의 태도를 기준으로 작품 비교하기</h3><p>원장이 먼저 요구한 것과 화자가 바라는 인간상을 각각 적습니다. 「청산도」에서 그 인간상을 뒷받침하는 표현을 찾아 근거로 듭니다.</p></article></div>
+</section>
+<section class="section print-table-section">
+<div class="section-heading"><h2>전체 문항 정답 확인표</h2><p class="hint">시험지 23쪽 정답표 기준</p></div>
+<div class="card audit-scroll"><table class="audit-table"><thead><tr><th scope="col">문항</th><th scope="col">출제 개념</th><th scope="col">정답</th><th scope="col">채점</th></tr></thead><tbody><tr><td>1</td><td>산업화의 그늘</td><td>⑤</td><td class="">정답</td></tr>
+<tr><td>2</td><td>권 씨와 사회의 갈등</td><td>②</td><td class="">정답</td></tr>
+<tr><td>3</td><td>출산 문제를 예고하는 복선</td><td>③</td><td class="">정답</td></tr>
+<tr><td>4</td><td>보증 제안에 담긴 계산</td><td>⑤</td><td class="">정답</td></tr>
+<tr><td>5</td><td>행동으로 드러나는 초조함</td><td>④</td><td class="">정답</td></tr>
+<tr><td>6</td><td>구두와 지식인의 자존심</td><td>④</td><td class="">정답</td></tr>
+<tr><td>7</td><td>권 씨의 행방과 결말</td><td>⑤</td><td class="">정답</td></tr>
+<tr><td>8</td><td>아홉 켤레에 남은 권 씨의 흔적</td><td>⑤</td><td class="">정답</td></tr>
+<tr><td>9</td><td>소시민의 갈등과 자존심 배려</td><td>⑤</td><td class="">정답</td></tr>
+<tr><td>10</td><td>대화 중심의 사건 전개</td><td>③</td><td class="">정답</td></tr>
+<tr><td>11</td><td>소재에 드러나는 생존과 이해관계</td><td>②</td><td class="">정답</td></tr>
+<tr><td>12</td><td>정체를 알아챘을 때의 권 씨</td><td>⑤</td><td class="">정답</td></tr>
+<tr><td>13</td><td>모르는 체하는 행동의 이유</td><td>④</td><td class="">정답</td></tr>
+<tr><td>14</td><td>소재·대화·1인칭 서술</td><td>②</td><td class="">정답</td></tr>
+<tr><td>15</td><td>평소와 다른 말투가 드러내는 절박함</td><td>③</td><td class="">정답</td></tr>
+<tr><td>16</td><td>문맥상 ‘적시’의 뜻</td><td>③</td><td class="bad">오답</td></tr>
+<tr><td>17</td><td>절박한 부탁과 자존심 회복</td><td>②</td><td class="">정답</td></tr>
+<tr><td>18</td><td>수술비를 낸 뒤에도 남는 한계</td><td>③</td><td class="">정답</td></tr>
+<tr><td>19</td><td>1인칭 관찰자의 인식 범위</td><td>⑤</td><td class="">정답</td></tr>
+<tr><td>20</td><td>광주 대단지 사건과 소외</td><td>④</td><td class="">정답</td></tr>
+<tr><td>21</td><td>원장의 태도와 대비되는 인간상</td><td>⑤</td><td class="bad">오답</td></tr>
+<tr><td>22</td><td>구두와 &lt;보기&gt;의 신발 비교</td><td>④</td><td class="">정답</td></tr>
+<tr><td>23</td><td>도시 빈민을 바라보는 권력</td><td>⑤</td><td class="">정답</td></tr>
+<tr><td>24</td><td>빈 한 켤레와 제목의 의미</td><td>①</td><td class="">정답</td></tr>
+<tr><td>25</td><td>관찰자 시점의 효과와 한계</td><td>⑤</td><td class="">정답</td></tr>
+<tr><td>26</td><td>연민과 자기 보호 사이의 갈등</td><td>⑤</td><td class="">정답</td></tr>
+<tr><td>27</td><td>구두를 닦는 행위와 정체성</td><td>③</td><td class="">정답</td></tr>
+<tr><td>28</td><td>거절 뒤 권 씨가 내세운 자존심</td><td>⑤</td><td class="">정답</td></tr>
+<tr><td>29</td><td>어휘 선택이 전달하는 위급함</td><td>④</td><td class="">정답</td></tr>
+<tr><td>30</td><td>지식인이라는 정체성의 확인</td><td>②</td><td class="">정답</td></tr></tbody></table></div>
+</section>
+<footer class="report-foot"><span><b>2310 APEX · 둔촌고1 주간지 분석</b><br>윤흥길 「아홉 켤레의 구두로 남은 사내」 · 2026.11.12</span><span>정답률은 문항 수 기준입니다.<br>제공된 오답 목록을 기준으로 채점했습니다.</span></footer></main>
+<script>const PANELS=["<div class=\"detail-top\"><span class=\"tag\">1번</span><span class=\"tag\">정답</span><span class=\"tag\">주제·사회적 맥락</span></div>\n<h3>산업화의 그늘</h3><div class=\"detail-label\">정답 ⑤</div><p class=\"detail-text\">권 씨는 도시 개발 과정에서 삶의 터전을 잃고 아내의 수술비도 구하기 어려운 처지가 된다. 작품은 경제 성장의 이점보다 그 과정에서 소외된 사람들의 삶을 보여 준다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 23쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">2번</span><span class=\"tag\">정답</span><span class=\"tag\">인물·갈등</span></div>\n<h3>권 씨와 사회의 갈등</h3><div class=\"detail-label\">정답 ②</div><p class=\"detail-text\">당국의 불합리한 정책에 항의한 권 씨는 시위 주동자로 몰려 전과자가 된다. 갈등의 상대를 개인으로 좁히지 않고 사회 제도와 권력으로 봐야 한다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 23쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">3번</span><span class=\"tag\">정답</span><span class=\"tag\">서술·표현</span></div>\n<h3>출산 문제를 예고하는 복선</h3><div class=\"detail-label\">정답 ③</div><p class=\"detail-text\">‘나’의 아내가 권 씨 부인의 출산을 걱정하는 장면은 이후 수술비를 빌리러 오는 사건을 예고한다. 걱정하는 주체는 ‘나’의 아내다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 23쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">4번</span><span class=\"tag\">정답</span><span class=\"tag\">인물·갈등</span></div>\n<h3>보증 제안에 담긴 계산</h3><div class=\"detail-label\">정답 ⑤</div><p class=\"detail-text\">‘나’는 빌려준 돈을 돌려받지 못할까 걱정하다 보증을 제안한다. 도움을 주었다는 명분은 얻으면서 직접 돈을 내야 하는 부담은 피하려는 태도다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 23쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">5번</span><span class=\"tag\">정답</span><span class=\"tag\">서술·표현</span></div>\n<h3>행동으로 드러나는 초조함</h3><div class=\"detail-label\">정답 ④</div><p class=\"detail-text\">수술 결과를 기다리는 ‘나’의 초조함은 행동 묘사를 통해 간접적으로 드러난다. 심리를 서술자가 명시했는지, 독자가 행동을 보고 추론해야 하는지 구별한다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 24쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">6번</span><span class=\"tag\">정답</span><span class=\"tag\">소재·어휘</span></div>\n<h3>구두와 지식인의 자존심</h3><div class=\"detail-label\">정답 ④</div><p class=\"detail-text\">권 씨는 가난 속에서도 구두를 빛나게 닦는다. 구두는 대학을 나온 지식인이라는 정체성과 끝까지 지키려는 자존심을 상징한다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 24쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">7번</span><span class=\"tag\">정답</span><span class=\"tag\">인물·갈등</span></div>\n<h3>권 씨의 행방과 결말</h3><div class=\"detail-label\">정답 ⑤</div><p class=\"detail-text\">‘나’는 강도가 권 씨라는 사실을 알면서도 끝까지 강도로 대하며 돌려보낸다. 이후 남은 구두를 보고 권 씨가 쉽게 돌아오지 못하리라고 깨닫는다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 24쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">8번</span><span class=\"tag\">정답</span><span class=\"tag\">소재·어휘</span></div>\n<h3>아홉 켤레에 남은 권 씨의 흔적</h3><div class=\"detail-label\">정답 ⑤</div><p class=\"detail-text\">구두는 권 씨가 지키려던 마지막 자존심을 보여 준다. 권 씨가 사라지고 구두만 남은 결말은 그의 무너진 처지를 부각한다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 24쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">9번</span><span class=\"tag\">정답</span><span class=\"tag\">주제·사회적 맥락</span></div>\n<h3>소시민의 갈등과 자존심 배려</h3><div class=\"detail-label\">정답 ⑤</div><p class=\"detail-text\">‘나’는 권 씨에게 연민을 느끼면서도 자신에게 돌아올 손해를 염려한다. 강도 장면에서는 정체를 밝히려 조롱하는 대신 모르는 체하여 권 씨의 자존심을 지키려 한다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 24쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">10번</span><span class=\"tag\">정답</span><span class=\"tag\">서술·표현</span></div>\n<h3>대화 중심의 사건 전개</h3><div class=\"detail-label\">정답 ③</div><p class=\"detail-text\">권 씨와 ‘나’가 주고받는 대화와 행동을 중심으로 갈등이 전개된다. 서술자의 설명 위주로 장면이 빠르게 전환된다는 진술은 지문의 전개와 맞지 않는다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 25쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">11번</span><span class=\"tag\">정답</span><span class=\"tag\">소재·어휘</span></div>\n<h3>소재에 드러나는 생존과 이해관계</h3><div class=\"detail-label\">정답 ②</div><p class=\"detail-text\">진흙 속 참외를 먹는 군중의 모습은 생존권을 위협받는 철거민의 절박함을 보여 준다. 돈을 돌려받지 못할까 걱정하는 ‘나’의 모습과 함께 인간의 본성을 드러내는 소재다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 25쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">12번</span><span class=\"tag\">정답</span><span class=\"tag\">인물·갈등</span></div>\n<h3>정체를 알아챘을 때의 권 씨</h3><div class=\"detail-label\">정답 ⑤</div><p class=\"detail-text\">‘나’가 자신의 정체를 안다는 것을 깨달은 권 씨에게서는 자존심이 상한 모습이 드러난다. 앞으로의 처벌이나 뒷일을 두려워한다는 설명을 뒷받침하는 근거는 없다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 25쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">13번</span><span class=\"tag\">정답</span><span class=\"tag\">주제·사회적 맥락</span></div>\n<h3>모르는 체하는 행동의 이유</h3><div class=\"detail-label\">정답 ④</div><p class=\"detail-text\">강도로 침입한 권 씨를 끝까지 강도로 대하는 것은 그가 이튿날 다시 떳떳하게 마주할 수 있도록 배려하려는 행동이다. 해당 행동의 동기를 ‘나’의 개인주의로 설명하기 어렵다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 25쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">14번</span><span class=\"tag\">정답</span><span class=\"tag\">서술·표현</span></div>\n<h3>소재·대화·1인칭 서술</h3><div class=\"detail-label\">정답 ②</div><p class=\"detail-text\">구두의 상징, 인물의 대화를 통한 갈등, 등장인물 ‘나’의 1인칭 서술이 확인된다. 옳은 설명은 ㉠·㉣·㉤이다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 25쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">15번</span><span class=\"tag\">정답</span><span class=\"tag\">인물·갈등</span></div>\n<h3>평소와 다른 말투가 드러내는 절박함</h3><div class=\"detail-label\">정답 ③</div><p class=\"detail-text\">권 씨가 평소 쓰지 않던 거친 말을 꺼낸 것은 아내와 아이가 위험한 상황에서 절박했기 때문이다. 한 번의 말투 변화만으로 인물의 이중성을 단정할 근거는 없다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 25쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag bad\">16번</span><span class=\"tag bad\">오답</span><span class=\"tag\">소재·어휘</span></div>\n<h3>문맥상 ‘적시’의 뜻</h3><div class=\"detail-label\">정답 ③</div><p class=\"detail-text\">‘그가 적시에 일깨워 주었기’의 ‘적시’는 ‘알맞은 때’를 뜻한다. 권 씨의 말 덕분에 ‘나’가 돈을 돌려받는 문제를 그때 떠올렸다는 뜻이다. ‘갑자기’로 바꾸면 시점이 알맞았다는 의미가 사라진다.</p>\n<div class=\"detail-label\">선지별 판단 근거</div><ul class=\"choice-list\"><li><strong>①</strong> ‘상투적’은 늘 되풀이되어 새로움이 없다는 뜻이므로 ‘진부한’으로 바꿀 수 있다.</li><li><strong>②</strong> ‘경제권을 장악하고’는 경제권을 쥐고 있다는 뜻이다.</li><li><strong>③</strong> ‘적시’는 알맞은 때를 가리킨다. ‘갑자기’는 일이 뜻밖에 급작스럽게 일어남을 나타내므로 바꾸어 쓸 수 없다.</li><li><strong>④</strong> ‘기왕’은 이미 그렇게 된 바에라는 뜻으로 ‘이왕’과 통한다.</li><li><strong>⑤</strong> ‘변통하다’는 이 문맥에서 필요한 돈을 융통한다는 뜻이다.</li></ul><div class=\"detail-label\">다시 풀 때</div><p class=\"detail-text\">‘알맞은 때에’와 ‘갑작스럽게’를 각각 넣어 읽고, 원문에 있던 의미가 유지되는지 확인해 보세요.</p>\n<p class=\"detail-source\">시험지 정답·해설 26쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">17번</span><span class=\"tag\">정답</span><span class=\"tag\">인물·갈등</span></div>\n<h3>절박한 부탁과 자존심 회복</h3><div class=\"detail-label\">정답 ②</div><p class=\"detail-text\">권 씨는 아내와 아이를 구하려 어떤 일이든 하겠다며 부탁한다. 거절당한 뒤 대학을 나왔다고 말한 것은 상처 입은 자존심을 지키려는 행동이다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 26쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">18번</span><span class=\"tag\">정답</span><span class=\"tag\">인물·갈등</span></div>\n<h3>수술비를 낸 뒤에도 남는 한계</h3><div class=\"detail-label\">정답 ③</div><p class=\"detail-text\">‘나’는 처음에 책임을 피하려 돈을 빌려주지 않지만, 뒤늦게 죄책감을 느껴 수술비를 대신 낸다. 권 씨 몰래 한 지원을 지속적인 연대나 소시민적 한계의 완전한 극복으로 확대할 수 없다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 26쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">19번</span><span class=\"tag\">정답</span><span class=\"tag\">서술·표현</span></div>\n<h3>1인칭 관찰자의 인식 범위</h3><div class=\"detail-label\">정답 ⑤</div><p class=\"detail-text\">‘나’는 자신의 생각을 직접 서술하지만 권 씨의 내면은 말과 행동을 보고 추측한다. 뒤늦게 절박함을 깨달았다고 해서 상대를 완전히 이해했다고 볼 수는 없다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 26쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">20번</span><span class=\"tag\">정답</span><span class=\"tag\">주제·사회적 맥락</span></div>\n<h3>광주 대단지 사건과 소외</h3><div class=\"detail-label\">정답 ④</div><p class=\"detail-text\">철거민 입주권과 도시 빈민의 처지가 시대적 배경을 보여 준다. 집을 마련하고 진 빚에 부담을 느끼는 ‘나’를 사건으로 경제적 이득을 얻은 집단의 대표로 보기 어렵다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 26쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag bad\">21번</span><span class=\"tag bad\">오답</span><span class=\"tag\">주제·사회적 맥락</span></div>\n<h3>원장의 태도와 대비되는 인간상</h3><div class=\"detail-label\">정답 ⑤</div><p class=\"detail-text\">원장은 위급한 산모의 수술을 앞두고 비용 보증부터 요구한다. 이 태도에 실망한 ‘나’가 바랄 인간상은 물질을 앞세우는 현실 속에서도 마음의 맑음과 따뜻함을 지닌 사람이다. 이 인간상을 노래한 박두진의 「청산도」가 가장 적절하다.</p>\n<div class=\"detail-label\">선지별 판단 근거</div><ul class=\"choice-list\"><li><strong>①</strong> 이직의 시조는 겉과 속이 다른 위선을 비판한다. 화자가 만나고 싶은 인간상을 제시하는 데까지 나아가지는 않는다.</li><li><strong>②</strong> 황진이의 시조는 임을 향한 변함없는 마음과 기다림을 드러낸다.</li><li><strong>③</strong> 김소월의 「초혼」은 떠난 이를 절절하게 부르는 상실의 슬픔이 중심이다.</li><li><strong>④</strong> 황동규의 「즐거운 편지」는 상대를 향해 오래 지속되는 사랑을 노래한다.</li><li><strong>⑤</strong> 박두진의 「청산도」는 티끌 부는 세상에서도 마음이 맑은 사람을 그린다. 돈을 먼저 따지는 원장의 태도와 대비되는 인간상이다.</li></ul><div class=\"detail-label\">다시 풀 때</div><p class=\"detail-text\">원장의 태도를 먼저 한 문장으로 정리하고, 그와 대비되는 인물을 떠올린 뒤 시의 표현을 근거로 고르세요.</p>\n<p class=\"detail-source\">시험지 정답·해설 26쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">22번</span><span class=\"tag\">정답</span><span class=\"tag\">소재·어휘</span></div>\n<h3>구두와 &lt;보기&gt;의 신발 비교</h3><div class=\"detail-label\">정답 ④</div><p class=\"detail-text\">권 씨의 구두는 지식인으로서 지키고 싶은 마지막 자존심을 나타낸다. 서정주의 「신발」은 어린 시절의 자유로운 본성과 그 본성을 잃어 대용품으로 살아가는 상태까지 드러낸다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 27쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">23번</span><span class=\"tag\">정답</span><span class=\"tag\">주제·사회적 맥락</span></div>\n<h3>도시 빈민을 바라보는 권력</h3><div class=\"detail-label\">정답 ⑤</div><p class=\"detail-text\">이 순경이 권 씨의 동태를 살펴 달라고 부탁하는 장면은 소외 계층을 감시하고 통제하는 권력의 태도를 보여 준다. 산업 발전에 참여시키려는 의도로 해석할 근거는 없다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 27쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">24번</span><span class=\"tag\">정답</span><span class=\"tag\">소재·어휘</span></div>\n<h3>빈 한 켤레와 제목의 의미</h3><div class=\"detail-label\">정답 ①</div><p class=\"detail-text\">권 씨는 끝까지 구두를 가꾸며 자존심을 지키려 한다. 한 켤레가 비어 있고 그 주인이 돌아오지 않으리라는 결말은 사회 구조의 모순 속에서 무너져 가는 그의 처지를 드러낸다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 27쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">25번</span><span class=\"tag\">정답</span><span class=\"tag\">서술·표현</span></div>\n<h3>관찰자 시점의 효과와 한계</h3><div class=\"detail-label\">정답 ⑤</div><p class=\"detail-text\">등장인물 ‘나’가 권 씨를 관찰하며 사건을 서술한다. 독자에게 전달되는 정보에는 ‘나’의 판단이 개입하며, 권 씨의 내면을 직접 보여 주는 데는 한계가 있다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 27쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">26번</span><span class=\"tag\">정답</span><span class=\"tag\">인물·갈등</span></div>\n<h3>연민과 자기 보호 사이의 갈등</h3><div class=\"detail-label\">정답 ⑤</div><p class=\"detail-text\">‘나’는 직접 돈을 빌려주는 데 따르는 손실을 꺼려 보증을 제안하고, 나중에 죄책감으로 수술비를 대신 낸다. 그 행동만으로 이후의 삶까지 이타적으로 바뀌었다고 볼 수는 없다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 28쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">27번</span><span class=\"tag\">정답</span><span class=\"tag\">소재·어휘</span></div>\n<h3>구두를 닦는 행위와 정체성</h3><div class=\"detail-label\">정답 ③</div><p class=\"detail-text\">육체노동으로 생계를 잇는 권 씨가 구두를 반짝이게 닦는 행동은 지식인이라는 정체성과 최소한의 품위를 지키려는 노력이다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 28쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">28번</span><span class=\"tag\">정답</span><span class=\"tag\">인물·갈등</span></div>\n<h3>거절 뒤 권 씨가 내세운 자존심</h3><div class=\"detail-label\">정답 ⑤</div><p class=\"detail-text\">‘나 대학 나온 사람이오’라는 말은 경제적으로 도움을 받지 못한 순간에도 자신의 존엄을 지키려는 표현이다. 물질적 보상을 요구하는 말로 보기 어렵다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 28쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">29번</span><span class=\"tag\">정답</span><span class=\"tag\">서술·표현</span></div>\n<h3>어휘 선택이 전달하는 위급함</h3><div class=\"detail-label\">정답 ④</div><p class=\"detail-text\">‘나’는 권 씨가 평소 사용하지 않던 ‘제기랄’이라는 말을 듣고 그의 말이 진지하다고 느낀다. 평소와 다른 거친 말이 상황의 위급함을 전한다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 28쪽 대조</p>","<div class=\"detail-top\"><span class=\"tag\">30번</span><span class=\"tag\">정답</span><span class=\"tag\">인물·갈등</span></div>\n<h3>지식인이라는 정체성의 확인</h3><div class=\"detail-label\">정답 ②</div><p class=\"detail-text\">돈을 빌려 달라는 부탁이 이미 거절된 뒤 권 씨가 대학을 나왔다고 말한다. 상대를 설득하기보다 모멸감 속에서 상처 입은 자존심을 지키려는 말이다.</p>\n\n<p class=\"detail-source\">시험지 정답·해설 29쪽 대조</p>"];
+const WRONG=new Set([16,21]);
+const buttons=[...document.querySelectorAll('[data-q]')],panel=document.getElementById('detail');
+function show(n){if(!Number.isInteger(n)||n<1||n>30)return;buttons.forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.q)===n)));panel.innerHTML=PANELS[n-1];panel.hidden=false;}
+buttons.forEach(b=>b.addEventListener('click',()=>show(Number(b.dataset.q))));
+function filter(bad){buttons.forEach(b=>b.hidden=bad&&!WRONG.has(Number(b.dataset.q)));document.getElementById('allFilter').setAttribute('aria-pressed',String(!bad));document.getElementById('wrongFilter').setAttribute('aria-pressed',String(bad));document.getElementById('emptyFilter').hidden=!(bad&&WRONG.size===0);if(bad&&WRONG.size===0){panel.hidden=true;return;}const current=buttons.find(b=>b.getAttribute('aria-pressed')==='true');if(bad&&(!current||!WRONG.has(Number(current.dataset.q))))show([...WRONG][0]);else if(panel.hidden)show(1);}
+document.getElementById('allFilter').addEventListener('click',()=>filter(false));document.getElementById('wrongFilter').addEventListener('click',()=>filter(true));document.getElementById('printBtn').addEventListener('click',()=>window.print());
+let previouslyOpen=[];window.addEventListener('beforeprint',()=>{previouslyOpen=[...document.querySelectorAll('details')].map(e=>e.open);document.querySelectorAll('details').forEach(e=>e.open=true);});window.addEventListener('afterprint',()=>document.querySelectorAll('details').forEach((e,i)=>e.open=previouslyOpen[i]));show(16);</script></body></html>
